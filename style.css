@@ -1,12 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* 第一种字体 */
+/* @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"); */
 
-/* https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap */
+/* 第二种字体 */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
 
 * {
   margin: 0;
   padding: 0;
+  outline: none;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  /* font-family: "Roboto", sans-serif; */
+  font-family: "Ubuntu", sans-serif;
 }
 
 a {
@@ -19,7 +23,11 @@ img {
 }
 
 body {
-  background: #f3f4f6;
+  background: #fff;
+}
+
+.cursor {
+  cursor: pointer;
 }
 
 .btn {
@@ -50,11 +58,15 @@ body {
   color: #fff;
 }
 
-.navbar {
+#navbar {
+  position: fixed; /* 初始定位 */
+  z-index: 999;
+  width: 100%;
+  padding: 20px 60px;
+  background: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 60px;
 }
 
 .navbar__logo {
@@ -191,6 +203,16 @@ body {
   padding: 8px;
   border-radius: 50%;
   transition: all 0.5s ease;
+}
+
+#scrollToTopBtn {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  left: calc(100vw - 84px);
+  bottom: 5%;
+  font-size: 50px;
+  color: #1f2937;
 }
 
 .skills {
@@ -651,6 +673,11 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+
+  #navbar{
+    padding: 20px 33px;
+  }
+
   .navbar__actions {
     display: none;
   }
