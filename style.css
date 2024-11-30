@@ -685,13 +685,34 @@ body {
   .hero {
     flex-direction: column;
     height: auto;
-    padding: 40px 30px 0px;
+    padding-top: 83px;
     gap: 30px;
+  }
+
+  .skills__stats{
+    overflow: auto;
   }
 
   .hero__content,
   .hero__intro {
     width: 100%;
+  }
+
+  .hero__intro{
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .hero__actions{
+    display: block;
+  }
+
+  .skills__desc{
+    text-align: center;
+  }
+
+  .skills__actions{
+    display: block;
   }
 
   .hero__content h2 {
