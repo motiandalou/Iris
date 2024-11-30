@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- 网站--图标 -->
-    <link rel="icon" href=".person.png" />
+    <link rel="icon" href="person.png" />
     <!-- 在线图标网站 -->
     <link
       rel="stylesheet"
@@ -17,9 +17,9 @@
   </head>
 
   <body>
-    <nav class="navbar">
+    <nav  id="navbar" >
       <a href="#" class="navbar__logo"
-        ><i class="ri-code-s-slash-line"></i> Logo.</a
+        ><i class="ri-code-s-slash-line"></i> Logo</a
       >
 
       <div class="navbar__menu">
@@ -32,7 +32,7 @@
       <div class="navbar__actions">
         <div class="navbar__location">
           <h5>CHINA, Shang Hai</h5>
-          <p>6:18:31 pm</p>
+          <p id="clock"></p>
         </div>
         <button class="btn">Get a Quote</button>
       </div>
@@ -40,11 +40,7 @@
 
     <section class="hero">
       <div class="hero__content">
-        <img
-          src="person.png"
-          alt="Profile Image"
-          class="hero__image"
-        />
+        <img src="person.png"  class="hero__image" />
         <h2>Hello! I'm Iris</h2>
       </div>
 
@@ -362,7 +358,7 @@
 
     <footer class="footer">
       <div class="footer__brand">
-        <a href="#">Logo.</a>
+        <a href="#">Logo</a>
         <p>© 2024 AsmrProg YouTube Channel.</p>
       </div>
       <div class="footer__links">
@@ -372,5 +368,16 @@
         <a href="#">About</a>
       </div>
     </footer>
+
+    <a href="#">
+      <i id="scrollToTopBtn" class="ri-arrow-up-circle-line cursor"></i>
+    </a>
   </body>
+
+  <!-- 滚动到顶部 -->
+  <script src="/scrollToTop.js"></script>
+  <!-- 实时获取时间 -->
+  <script src="/updateClock.js"></script>
+  <!-- 头部导航栏吸顶效果 -->
+  <script src="/stickyTop.js"></script>
 </html>
