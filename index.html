@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- 网站--图标 -->
-    <link rel="icon" href="person.png" />
+    <link rel="icon" href="https://cdn.jsdelivr.net/gh/motiandalou/Iris/person.png" />
     <!-- 在线图标网站 -->
     <link
       rel="stylesheet"
@@ -13,22 +13,21 @@
     <!-- 样式 -->
     <link rel="stylesheet" href="style.css" />
     <!-- 网站--标题 -->
-    <title>Iris English</title>
+    <title id="typing"></title>
   </head>
 
   <body>
-    <nav  id="navbar" >
-      <a href="#" class="navbar__logo"
-        ><i class="ri-code-s-slash-line"></i> Logo</a
-      >
+    <nav id="navbar">
+      <a href="#" class="navbar__logo">
+        <i class="ri-flower-line"></i>
+        <span>Iris</span>
+      </a>
 
       <div class="navbar__menu">
-        <a href="#" class="navbar__link cursor active" >Home</a>
+        <a href="#" class="navbar__link cursor active">Home</a>
         <a href="#" class="navbar__link cursor">Projects</a>
         <a href="#" class="navbar__link cursor">Skills</a>
         <a href="#" class="navbar__link cursor">About</a>
-
-        <div class="underline"></div>
       </div>
 
       <div class="navbar__actions">
@@ -42,7 +41,7 @@
 
     <section class="hero">
       <div class="hero__content">
-        <img src="person.png"  class="hero__image" />
+        <img src="https://cdn.jsdelivr.net/gh/motiandalou/Iris/person.png" class="hero__image" />
         <h2>Hello! I'm Iris</h2>
       </div>
 
@@ -53,7 +52,7 @@
           and high schools one-stop solution.
         </p>
         <div class="hero__actions">
-          <button class="btn">Work With Me</button>
+          <button id="showPageBtn" class="btn">Work With Me</button>
           <button class="btn btn--secondary">See My Portfolio</button>
         </div>
       </div>
@@ -88,7 +87,7 @@
           <h5>1000+</h5>
           <p>Number of Tutors</p>
         </div>
-        <i class="ri-flower-line"></i>
+        <i class="ri-swap-3-line"></i>
         <div class="skill__info">
           <h5>2+</h5>
           <p>Teaching Years</p>
@@ -132,7 +131,7 @@
           <div class="category__projects">
             <div class="project-card">
               <img
-                src="item-1.png"
+                src="https://raw.githubusercontent.com/motiandalou/Iris/main/item-1.be2d4f75.png"
                 alt="Portfolio 1"
                 class="project-card__image"
               />
@@ -149,7 +148,7 @@
             </div>
             <div class="project-card">
               <img
-                src="item-2.png"
+                src="https://cdn.jsdelivr.net/gh/motiandalou/Iris/item-2.png"
                 alt="Portfolio 2"
                 class="project-card__image"
               />
@@ -166,7 +165,7 @@
             </div>
             <div class="project-card">
               <img
-                src="item-3.jpg"
+                src="https://cdn.jsdelivr.net/gh/motiandalou/Iris/item-3.jpg"
                 alt="Portfolio 3"
                 class="project-card__image"
               />
@@ -183,7 +182,7 @@
             </div>
             <div class="project-card">
               <img
-                src="item-4.png"
+                src="https://cdn.jsdelivr.net/gh/motiandalou/Iris/item-4.png"
                 alt="Portfolio 4"
                 class="project-card__image"
               />
@@ -219,7 +218,7 @@
           <div class="category__projects">
             <div class="project-card">
               <img
-                src="item-5.png"
+                src="https://cdn.jsdelivr.net/gh/motiandalou/Iris/item-5.png"
                 alt="NFT Landing"
                 class="project-card__image"
               />
@@ -236,7 +235,7 @@
             </div>
             <div class="project-card">
               <img
-                src="item-6.png"
+                src="https://cdn.jsdelivr.net/gh/motiandalou/Iris/item-6.png"
                 alt="Music Platform"
                 class="project-card__image"
               />
@@ -253,7 +252,7 @@
             </div>
             <div class="project-card">
               <img
-                src="item-7.png"
+                src="https://cdn.jsdelivr.net/gh/motiandalou/Iris/item-7.png"
                 alt="Crypto Market"
                 class="project-card__image"
               />
@@ -270,7 +269,7 @@
             </div>
             <div class="project-card">
               <img
-                src="item-8.png"
+                src="https://cdn.jsdelivr.net/gh/motiandalou/Iris/item-8.png"
                 alt="Jobs Platform"
                 class="project-card__image"
               />
@@ -355,13 +354,13 @@
       <h5>Got a Projects?</h5>
       <h2>Let's Work Together!</h2>
       <button class="btn">Send Message</button>
-      <p>Phone: <span>+11111111111</span></p>
+      <p>Phone: <span>86-17621901054</span></p>
     </section>
 
     <footer class="footer">
       <div class="footer__brand">
-        <a href="#">Logo</a>
-        <p>© 2024 AsmrProg YouTube Channel.</p>
+        <a href="#">Iris English</a>
+        <p>© 2025 Experience Your life.</p>
       </div>
       <div class="footer__links">
         <a href="#">Home</a>
@@ -374,6 +373,24 @@
     <a href="#">
       <i id="scrollToTopBtn" class="ri-arrow-up-circle-line cursor"></i>
     </a>
+
+    <div id="slidePage" class="slide-page">
+      <div style="height: calc(100%-72px)"></div>
+      <p
+        style="
+          display: flex;
+          font-size: 40px;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        "
+      >
+        developing
+      </p>
+
+      <i id="closePageBtn" class="ri-close-large-fill close-btn cursor"></i>
+    </div>
   </body>
 
   <!-- 滚动到顶部 -->
@@ -382,6 +399,10 @@
   <script src="updateClock.js"></script>
   <!-- 头部导航栏吸顶效果 -->
   <!-- <script src="stickyTop.js"></script> -->
-   <!-- 头部导航栏切换页签 -->
+  <!-- 头部导航栏切换页签 -->
   <script src="tabsSwitch.js"></script>
+  <!-- 底部出现页面 -->
+  <script src="showPageBtn.js"></script>
+  <!-- 打字机的效果 -->
+  <script src="type.js"></script>
 </html>

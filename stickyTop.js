@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     didScroll = true;
     setTimeout(function () {
       if (window.pageYOffset > 320) {
-        // 300spx is the offset before the navbar sticks
+        // 320spx is the offset before the navbar sticks
         navbar.style.position = "fixed";
         navbar.style.top = "0";
       } else {
