@@ -15,7 +15,7 @@
 
 a {
   text-decoration: none;
-  color: #1f2937;
+  color: #000;
 }
 
 img {
@@ -31,8 +31,8 @@ body {
 }
 
 .btn {
-  border: 2px solid #1f2937;
-  background: #1f2937;
+  border: 2px solid #000;
+  background: #000;
   color: #fff;
   cursor: pointer;
   border-radius: 10px;
@@ -40,21 +40,21 @@ body {
 }
 
 .btn:hover {
-  color: #1f2937;
+  color: #000;
   background: #fff;
   border-color: #e5e7eb;
 }
 
 .btn--secondary {
-  color: #1f2937;
+  color: #000;
   background: #fff;
   border: 2px solid #e5e7eb;
 }
 
 .btn--secondary:hover,
 .hero__socials a:hover {
-  border-color: #1f2937;
-  background: #1f2937;
+  border-color: #000;
+  background: #000;
   color: #fff;
 }
 
@@ -84,7 +84,7 @@ body {
     color: #000;
     border: 2px solid #fff;
     &:hover {
-      border: 2px solid #1f2937;
+      border: 2px solid #000;
     }
   }
 }
@@ -112,7 +112,7 @@ body {
   bottom: -4px;
   width: 0;
   height: 1.5px;
-  background-color: #1f2937;
+  background-color: #000;
   transition: all 0.3s ease;
   border-radius: 4px;
 }
@@ -275,7 +275,7 @@ body {
   left: calc(100vw - 84px);
   bottom: 5%;
   font-size: 50px;
-  color: #1f2937;
+  color: #000;
 }
 
 .skills {
@@ -364,8 +364,8 @@ body {
   font-size: 13px;
   padding: 5px 16px;
   color: #fff;
-  background: #1f2937;
-  border-color: #1f2937;
+  background: #000;
+  border-color: #000;
 }
 
 .showcase_categories .category:first-child {
@@ -476,7 +476,7 @@ body {
   border-radius: 16px 0 10px 0;
   border: none;
   color: #fff;
-  background: #1f2937;
+  background: #000;
 }
 
 .project-card .btn:hover {
@@ -574,9 +574,9 @@ body {
 
 .contact .btn {
   padding: 6px 20px;
-  border: 2px solid #1f2937;
+  border: 2px solid #000;
   color: #fff;
-  background: #1f2937;
+  background: #000;
   margin-bottom: 14px;
 }
 
@@ -587,7 +587,7 @@ body {
 }
 
 .contact p span {
-  color: #1f2937;
+  color: #000;
   font-weight: 600;
   font-size: 13px;
 }
@@ -601,7 +601,7 @@ body {
 
 .footer__brand {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   gap: 30px;
 }
 
