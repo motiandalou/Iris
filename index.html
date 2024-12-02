@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- 网站--图标 -->
-    <link rel="icon" href="https://cdn.jsdelivr.net/gh/motiandalou/Iris/person.png" />
+    <link
+      rel="icon"
+      href="https://cdn.jsdelivr.net/gh/motiandalou/Iris/person.png"
+    />
     <!-- 在线图标网站 -->
     <link
       rel="stylesheet"
@@ -18,8 +21,8 @@
 
   <body>
     <nav id="navbar">
-      <a href="#" class="navbar__logo">
-        <i class="ri-flower-line" style="font-size: 25px;"></i>
+      <a id="logo" class="navbar__logo cursor">
+        <i class="ri-flower-line" style="font-size: 25px"></i>
       </a>
 
       <div class="navbar__menu">
@@ -40,7 +43,11 @@
 
     <section class="hero">
       <div class="hero__content">
-        <img src="https://cdn.jsdelivr.net/gh/motiandalou/Iris/person.png" alt="loading..." class="hero__image" />
+        <img
+          src="https://cdn.jsdelivr.net/gh/motiandalou/Iris/person.png"
+          alt="loading..."
+          class="hero__image"
+        />
         <h2>Hello! I'm Iris</h2>
       </div>
 
@@ -57,12 +64,11 @@
       </div>
 
       <div class="hero__socials">
-        <a href="#"><i class="ri-wechat-fill"></i></a>
-        <a href="#"><i class="ri-mail-line"></i></a>
-        <a href="#"><i class="ri-instagram-line"></i></a>
-        <a href="#"><i class="ri-dribbble-line"></i></a>
-        <a href="#"><i class="ri-linkedin-box-line"></i></a>
-        <a href="#"><i class="ri-youtube-line"></i></a>
+        <a id="openModalButton1"><i class="ri-wechat-fill"></i></a>
+        <a id="openModalButton2"><i class="ri-mail-line"></i></a>
+        <a id="openModalButton3"><i class="ri-instagram-line"></i></a>
+        <a id="openModalButton4"><i class="ri-linkedin-box-line"></i></a>
+        <a id="openModalButton5"><i class="ri-youtube-line"></i></a>
       </div>
     </section>
 
@@ -359,7 +365,7 @@
     <footer class="footer">
       <div class="footer__brand">
         <a href="#" class="navbar__logo">
-          <i class="ri-flower-line" style="font-size: 25px;"></i>
+          <i class="ri-flower-line" style="font-size: 25px"></i>
         </a>
         <p>© 2025 Experience Your life.</p>
       </div>
@@ -392,8 +398,155 @@
 
       <i id="closePageBtn" class="ri-close-large-fill close-btn cursor"></i>
     </div>
+
+    <!-- 模态对话框的蒙层 -->
+    <div id="modal-overlay" style="display: none"></div>
+
+    <!-- 模态对话框的内容 -->
+    <div id="modal-content" style="display: none">
+      <!-- X -->
+      <div id="modal-body">
+        <!-- 弹窗内容将在这里动态加载 -->
+      </div>
+    </div>
   </body>
 
+  <script>
+    // 刷新页面--点击左上角logo
+    const logo = document.getElementById("logo");
+    logo.addEventListener("click", function () {
+      location.reload();
+    });
+
+    // todo(图片地址就待替换)点击--微信
+    const openModalButton1 = document.getElementById("openModalButton1");
+    openModalButton1.addEventListener("click", function () {
+      // 电脑分辨率
+      let clientWidth = document.documentElement.clientWidth;
+      if (clientWidth > 1230) return;
+      showModal(`
+          <div class="connect-wx">
+            <div>
+              <h3 class="Hello">Hello!</h3>
+              <div id="modal-close">&times;</div>
+            </div>
+
+            <img
+              src="https://cdn.jsdelivr.net/gh/motiandalou/Iris/connect-wx.jpg"
+              alt="loading..."
+            />
+          </div>
+        `);
+      // 关闭弹窗
+      setTimeout(() => {
+        document.getElementById("modal-close").onclick = hideModal;
+      });
+
+      noScroll();
+    });
+
+    // todo(图片地址就待替换)点击--邮件
+    const openModalButton2 = document.getElementById("openModalButton2");
+    openModalButton2.addEventListener("click", function () {
+      // 电脑分辨率
+      let clientWidth = document.documentElement.clientWidth;
+      if (clientWidth > 1230) return;
+      showModal(`
+          <div class="connect-wx">
+            <div>
+              <h3 class="Hello">Hello!</h3>
+              <div id="modal-close">&times;</div>
+            </div>
+
+            <img
+              src="https://cdn.jsdelivr.net/gh/motiandalou/Iris/connect-wx.jpg"
+              alt="loading..."
+            />
+          </div>
+        `);
+      // 关闭弹窗
+      setTimeout(() => {
+        document.getElementById("modal-close").onclick = hideModal;
+      });
+    });
+
+    // todo(图片地址就待替换)点击--instagram
+    const openModalButton3 = document.getElementById("openModalButton3");
+    openModalButton3.addEventListener("click", function () {
+      // 电脑分辨率
+      let clientWidth = document.documentElement.clientWidth;
+      if (clientWidth > 1230) return;
+      showModal(`
+          <div class="connect-wx">
+            <div>
+              <h3 class="Hello">Hello!</h3>
+              <div id="modal-close">&times;</div>
+            </div>
+
+            <img
+              src="https://cdn.jsdelivr.net/gh/motiandalou/Iris/connect-wx.jpg"
+              alt="loading..."
+            />
+          </div>
+        `);
+      // 关闭弹窗
+      setTimeout(() => {
+        document.getElementById("modal-close").onclick = hideModal;
+      });
+    });
+
+    // todo(图片地址就待替换)点击--linkedin
+    const openModalButton4 = document.getElementById("openModalButton4");
+    openModalButton4.addEventListener("click", function () {
+      // 电脑分辨率
+      let clientWidth = document.documentElement.clientWidth;
+      if (clientWidth > 1230) return;
+      showModal(`
+          <div class="connect-wx">
+            <div>
+              <h3 class="Hello">Hello!</h3>
+              <div id="modal-close">&times;</div>
+            </div>
+
+            <img
+              src="https://cdn.jsdelivr.net/gh/motiandalou/Iris/connect-wx.jpg"
+              alt="loading..."
+            />
+          </div>
+        `);
+      // 关闭弹窗
+      setTimeout(() => {
+        document.getElementById("modal-close").onclick = hideModal;
+      });
+    });
+
+    // todo(图片地址就待替换)点击--youtube
+    const openModalButton5 = document.getElementById("openModalButton5");
+    openModalButton5.addEventListener("click", function () {
+      // 电脑分辨率
+      let clientWidth = document.documentElement.clientWidth;
+      if (clientWidth > 1230) return;
+      showModal(`
+          <div class="connect-wx">
+            <div>
+              <h3 class="Hello">Hello!</h3>
+              <div id="modal-close">&times;</div>
+            </div>
+
+            <img
+              src="https://cdn.jsdelivr.net/gh/motiandalou/Iris/connect-wx.jpg"
+              alt="loading..."
+            />
+          </div>
+        `);
+      // 关闭弹窗
+      setTimeout(() => {
+        document.getElementById("modal-close").onclick = hideModal;
+      });
+    });
+  </script>
+  <!-- 公共函数 -->
+  <script src="common.js"></script>
   <!-- 滚动到顶部 -->
   <script src="scrollToTop.js"></script>
   <!-- 实时获取时间 -->
@@ -406,4 +559,6 @@
   <script src="showPageBtn.js"></script>
   <!-- 打字机的效果 -->
   <script src="type.js"></script>
+  <!-- 蒙层弹窗 -->
+  <script src="modal.js"></script>
 </html>
