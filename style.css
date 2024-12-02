@@ -132,15 +132,9 @@ body.no-scroll {
   width: 100%;
 }
 
-.navbar__menu,
-.footer__links {
+.navbar__menu {
   display: flex;
   gap: 20px;
-}
-
-.footer__links a {
-  font-size: 14px;
-  font-weight: 500;
 }
 
 .footer__links a:hover {
@@ -280,7 +274,7 @@ body.no-scroll {
   position: fixed;
   z-index: 99;
   left: calc(100vw - 84px);
-  bottom: 5%;
+  bottom: 2%;
   font-size: 50px;
   color: #000;
 }
@@ -375,7 +369,7 @@ body.no-scroll {
   border-color: #000;
 }
 
-.showcase_categories .category:first-child {
+.showcase_categories .category:not(:last-child) {
   margin-bottom: 100px;
 }
 
