@@ -15,6 +15,4 @@ function hideModal() {
   document.getElementById("modal-content").style.display = "none";
   // 移除禁止滚动的类--pc
   document.body.classList.remove("no-scroll");
-  // 移除禁止滚动的类--mobile
-  window.removeEventListener("touchmove", preventScrolling, { passive: false });
 }

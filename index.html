@@ -437,12 +437,13 @@
             />
           </div>
         `);
+      // 禁止滚动
+      noScroll();
+
       // 关闭弹窗
       setTimeout(() => {
         document.getElementById("modal-close").onclick = hideModal;
       });
-
-      noScroll();
     });
 
     // todo(图片地址就待替换)点击--邮件
@@ -464,6 +465,7 @@
             />
           </div>
         `);
+      noScroll();
       // 关闭弹窗
       setTimeout(() => {
         document.getElementById("modal-close").onclick = hideModal;
@@ -489,6 +491,7 @@
             />
           </div>
         `);
+      noScroll();
       // 关闭弹窗
       setTimeout(() => {
         document.getElementById("modal-close").onclick = hideModal;
@@ -514,6 +517,7 @@
             />
           </div>
         `);
+      noScroll();
       // 关闭弹窗
       setTimeout(() => {
         document.getElementById("modal-close").onclick = hideModal;
@@ -539,12 +543,14 @@
             />
           </div>
         `);
+      noScroll();
       // 关闭弹窗
       setTimeout(() => {
         document.getElementById("modal-close").onclick = hideModal;
       });
     });
   </script>
+
   <!-- 公共函数 -->
   <script src="common.js"></script>
   <!-- 滚动到顶部 -->

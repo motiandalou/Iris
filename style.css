@@ -260,7 +260,7 @@ body.no-scroll {
   flex-direction: column;
   gap: 16px;
   right: 30px;
-  top: 20%;
+  top: 25%;
 }
 
 .hero__socials a {
@@ -693,7 +693,7 @@ body.no-scroll {
   position: absolute;
   top: 5px;
   right: 16px;
-  font-size: 28px;
+  font-size: 30px;
 }
 
 #modal-body {
@@ -963,7 +963,7 @@ body.no-scroll {
   }
 
   .hero__socials {
-    top: 6%;
+    top: 26%;
   }
 
   .skills {
