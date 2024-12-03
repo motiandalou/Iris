@@ -31,6 +31,11 @@ body.no-scroll {
   overflow: hidden;
 }
 
+/* 滚动过渡动画 */
+html {
+  scroll-behavior: smooth;
+}
+
 .cursor {
   cursor: pointer;
 }
@@ -277,13 +282,22 @@ body.no-scroll {
 }
 
 #scrollToTopBtn {
-  display: none;
+  width: 60px;
+  height: 60px;
   position: fixed;
   z-index: 99;
   left: calc(100vw - 84px);
   bottom: 2%;
-  font-size: 50px;
-  color: #000;
+  font-size: 35px;
+  color: #fff;
+  background-color: #000;
+  border-radius: 8px;
+  &::before {
+    display: flex;
+    justify-self: center;
+    text-align: center;
+    line-height: 60px;
+  }
 }
 
 .skills {
@@ -636,26 +650,27 @@ body.no-scroll {
   transition: bottom 0.5s ease, border-radius 0.5s ease; /* 平滑过渡效果 */
   overflow: auto; /* 如果内容过多，允许滚动 */
   z-index: 99;
+  .slidePage-header {
+    padding: 30px 60px;
+    font-weight: 300;
+  }
+  .slidePage-title {
+    text-transform: uppercase;
+    font-size: clamp(42px, -6.5915492958px + 9.7183098592vw, 180px);
+    line-height: 100%;
+    text-align: center;
+    margin-bottom: clamp(40px, 5vw, 96px);
+  }
+  .slidePage-little-title{
+    width: 100%;
+    text-align: center;
+    font-size: clamp(18px, 15.8873239437px + 0.4225352113vw, 24px);
+  }
 }
 
 /* 当页面显示时 */
 .show {
   bottom: 0; /* 移动到屏幕底部 */
-}
-
-.close-btn {
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  line-height: 40px;
-  font-size: 20px;
-  position: absolute;
-  top: 9%;
-  right: 5%;
-  &:hover {
-    border-radius: 50%;
-    background-color: whitesmoke;
-  }
 }
 
 /* 蒙层样式 */
