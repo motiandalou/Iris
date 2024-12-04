@@ -13,6 +13,11 @@
   font-family: "Ubuntu", sans-serif;
 }
 
+/* 滚动过渡动画 */
+html {
+  scroll-behavior: smooth;
+}
+
 .ellipsis {
   white-space: nowrap;
   overflow: hidden;
@@ -30,6 +35,7 @@ img {
 
 body {
   background: #fff;
+  font-size: 14px;
 }
 
 /* 禁止滚动 */
@@ -37,21 +43,16 @@ body.no-scroll {
   overflow: hidden;
 }
 
-/* 滚动过渡动画 */
-html {
-  scroll-behavior: smooth;
-}
-
 .cursor {
   cursor: pointer;
 }
 
 .btn {
-  border: 2px solid #000;
+  border: 0.0078rem solid #000;
   background: #000;
   color: #fff;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 0.0586rem;
   transition: all 0.5s ease;
 }
 
@@ -64,7 +65,7 @@ html {
 .btn--secondary {
   color: #000;
   background: #fff;
-  border: 2px solid #e5e7eb;
+  border: 0.0078rem solid #e5e7eb;
 }
 
 .btn--secondary:hover,
@@ -79,12 +80,13 @@ html {
   position: fixed; /* 初始定位 */
   z-index: 999;
   width: 100%;
-  padding: 20px 60px;
+  padding: 0.1172rem 0.3906rem;
   background: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
   transition: background-color 0.5s ease; /* 平滑过渡效果 */
+  height: 0.3906rem;
 }
 
 #footer-quickLink {
@@ -95,28 +97,28 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  bottom: 30px;
+  bottom: 0.1563rem;
   box-sizing: border-box;
 
   .footer__menu {
     background-color: #4d4d4d;
-    width: 626px;
-    height: 60px;
-    border-radius: 12px;
+    width: 3.4375rem;
+    height: 0.3906rem;
+    border-radius: 0.0781rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 8px;
+    padding: 0 0.0469rem;
 
     a {
-      height: 48px;
+      height: 0.2734rem;
       display: inline-flex;
+      box-sizing: border-box;
       align-items: center;
-      height: 48px;
-      margin:0 6px;
-      padding: 0 10px;
-      border: 1px solid #4e4e4e;
-      border-radius: 8px;
+      margin: 0 0.0391rem;
+      padding: 0 0.0703rem;
+      border: 0.0078rem solid #4e4e4e;
+      border-radius: 0.0313rem;
       color: #dedede;
       &:hover {
         border-color: #a7a7a7;
@@ -131,17 +133,21 @@ html {
     .courses {
       display: flex;
       align-items: center;
-      height: 48px;
-      border-radius: 8px;
-      background-color: #3E3E3E;
+      justify-content: space-between;
+      height: 0.2734rem;
+      border-radius: 0.0313rem;
+      background-color: #3e3e3e;
       a {
-        height: 36px;
+        height: 0.1563rem;
+        font-size: 0.0781rem;
+        text-align: center;
       }
     }
     .home {
       background-color: #e9e9e9;
       color: #000;
       font-weight: bold;
+      font-size: 0.0781rem;
     }
   }
 }
@@ -158,9 +164,9 @@ html {
   .btn {
     background-color: #fff;
     color: #000;
-    border: 2px solid #fff;
+    border: 0.0078rem solid #fff;
     &:hover {
-      border: 2px solid #000;
+      border: 0.0078rem solid #000;
     }
   }
 }
@@ -172,12 +178,12 @@ html {
 }
 
 .navbar__logo i {
-  font-size: 30px;
+  font-size: 0.1563rem;
 }
 
 .navbar__menu .navbar__link {
   position: relative;
-  font-size: 14px;
+  font-size: 0.0898rem;
   font-weight: 500;
 }
 .navbar__menu .navbar__link::after {
@@ -185,12 +191,12 @@ html {
   display: block;
   position: absolute;
   left: 0;
-  bottom: -4px;
+  bottom: -0.0156rem;
   width: 0;
-  height: 1.5px;
+  height: 0.0117rem;
   background-color: #000;
   transition: all 0.3s ease;
-  border-radius: 4px;
+  border-radius: 0.0156rem;
 }
 
 /* 黑色弹窗出现的时候 */
@@ -204,7 +210,7 @@ html {
 
 .navbar__menu {
   display: flex;
-  gap: 20px;
+  gap: 0.1172rem;
 }
 
 .footer__links a:hover {
@@ -214,23 +220,23 @@ html {
 .navbar__actions {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 0.0781rem;
 }
 
 .navbar__location h5 {
   font-weight: 500;
   color: #6b7280;
-  font-size: 12px;
+  font-size: 0.0703rem;
 }
 
 .navbar__location p {
-  font-size: 11px;
+  font-size: 0.0625rem;
   font-weight: 600;
 }
 
 .navbar__actions .btn {
-  padding: 6px 10px;
-  font-size: 12px;
+  padding: 0.0234rem 0.0391rem;
+  font-size: 0.0469rem;
   font-weight: 500;
 }
 
@@ -239,9 +245,9 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 100px 60px;
-  gap: 60px;
-  height: calc(100vh - 75px);
+  padding: 0.1172rem 0.3906rem;
+  gap: 0.2344rem;
+  height: calc(100vh - 0.0625rem);
 }
 
 .hero__content,
@@ -258,7 +264,7 @@ html {
 .typing::after {
   content: "|";
   display: inline-block;
-  margin-left: 5px;
+  margin-left: 0.0195rem;
   opacity: 1;
   animation: blink-caret 0.75s step-end infinite;
 }
@@ -275,53 +281,54 @@ html {
 }
 
 .hero__image {
-  width: 340px;
-  height: 340px;
-  border-radius: 10px;
+  width: 1.9531rem;
+  height: 1.9531rem;
+  border-radius: 0.0391rem;
 }
 
 .hero__content h2 {
-  font-size: 48px;
-  line-height: 60px;
+  font-size: 0.2734rem;
+  line-height: 0.2344rem;
   font-weight: 400;
-  margin-top: 20px;
+  margin-top: 0.1953rem;
   width: 85%;
   &::after {
     content: "__";
     display: inline-block;
-    margin-left: 5px;
+    margin-left: 0.0195rem;
     opacity: 1;
     animation: blink-caret 0.75s step-end infinite;
   }
 }
 
 .hero__intro {
-  padding-right: 40px;
+  padding-right: 0.1563rem;
+  font-size: 0.0977rem;
 }
 
 .hero__intro h3 {
   font-weight: 500;
-  font-size: 40px;
-  line-height: 50px;
-  margin-bottom: 10px;
+  font-size: 0.2344rem;
+  line-height: 0.3125rem;
+  margin-bottom: 0.0391rem;
 }
 
 .hero__intro p {
   color: #6b7280;
   font-weight: 500;
-  margin-bottom: 30px;
+  margin-bottom: 0.1172rem;
 }
 
 .hero__actions,
 .skills__actions {
   display: flex;
-  gap: 10px;
+  gap: 0.0391rem;
 }
 
 .hero__actions .btn,
 .skills__actions .btn {
-  padding: 6px 20px;
-  font-size: 12px;
+  padding: 0.0391rem 0.0781rem;
+  font-size: 0.0781rem;
   font-weight: 500;
 }
 
@@ -329,8 +336,8 @@ html {
   position: absolute;
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  right: 30px;
+  gap: 0.0977rem;
+  right: 0.1758rem;
   top: 25%;
 }
 
@@ -338,9 +345,9 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
-  border: 2px solid #e5e7eb;
-  padding: 8px;
+  font-size: 0.1172rem;
+  border: 0.0117rem solid #e5e7eb;
+  padding: 0.0469rem;
   border-radius: 50%;
   transition: all 0.5s ease;
   position: relative;
@@ -348,25 +355,25 @@ html {
 
 #scrollToTopBtn {
   display: none;
-  width: 60px;
-  height: 60px;
+  width: 0.3516rem;
+  height: 0.3516rem;
   position: fixed;
   z-index: 99;
-  right: calc(100vw - 84px);
-  bottom: 2%;
-  font-size: 35px;
+  right: calc(100vw - 0.5078rem);
+  bottom: 0.0977rem;
+  font-size: 0.1953rem;
   color: #dedede;
   background-color: #000;
-  border-radius: 8px;
+  border-radius: 0.0391rem;
   text-align: center;
-  line-height: 60px;
+  line-height: 0.3516rem;
 }
 
 .skills {
-  padding: 60px;
+  padding: 0.2539rem 0.3906rem;
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 0.1563rem;
 }
 
 .skills__desc,
@@ -375,19 +382,19 @@ html {
 }
 
 .skills__desc {
-  padding-right: 80px;
+  padding-right: 0.4297rem;
 }
 
 .skills__desc h3 {
-  font-size: 30px;
+  font-size: 0.1758rem;
   font-weight: 400;
-  margin-bottom: 10px;
+  margin-bottom: 0.0391rem;
 }
 
 .skills__desc p {
   color: #6b7280;
-  font-size: 14px;
-  margin-bottom: 30px;
+  font-size: 0.0781rem;
+  margin-bottom: 0.1172rem;
 }
 
 .skills__stats {
@@ -396,11 +403,11 @@ html {
 }
 
 .skills__stats i {
-  font-size: 60px;
+  font-size: 0.2344rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px 0;
+  padding: 0.0781rem 0;
 }
 
 .skill__info {
@@ -409,26 +416,26 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 0.1953rem;
 }
 
 .skill__info h5 {
   text-align: center;
-  font-size: 24px;
+  font-size: 0.1563rem;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 0.0391rem;
 }
 
 .skill__info p {
   width: 50%;
   text-align: center;
-  font-size: 14px;
+  font-size: 0.0781rem;
   color: #7a7a7a;
   font-weight: 500;
 }
 
 .showcase {
-  padding: 80px 60px 100px;
+  padding: 0.4688rem 0.3906rem 0.4297rem;
   background: #e5e7eb;
 }
 
@@ -436,24 +443,24 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 36px;
+  margin-bottom: 0.1406rem;
 }
 
 .showcase__header h3 {
-  font-size: 28px;
+  font-size: 0.1563rem;
   font-weight: 400;
 }
 
 .showcase__header .btn {
-  font-size: 13px;
-  padding: 5px 16px;
+  font-size: 0.0781rem;
+  padding: 0.0195rem 0.0625rem;
   color: #fff;
   background: #000;
   border-color: #000;
 }
 
 .showcase_categories .category:not(:last-child) {
-  margin-bottom: 100px;
+  margin-bottom: 0.3906rem;
 }
 
 .category__header {
@@ -469,11 +476,11 @@ html {
 }
 
 .category__title {
-  gap: 12px;
+  gap: 0.0469rem;
 }
 
 .category__title h4 {
-  font-size: 22px;
+  font-size: 0.1367rem;
   font-weight: 400;
 }
 
@@ -482,72 +489,73 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
+  padding: 0.0625rem;
   border-radius: 50%;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  font-size: 0.0977rem;
+  box-shadow: 0 0.0391rem 0.1172rem rgba(0, 0, 0, 0.1);
 }
 
 .category__desc {
-  gap: 40px;
+  gap: 0.1563rem;
   justify-content: space-between;
 }
 
 .category__desc p {
-  font-size: 13px;
+  font-size: 0.0703rem;
   color: #6b7280;
   font-weight: 500;
 }
 
 .category__desc a {
-  font-size: 22px;
+  font-size: 0.0859rem;
 }
 
 .category__projects {
-  margin-top: 40px;
+  margin-top: 0.1563rem;
   display: flex;
-  gap: 20px;
+  gap: 0.0781rem;
 }
 
 .project-card {
   position: relative;
   width: 25%;
-  height: 420px;
-  padding: 20px;
+  height: 2.4219rem;
+  padding: 0.0781rem;
   background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 0.0391rem;
+  box-shadow: 0 0.0391rem 0.1172rem rgba(0, 0, 0, 0.1);
 }
 
 .project-card__image {
   width: 100%;
-  height: 200px;
-  border-radius: 10px;
+  height: 1.25rem;
+  border-radius: 0.0391rem;
   object-position: top center;
   border: 1px solid #e5e7eb;
-  margin-bottom: 20px;
+  margin-bottom: 0.0781rem;
 }
 
 .project-card__info {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 6px;
-  margin-bottom: 8px;
+  gap: 0.0234rem;
+  margin-bottom: 0.0313rem;
 }
 
 .project-card__info h5 {
-  font-size: 17px;
+  font-size: 0.0977rem;
   font-weight: 500;
 }
 
 .project-card__info p {
-  font-size: 12px;
+  font-size: 0.0703rem;
   color: #6b7280;
   font-weight: 500;
 }
 
 .project-card__desc {
-  font-size: 13px;
+  font-size: 0.0781rem;
   color: #7a7a7a;
   margin-bottom: 30px;
 
@@ -562,11 +570,12 @@ html {
   position: absolute;
   bottom: 0;
   right: 0;
-  padding: 8px 20px;
-  border-radius: 16px 0 10px 0;
+  padding: 0.0313rem 0.0781rem;
+  border-radius: 0.0625rem 0 0.0391rem 0;
   border: none;
   color: #fff;
   background: #000;
+  font-size: 0.0781rem;
 }
 
 .project-card .btn:hover {
@@ -574,10 +583,10 @@ html {
 }
 
 .career {
-  padding: 60px 60px 80px;
+  padding: 0.2734rem 0.3906rem 0.3516rem;
   display: flex;
   align-items: center;
-  gap: 100px;
+  gap: 0.3906rem;
 }
 
 .career__jobs,
@@ -585,32 +594,32 @@ html {
   width: 50%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 0.0781rem;
 }
 
 .career h3 {
-  font-size: 32px;
+  font-size: 50px;
   font-weight: 400;
-  margin-bottom: 20px;
+  margin-bottom: 0.0781rem;
 }
 
 .job,
 .award {
   display: flex;
   align-items: center;
-  gap: 20px;
-  padding-bottom: 20px;
-  border-bottom: 2px solid #e5e7eb;
+  gap: 0.1172rem;
+  padding-bottom: 0.0781rem;
+  border-bottom: 0.0078rem solid #e5e7eb;
 }
 
 .job i,
 .award div i {
-  font-size: 20px;
-  padding: 10px;
+  font-size: 0.1367rem;
+  padding: 0.0391rem;
   background: #fff;
-  border-radius: 10px;
+  border-radius: 0.0586rem;
   font-weight: bold;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.0391rem 0.1172rem rgba(0, 0, 0, 0.1);
 }
 
 .award {
@@ -620,12 +629,12 @@ html {
 .award > div {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 0.0781rem;
 }
 
 .job__info h5,
 .award__info h5 {
-  font-size: 15px;
+  font-size: 0.0977rem;
   font-weight: 500;
 }
 
@@ -636,54 +645,55 @@ html {
 
 .job__info p,
 .award__info p {
-  font-size: 13px;
+  font-size: .0703rem;
   color: #6b7280;
   font-weight: 500;
 }
 
 .award a i {
-  font-size: 24px;
+  font-size: 0.1367rem;
 }
 
 .contact {
   text-align: center;
-  padding: 60px;
+  padding: 0.3516rem;
 }
 
 .contact h5 {
-  font-size: 16px;
+  font-size: 0.0977rem;
   font-weight: 500;
-  margin-bottom: 12px;
+  margin-bottom: 0.0703rem;
 }
 
 .contact h2 {
-  font-size: 36px;
+  font-size: 0.1953rem;
   font-weight: 500;
-  margin-bottom: 20px;
+  margin-bottom: 0.1172rem;
 }
 
 .contact .btn {
-  padding: 6px 20px;
-  border: 2px solid #000;
+  padding: 0.0234rem 0.0781rem;
+  border: 0.0078rem solid #000;
   color: #fff;
   background: #000;
-  margin-bottom: 14px;
+  margin-bottom: 0.0703rem;
+  font-size: 0.0781rem;
 }
 
 .contact p {
   color: #6b7280;
-  font-size: 14px;
+  font-size: 0.0938rem;
   font-weight: 500;
 }
 
 .contact p span {
   color: #000;
   font-weight: 600;
-  font-size: 13px;
+  font-size: 0.0703rem;
 }
 
 .footer {
-  padding: 20px 60px;
+  padding: 0.0781rem 0.2344rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -692,23 +702,23 @@ html {
 .footer__brand {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 0.1172rem;
 }
 
 .footer__brand a {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 0.0703rem;
 }
 
 .footer__brand p {
-  font-size: 13px;
+  font-size: 0.0508rem;
   color: #6b7280;
   font-weight: 500;
 }
 
 /* page-workWithMe */
 .slide-page {
-  padding-top: 73px;
+  padding-top: 0.2852rem;
   position: fixed;
   bottom: -100%; /* 初始位置在屏幕外 */
   left: 0;
@@ -724,21 +734,21 @@ html {
   }
   .slidePage-title {
     text-transform: uppercase;
-    font-size: clamp(42px, -6.5915492958px + 9.7183098592vw, 180px);
+    font-size: clamp(0.1641rem, -6.5915492958px + 9.7183098592vw, 0.7031rem);
     line-height: 100%;
     text-align: center;
-    margin-top: 30px;
-    margin-bottom: clamp(40px, 5vw, 96px);
+    margin-top: 0.1172rem;
+    margin-bottom: clamp(0.1563rem, 5vw, 0.375rem);
   }
   .slidePage-little-title {
     width: 100%;
     text-align: center;
-    font-size: clamp(18px, 15.8873239437px + 0.4225352113vw, 24px);
+    font-size: clamp(0.0703rem, 0.0621rem + 0.4225352113vw, 0.0938rem);
   }
   .slidePage-showImg {
     padding: 8% 10%;
     img {
-      border-radius: 20px;
+      border-radius: 0.0781rem;
       width: 100%;
       height: auto;
     }
@@ -747,7 +757,7 @@ html {
     width: 100%;
     padding: 6% 10%;
     font-weight: bold;
-    font-size: clamp(22px, 12.8450704225px + 1.8309859155vw, 48px);
+    font-size: clamp(0.0859rem, 0.0502rem + 1.8309859155vw, 0.1875rem);
   }
 }
 
@@ -790,9 +800,9 @@ html {
 #modal-close {
   cursor: pointer;
   position: absolute;
-  top: 5px;
-  right: 16px;
-  font-size: 30px;
+  top: 0.0195rem;
+  right: 0.0625rem;
+  font-size: 0.1172rem;
 }
 
 #modal-body {
@@ -807,7 +817,7 @@ html {
 /* Tab Container */
 .tab-container {
   width: 100%;
-  max-width: 600px;
+  max-width: 2.3438rem;
   margin: 0 auto;
 }
 
@@ -815,11 +825,11 @@ html {
 .tab-header {
   display: flex;
   background: #f1f1f1;
-  padding: 10px;
+  padding: 0.0391rem;
 }
 
 .tab-title {
-  padding: 10px 20px;
+  padding: 0.0391rem 0.0781rem;
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -836,7 +846,7 @@ html {
 /* Tab Content */
 .tab-content {
   display: none;
-  padding: 20px;
+  padding: 0.0781rem;
   border: 1px solid #ddd;
 }
 
@@ -847,9 +857,9 @@ html {
 /* Hello */
 .Hello {
   position: absolute;
-  top: 10px;
-  left: 20px;
-  font-size: 24px;
+  top: 0.0391rem;
+  left: 0.0781rem;
+  font-size: 0.0938rem;
 }
 
 /* 弹窗--微信 */
@@ -858,17 +868,17 @@ html {
   width: 30%;
   height: 20%;
   /* 兼容手机端 */
-  min-width: 323px;
-  min-height: 392px;
+  min-width: 1.2617rem;
+  min-height: 1.5313rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: space-between;
 
   background: #fff;
-  padding: 30px;
-  border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 0.1172rem;
+  border-radius: 0.0195rem;
+  box-shadow: 0 0.0156rem 0.0234rem rgba(0, 0, 0, 0.1);
 
   img {
     width: 100%;
@@ -887,10 +897,10 @@ html {
   #openModalButton1::after {
     content: "";
     position: absolute;
-    width: 100px; /* 根据实际图片大小调整 */
-    height: 100px; /* 根据实际图片大小调整 */
-    top: -80%;
-    left: -315%;
+    width: .625rem;
+    height: .625rem;
+    top: -92%;
+    left: -350%;
 
     background-image: url("https://cdn.jsdelivr.net/gh/motiandalou/Iris/connect-wx.jpg");
     background-size: cover;
@@ -907,10 +917,10 @@ html {
   #openModalButton2::after {
     content: "";
     position: absolute;
-    width: 100px; /* 根据实际图片大小调整 */
-    height: 100px; /* 根据实际图片大小调整 */
-    top: -80%;
-    left: -315%;
+    width: .625rem;
+    height: .625rem;
+    top: -92%;
+    left: -350%;
 
     background-image: url("https://cdn.jsdelivr.net/gh/motiandalou/Iris/connect-wx.jpg");
     background-size: cover;
@@ -927,10 +937,10 @@ html {
   #openModalButton3::after {
     content: "";
     position: absolute;
-    width: 100px; /* 根据实际图片大小调整 */
-    height: 100px; /* 根据实际图片大小调整 */
-    top: -80%;
-    left: -315%;
+    width: .625rem;
+    height: .625rem;
+    top: -92%;
+    left: -350%;
 
     background-image: url("https://cdn.jsdelivr.net/gh/motiandalou/Iris/connect-wx.jpg");
     background-size: cover;
@@ -947,10 +957,10 @@ html {
   #openModalButton4::after {
     content: "";
     position: absolute;
-    width: 100px; /* 根据实际图片大小调整 */
-    height: 100px; /* 根据实际图片大小调整 */
-    top: -80%;
-    left: -315%;
+    width: .625rem;
+    height: .625rem;
+    top: -92%;
+    left: -350%;
 
     background-image: url("https://cdn.jsdelivr.net/gh/motiandalou/Iris/connect-wx.jpg");
     background-size: cover;
@@ -967,10 +977,10 @@ html {
   #openModalButton5::after {
     content: "";
     position: absolute;
-    width: 100px; /* 根据实际图片大小调整 */
-    height: 100px; /* 根据实际图片大小调整 */
-    top: -80%;
-    left: -315%;
+    width: .625rem;
+    height: .625rem;
+    top: -92%;
+    left: -350%;
 
     background-image: url("https://cdn.jsdelivr.net/gh/motiandalou/Iris/connect-wx.jpg");
     background-size: cover;
@@ -985,216 +995,4 @@ html {
   }
 
   /* 尾--二维码 */
-}
-
-@media screen and (max-width: 1230px) {
-  .hero__image {
-    width: 100%;
-  }
-
-  .hero__content h2 {
-    font-size: 38px;
-    text-align: center;
-  }
-
-  .hero__intro h3 {
-    font-size: 30px;
-  }
-
-  .hero__intro p {
-    font-size: 15px;
-  }
-
-  .skills__desc {
-    padding-right: 20px;
-  }
-
-  .skills__desc h3 {
-    font-size: 26px;
-  }
-
-  .skills__stats i {
-    font-size: 50px;
-  }
-
-  .skill__info h5 {
-    font-size: 20px;
-  }
-
-  .skill__info p {
-    font-size: 12px;
-    width: 100%;
-  }
-
-  .category__title {
-    width: 40%;
-  }
-
-  .category__desc {
-    width: 60%;
-  }
-
-  .category__projects {
-    flex-wrap: wrap;
-  }
-
-  .project-card {
-    width: 48%;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .navbar {
-    padding: 20px 30px;
-  }
-
-  .hero {
-    padding: 100px 30px 40px;
-  }
-
-  .hero__intro h3 {
-    font-size: 22px;
-    line-height: 34px;
-  }
-
-  .hero__intro p {
-    font-size: 13px;
-  }
-
-  .hero__socials {
-    top: 26%;
-  }
-
-  .skills {
-    flex-direction: column;
-    padding: 60px 30px 80px;
-  }
-
-  .skills__desc,
-  .skills__stats,
-  .category__title,
-  .category__desc,
-  .career__jobs,
-  .career__awards {
-    width: 100%;
-  }
-
-  .skills__desc {
-    padding-right: 0;
-  }
-
-  .showcase {
-    padding: 80px 30px 100px;
-  }
-
-  .category__header {
-    flex-direction: column;
-  }
-
-  .category__title {
-    margin-bottom: 20px;
-  }
-
-  .career {
-    padding: 60px 30px 80px;
-    flex-direction: column;
-    gap: 60px;
-  }
-
-  .footer {
-    padding: 20px 30px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  #navbar {
-    padding: 20px 33px;
-  }
-
-  .navbar__actions {
-    display: none;
-  }
-
-  .hero {
-    flex-direction: column;
-    height: auto;
-    padding-top: 83px;
-    gap: 30px;
-  }
-
-  .skills__stats {
-    overflow: auto;
-  }
-
-  .hero__content,
-  .hero__intro {
-    width: 100%;
-  }
-
-  .hero__intro {
-    padding: 0 20px;
-    text-align: center;
-  }
-
-  .hero__actions {
-    display: block;
-  }
-
-  .skills__desc {
-    text-align: center;
-  }
-
-  .skills__actions {
-    display: block;
-  }
-
-  .hero__content h2 {
-    width: 100%;
-    font-size: 30px;
-  }
-
-  .hero__socials {
-    position: relative;
-    flex-direction: row;
-    right: auto;
-    margin-top: 10px;
-  }
-
-  .showcase__header h3 {
-    font-size: 24px;
-  }
-
-  .category__title h4 {
-    font-size: 20px;
-  }
-
-  .project-card {
-    width: 100%;
-    height: 500px;
-  }
-
-  .project-card__image {
-    height: 300px;
-  }
-
-  .project-card__desc {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 6; /* 定义文本的行数 */
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  .career h3 {
-    font-size: 26px;
-  }
-
-  .footer {
-    flex-direction: column-reverse;
-    gap: 16px;
-  }
-
-  #footer-quickLink {
-    display: none;
-  }
 }
