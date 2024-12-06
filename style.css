@@ -36,6 +36,15 @@ img {
 body {
   background: #fff;
   font-size: 14px;
+
+  /* 禁止选中事件 */
+  -webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
 }
 
 /* 禁止滚动 */
@@ -66,6 +75,11 @@ body.no-scroll {
   color: #000;
   background: #fff;
   border: 0.0078rem solid #e5e7eb;
+  &:hover a {
+    border-color: #000;
+    color: #fff;
+    cursor: pointer;
+  }
 }
 
 .btn--secondary:hover,
@@ -178,7 +192,7 @@ body.no-scroll {
 }
 
 .navbar__logo i {
-  font-size: 0.1563rem;
+  font-size: 0.1963rem;
 }
 
 .navbar__menu .navbar__link {
@@ -226,11 +240,11 @@ body.no-scroll {
 .navbar__location h5 {
   font-weight: 500;
   color: #6b7280;
-  font-size: 0.0703rem;
+  font-size: 0.0781rem;
 }
 
 .navbar__location p {
-  font-size: 0.0625rem;
+  font-size: 0.0703rem;
   font-weight: 600;
 }
 
@@ -247,7 +261,7 @@ body.no-scroll {
   justify-content: space-between;
   padding: 0.1172rem 0.3906rem;
   gap: 0.2344rem;
-  height: calc(100vh - .4531rem);
+  height: calc(100vh - 0.4531rem);
 }
 
 .hero__content,
@@ -531,7 +545,7 @@ body.no-scroll {
   height: 1.25rem;
   border-radius: 0.0391rem;
   object-position: top center;
-  border: 1px solid #e5e7eb;
+  border: .0039rem solid #e5e7eb;
   margin-bottom: 0.0781rem;
 }
 
@@ -557,7 +571,7 @@ body.no-scroll {
 .project-card__desc {
   font-size: 0.0781rem;
   color: #7a7a7a;
-  margin-bottom: 30px;
+  margin-bottom: .1172rem;
 
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -598,7 +612,7 @@ body.no-scroll {
 }
 
 .career h3 {
-  font-size: 50px;
+  font-size: .1953rem;
   font-weight: 400;
   margin-bottom: 0.0781rem;
 }
@@ -645,7 +659,7 @@ body.no-scroll {
 
 .job__info p,
 .award__info p {
-  font-size: .0703rem;
+  font-size: 0.0703rem;
   color: #6b7280;
   font-weight: 500;
 }
@@ -673,11 +687,14 @@ body.no-scroll {
 
 .contact .btn {
   padding: 0.0234rem 0.0781rem;
-  border: 0.0078rem solid #000;
-  color: #fff;
-  background: #000;
   margin-bottom: 0.0703rem;
   font-size: 0.0781rem;
+  a {
+    color: #fff;
+  }
+  &:hover a {
+    color: #000;
+  }
 }
 
 .contact p {
@@ -729,12 +746,12 @@ body.no-scroll {
   overflow: auto; /* 如果内容过多，允许滚动 */
   z-index: 99;
   .slidePage-header {
-    padding: 5% 9%;
+    padding: 2% 4%;
     font-weight: 300;
   }
   .slidePage-title {
     text-transform: uppercase;
-    font-size: clamp(0.1641rem, -6.5915492958px + 9.7183098592vw, 0.7031rem);
+    font-size: clamp(0.1641rem, -0.0257rem + 9.7183098592vw, 0.7031rem);
     line-height: 100%;
     text-align: center;
     margin-top: 0.1172rem;
@@ -847,7 +864,7 @@ body.no-scroll {
 .tab-content {
   display: none;
   padding: 0.0781rem;
-  border: 1px solid #ddd;
+  border: .0039rem solid #ddd;
 }
 
 .tab.active {
@@ -887,22 +904,115 @@ body.no-scroll {
   }
 }
 
+/* 详情页面--雅思 / 托福 / 出国留学 / 幼初高英语辅导 */
+.slider {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* 外边距全设置为 auto ，元素就这么神奇的居中定位了 */
+  margin: auto;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background-color: #999999;
+  overflow: auto;
+  padding-top: .1172rem;
+  .ri-close-large-line {
+    position: fixed;
+    top: 2%;
+    left: 1%;
+    font-size: .0977rem;
+    color: rgba(255, 255, 255, 0.8);
+    &:hover {
+      color: #fff;
+    }
+  }
+  .ri-arrow-left {
+    position: fixed;
+    top: 47%;
+    left: 3%;
+    font-size: .1641rem;
+    color: #AAAAAA;
+    &:hover {
+      color: #fff;
+    }
+  }
+  .ri-arrow-right {
+    position: fixed;
+    top: 47%;
+    left: 96%;
+    font-size: .1641rem;
+    color: #AAAAAA;
+    &:hover {
+      color: #fff;
+    }
+  }
+  .detail {
+    position: fixed;
+    z-index: 1;
+    top: .1172rem;
+    left: 7%;
+    width: 86%;
+    min-height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .2344rem;
+    border-top-left-radius: .0391rem;
+    border-top-right-radius: .0391rem;
+    background-color: #fff;
+
+    .card__image {
+      width: 3.125rem;
+      height: 3.125rem;
+    }
+    .card__content {
+      display: flex;
+      flex-direction: column;
+      height: 2.3438rem;
+      text-align: right;
+      font-size: .1953rem;
+
+      .card__desc {
+        width: 3.125rem;
+        margin-top: .3125rem;
+        text-align: right;
+        font-size: .1172rem;
+        line-height: 1.5;
+      }
+    }
+  }
+
+  /* 显示的页面 */
+  .fixed-page{
+    position: fixed;
+    top: .1172rem;
+    left: 7%;
+    z-index: -1;
+  }
+  
+}
+
 @media screen and (min-width: 1230px) {
   /* 顶部导航栏你阴影 */
   #navbar {
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 .0078rem .0156rem 0 rgba(0, 0, 0, 0.08);
   }
 
   /* 头--二维码 */
   #openModalButton1::after {
     content: "";
     position: absolute;
-    width: .625rem;
-    height: .625rem;
+    width: 0.625rem;
+    height: 0.625rem;
     top: -92%;
     left: -350%;
 
-    background-image: url("https://cdn.jsdelivr.net/gh/motiandalou/Iris/connect-wx.jpg");
+    background-image: url("https://s3.bmp.ovh/imgs/2024/12/06/8d099b2fb4ac5dbd.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0;
@@ -917,12 +1027,12 @@ body.no-scroll {
   #openModalButton2::after {
     content: "";
     position: absolute;
-    width: .625rem;
-    height: .625rem;
+    width: 0.625rem;
+    height: 0.625rem;
     top: -92%;
     left: -350%;
 
-    background-image: url("https://cdn.jsdelivr.net/gh/motiandalou/Iris/connect-wx.jpg");
+    background-image: url("https://s3.bmp.ovh/imgs/2024/12/06/8d099b2fb4ac5dbd.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0;
@@ -937,12 +1047,12 @@ body.no-scroll {
   #openModalButton3::after {
     content: "";
     position: absolute;
-    width: .625rem;
-    height: .625rem;
+    width: 0.625rem;
+    height: 0.625rem;
     top: -92%;
     left: -350%;
 
-    background-image: url("https://cdn.jsdelivr.net/gh/motiandalou/Iris/connect-wx.jpg");
+    background-image: url("https://s3.bmp.ovh/imgs/2024/12/06/8d099b2fb4ac5dbd.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0;
@@ -957,12 +1067,12 @@ body.no-scroll {
   #openModalButton4::after {
     content: "";
     position: absolute;
-    width: .625rem;
-    height: .625rem;
+    width: 0.625rem;
+    height: 0.625rem;
     top: -92%;
     left: -350%;
 
-    background-image: url("https://cdn.jsdelivr.net/gh/motiandalou/Iris/connect-wx.jpg");
+    background-image: url("https://s3.bmp.ovh/imgs/2024/12/06/8d099b2fb4ac5dbd.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0;
@@ -977,12 +1087,12 @@ body.no-scroll {
   #openModalButton5::after {
     content: "";
     position: absolute;
-    width: .625rem;
-    height: .625rem;
+    width: 0.625rem;
+    height: 0.625rem;
     top: -92%;
     left: -350%;
 
-    background-image: url("https://cdn.jsdelivr.net/gh/motiandalou/Iris/connect-wx.jpg");
+    background-image: url("https://s3.bmp.ovh/imgs/2024/12/06/8d099b2fb4ac5dbd.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0;
