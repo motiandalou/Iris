@@ -312,8 +312,7 @@ html {
   margin-bottom: 30px;
 }
 
-.hero__actions,
-.skills__actions {
+.hero__actions {
   display: flex;
   gap: 10px;
 }
@@ -668,6 +667,11 @@ html {
   color: #fff;
   background: #000;
   margin-bottom: 14px;
+
+  a {
+    color: #fff;
+  }
+  
 }
 
 .contact p {

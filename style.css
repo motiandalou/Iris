@@ -333,14 +333,13 @@ body.no-scroll {
   margin-bottom: 0.1172rem;
 }
 
-.hero__actions,
-.skills__actions {
+.hero__actions
+ {
   display: flex;
   gap: 0.0391rem;
 }
 
-.hero__actions .btn,
-.skills__actions .btn {
+.hero__actions .btn {
   padding: 0.0391rem 0.0781rem;
   font-size: 0.0781rem;
   font-weight: 500;
