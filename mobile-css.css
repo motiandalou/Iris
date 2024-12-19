@@ -205,6 +205,7 @@ html {
 .navbar__menu {
   display: flex;
   gap: 24px;
+  overflow-x: auto;
 }
 
 .footer__links a:hover {
@@ -896,7 +897,7 @@ html {
     top: -80%;
     left: -315%;
 
-    background-image: url("https://s3.bmp.ovh/imgs/2024/12/06/8d099b2fb4ac5dbd.jpg");
+    background-image: url("https://s3.bmp.ovh/imgs/2024/12/19/8d099b2fb4ac5dbd.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0;
@@ -916,7 +917,7 @@ html {
     top: -80%;
     left: -315%;
 
-    background-image: url("https://s3.bmp.ovh/imgs/2024/12/06/8d099b2fb4ac5dbd.jpg");
+    background-image: url("https://s3.bmp.ovh/imgs/2024/12/19/8d099b2fb4ac5dbd.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0;
@@ -936,7 +937,7 @@ html {
     top: -80%;
     left: -315%;
 
-    background-image: url("https://s3.bmp.ovh/imgs/2024/12/06/8d099b2fb4ac5dbd.jpg");
+    background-image: url("https://s3.bmp.ovh/imgs/2024/12/19/8d099b2fb4ac5dbd.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0;
@@ -956,7 +957,7 @@ html {
     top: -80%;
     left: -315%;
 
-    background-image: url("https://s3.bmp.ovh/imgs/2024/12/06/8d099b2fb4ac5dbd.jpg");
+    background-image: url("https://s3.bmp.ovh/imgs/2024/12/19/8d099b2fb4ac5dbd.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0;
@@ -976,7 +977,7 @@ html {
     top: -80%;
     left: -315%;
 
-    background-image: url("https://s3.bmp.ovh/imgs/2024/12/06/8d099b2fb4ac5dbd.jpg");
+    background-image: url("https://s3.bmp.ovh/imgs/2024/12/19/8d099b2fb4ac5dbd.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0;
