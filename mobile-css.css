@@ -348,18 +348,18 @@ html {
 
 #scrollToTopBtn {
   display: none;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   position: fixed;
   z-index: 99;
-  right: calc(100vw - 84px);
+  left: calc(100vw - 60px);
   bottom: 2%;
   font-size: 35px;
   color: #dedede;
-  background-color: #000;
+  background-color: #4d4d4d;
   border-radius: 8px;
   text-align: center;
-  line-height: 60px;
+  line-height: 50px;
 }
 
 .skills {

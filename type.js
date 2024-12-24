@@ -1,4 +1,4 @@
-const text = "Iris English";
+const text = "Iris Studio";
 const typingElement = document.getElementById("typing");
 let index = 0;
 
