@@ -231,29 +231,6 @@ body.no-scroll {
   color: #000;
 }
 
-.navbar__actions {
-  display: flex;
-  align-items: center;
-  gap: 0.0781rem;
-}
-
-.navbar__location h5 {
-  font-weight: 500;
-  color: #6b7280;
-  font-size: 0.0781rem;
-}
-
-.navbar__location p {
-  font-size: 0.0703rem;
-  font-weight: 600;
-}
-
-.navbar__actions .btn {
-  padding: 0.0234rem 0.0391rem;
-  font-size: 0.0469rem;
-  font-weight: 500;
-}
-
 .hero {
   position: relative;
   display: flex;

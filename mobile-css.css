@@ -212,29 +212,6 @@ html {
   color: #000;
 }
 
-.navbar__actions {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.navbar__location h5 {
-  font-weight: 500;
-  color: #6b7280;
-  font-size: 12px;
-}
-
-.navbar__location p {
-  font-size: 11px;
-  font-weight: 600;
-}
-
-.navbar__actions .btn {
-  padding: 6px 10px;
-  font-size: 12px;
-  font-weight: 500;
-}
-
 .hero {
   position: relative;
   display: flex;
@@ -1114,10 +1091,6 @@ html {
 @media screen and (max-width: 768px) {
   #navbar {
     padding: 20px 33px;
-  }
-
-  .navbar__actions {
-    display: none;
   }
 
   .hero {
