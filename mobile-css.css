@@ -204,8 +204,7 @@ html {
 
 .navbar__menu {
   display: flex;
-  gap: 24px;
-  overflow-x: auto;
+  gap: 45px;
 }
 
 .footer__links a:hover {
@@ -255,7 +254,7 @@ html {
 .hero__image {
   width: 340px;
   height: 340px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .hero__content h2 {
