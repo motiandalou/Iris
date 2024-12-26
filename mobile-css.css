@@ -113,7 +113,7 @@ html {
       display: inline-flex;
       align-items: center;
       height: 48px;
-      margin:0 6px;
+      margin: 0 6px;
       padding: 0 10px;
       border: 1px solid #4e4e4e;
       border-radius: 8px;
@@ -133,7 +133,7 @@ html {
       align-items: center;
       height: 48px;
       border-radius: 8px;
-      background-color: #3E3E3E;
+      background-color: #3e3e3e;
       a {
         height: 36px;
       }
@@ -203,8 +203,9 @@ html {
 }
 
 .navbar__menu {
+  width: 100%;
   display: flex;
-  gap: 45px;
+  justify-content: space-between;
 }
 
 .footer__links a:hover {
@@ -529,9 +530,18 @@ html {
 
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 7; /* 定义文本的行数 */
+  /* 定义文本的行数 */
+  -webkit-line-clamp: 7;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+/* 针对苹果设备的样式 */
+@supports (-webkit-touch-callout: none) {
+  .project-card__desc {
+    /* 定义文本的行数 */
+    -webkit-line-clamp: 6 !important; 
+  }
 }
 
 .project-card .btn {
@@ -648,7 +658,6 @@ html {
   a {
     color: #fff;
   }
-  
 }
 
 .contact p {
