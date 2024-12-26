@@ -901,12 +901,14 @@ html {
     background-color: #fff;
 
     .card__image {
-      width: auto;
-      height: 200px;
+      width: 300px;
+      height: 300px;
       margin-bottom: 10px;
       margin-top: 40px;
       border-radius: 5px;
+      overflow: hidden;
     }
+    
     .card__content {
       display: flex;
       flex-direction: column;
@@ -930,12 +932,15 @@ html {
     z-index: 99;
     left: 7%;
     width: 85%;
-    height: 75px;
+    height: 76px;
     position: relative;
     bottom: -83%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-color: #fff;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 
     .ri-close-large-line {
       font-size: 25px;
