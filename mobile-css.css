@@ -894,12 +894,19 @@ html {
     overflow: auto;
 
     .card__image {
+      /* 去除1像素白边 */
+      margin: 0;
+      padding: 0;
+      display: block;
+      border: none;
+      box-sizing: border-box;
+
       width: 100%;
       height: 50%;
       margin-bottom: 10px;
       /* 防止图片变形 */
       flex-shrink: 0;
-      display: block;
+      
     }
     
     .card__content {
