@@ -884,37 +884,31 @@ html {
   overflow: auto;
   padding-top: 30px;
 
-  .ri-close-large-line {
-    position: fixed;
-    z-index: 100;
-    bottom: 2%;
-    left: 45%;
-    font-size: 25px;
-    padding: 5px;
-    border: 1px solid #000;
-    border-radius: 50%;
-  }
-  .ri-arrow-left {
-    position: fixed;
-    z-index: 100;
-    bottom: 2%;
-    left: 24%;
-    font-size: 32px;
-  }
-  .ri-arrow-right {
-    position: fixed;
-    z-index: 100;
-    bottom: 2%;
-    left: 72%;
-    font-size: 32px;
-  }
-  .emptyWhite {
+  .slider-bottom{
     z-index: 99;
     left: 7%;
     width: 85%;
     height: 60px;
-    position: fixed;
-    bottom: 0px;
+    position: relative;
+    bottom: -85%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .ri-close-large-line {
+      font-size: 25px;
+      padding: 5px;
+      border: 1px solid #000;
+      border-radius: 50%; 
+    }
+    .ri-arrow-left {
+      font-size: 32px;
+    
+    }
+    .ri-arrow-right {
+      font-size: 32px;
+      
+    }
   }
   .detail {
     position: fixed;
@@ -951,7 +945,7 @@ html {
         font-size: 15px;
         line-height: 1.5;
         overflow: auto;
-        height: 360px;
+        height: 290px;
       }
     }
   }
