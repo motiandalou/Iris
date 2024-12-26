@@ -878,6 +878,7 @@ html {
   padding-bottom: 76px;
   
   .detail {
+    border: 0;
     position: fixed;
     z-index: 1;
     top: 30px;
@@ -892,6 +893,7 @@ html {
     background-color: #fff;
     border-radius: 10px;
     overflow: auto;
+    
 
     .card__image {
       /* 去除1像素白边 */
