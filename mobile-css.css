@@ -880,7 +880,6 @@ html {
   /* 外边距全设置为 auto ，元素就这么神奇的居中定位了 */
   margin: auto;
   z-index: 9999;
- 
   background-color: #999999;
   overflow: hidden;
   padding-top: 30px;
@@ -897,8 +896,8 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 15px;
     background-color: #fff;
+    border-radius: 10px;
 
     .card__image {
       width: 300px;
@@ -923,7 +922,7 @@ html {
         font-size: 15px;
         line-height: 1.5;
         overflow: auto;
-        max-height: 290px;
+        max-height: 263px;
       }
     }
   }
