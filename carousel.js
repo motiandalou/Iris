@@ -34,10 +34,4 @@ function moveSlide(n, id) {
     slides[i].style.display = "none";
   }
   slides[slideIndex - 1].style.display = "flex";
-
-  // 滚动条回到顶部
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth", // 平滑滚动
-  });
 }
