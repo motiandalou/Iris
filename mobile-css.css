@@ -536,7 +536,6 @@ html {
   text-overflow: ellipsis;
 }
 
-
 .project-card .btn {
   position: absolute;
   bottom: 0;
@@ -698,7 +697,7 @@ html {
   width: 100%;
   height: 100%;
   background-color: #fff;
-  transition: bottom 0.5s ease, border-radius 0.5s ease; /* 平滑过渡效果 */
+  transition: bottom 0.4s ease; /* 平滑过渡效果 */
   overflow: auto; /* 如果内容过多，允许滚动 */
   z-index: 99;
   .slidePage-header {
@@ -873,44 +872,37 @@ html {
   /* 外边距全设置为 auto ，元素就这么神奇的居中定位了 */
   margin: auto;
   z-index: 9999;
-  background-color: #999999;
+  background-color: #fff;
   overflow: hidden;
   padding-bottom: 76px;
-  
+
   .detail {
     border: 0;
     position: fixed;
     z-index: 1;
-    top: 30px;
-    left: 7%;
-    width: 85%;
-    height: 89%;
+    top: 5%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
     margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     overflow: auto;
-    
 
     .card__image {
-      /* 去除1像素白边 */
-      margin: 0;
-      padding: 0;
-      display: block;
-      border: none;
-      box-sizing: border-box;
-
-      width: 100%;
-      height: 50%;
+      width: 90%;
+      height: 45%;
       margin-bottom: 10px;
       /* 防止图片变形 */
       flex-shrink: 0;
-      
+      object-fit: cover;
+      border-radius: 5px;
     }
-    
+
     .card__content {
       display: flex;
       flex-direction: column;
@@ -929,38 +921,37 @@ html {
     }
   }
 
-  .slider-bottom{
+  .slider-bottom {
     z-index: 99;
-    left: 7%;
-    width: 85%;
+    left: 0%;
+    width: 100%;
     height: 76px;
     position: relative;
-    bottom: -92%;
+    bottom: -100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: #fff;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
+    /* border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px; */
 
     .ri-close-large-line {
       font-size: 25px;
       padding: 5px;
       border: 1px solid #000;
-      border-radius: 50%; 
+      border-radius: 50%;
     }
-    .ri-arrow-left,.ri-arrow-right {
+    .ri-arrow-left,
+    .ri-arrow-right {
       font-size: 32px;
-    
     }
-    
   }
 
   /* 显示的页面 */
   .fixed-page {
     position: fixed;
     top: 30px;
-    left: 7%;
+    left: 0%;
     z-index: -1;
   }
 }
