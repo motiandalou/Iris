@@ -950,7 +950,7 @@ html {
   /* 显示的页面 */
   .fixed-page {
     position: fixed;
-    top: 30px;
+    /* top: 30px; */
     left: 0%;
     z-index: -1;
   }
