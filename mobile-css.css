@@ -873,14 +873,15 @@ html {
   margin: auto;
   z-index: 9999;
   background-color: #fff;
-  overflow: hidden;
   padding-bottom: 76px;
+  
 
   .detail {
+    padding-top: 6%;
     border: 0;
     position: fixed;
     z-index: 1;
-    top: 5%;
+    top: 0%;
     left: 0%;
     width: 100%;
     height: 100%;
@@ -890,7 +891,6 @@ html {
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    /* border-radius: 10px; */
     overflow: auto;
 
     .card__image {
@@ -932,8 +932,6 @@ html {
     justify-content: space-around;
     align-items: center;
     background-color: #fff;
-    /* border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px; */
 
     .ri-close-large-line {
       font-size: 25px;
@@ -944,12 +942,19 @@ html {
     .ri-arrow-left,
     .ri-arrow-right {
       font-size: 32px;
+
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      line-height: 30px;
     }
   }
 
   /* 显示的页面 */
   .fixed-page {
     position: fixed;
+    padding-top: 6%;
     /* top: 30px; */
     left: 0%;
     z-index: -1;
