@@ -39,12 +39,11 @@ body {
 
   /* 禁止选中事件 */
   -webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 /* 禁止滚动 */
@@ -310,8 +309,7 @@ body.no-scroll {
   margin-bottom: 0.1172rem;
 }
 
-.hero__actions
- {
+.hero__actions {
   display: flex;
   gap: 0.0391rem;
 }
@@ -521,7 +519,7 @@ body.no-scroll {
   height: 1.25rem;
   border-radius: 0.0391rem;
   object-position: top center;
-  border: .0039rem solid #e5e7eb;
+  border: 0.0039rem solid #e5e7eb;
   margin-bottom: 0.0781rem;
 }
 
@@ -547,7 +545,7 @@ body.no-scroll {
 .project-card__desc {
   font-size: 0.0781rem;
   color: #7a7a7a;
-  margin-bottom: .1172rem;
+  margin-bottom: 0.1172rem;
 
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -588,7 +586,7 @@ body.no-scroll {
 }
 
 .career h3 {
-  font-size: .1953rem;
+  font-size: 0.1953rem;
   font-weight: 400;
   margin-bottom: 0.0781rem;
 }
@@ -840,7 +838,7 @@ body.no-scroll {
 .tab-content {
   display: none;
   padding: 0.0781rem;
-  border: .0039rem solid #ddd;
+  border: 0.0039rem solid #ddd;
 }
 
 .tab.active {
@@ -895,12 +893,12 @@ body.no-scroll {
   height: 100%;
   background-color: #999999;
   overflow: auto;
-  padding-top: .1172rem;
+  padding-top: 0.1172rem;
   .ri-close-large-line {
     position: fixed;
     top: 2%;
     left: 1%;
-    font-size: .0977rem;
+    font-size: 0.0977rem;
     color: rgba(255, 255, 255, 0.8);
     &:hover {
       color: #fff;
@@ -910,8 +908,8 @@ body.no-scroll {
     position: fixed;
     top: 47%;
     left: 3%;
-    font-size: .1641rem;
-    color: #AAAAAA;
+    font-size: 0.1641rem;
+    color: #aaaaaa;
     &:hover {
       color: #fff;
     }
@@ -920,8 +918,8 @@ body.no-scroll {
     position: fixed;
     top: 47%;
     left: 96%;
-    font-size: .1641rem;
-    color: #AAAAAA;
+    font-size: 0.1641rem;
+    color: #aaaaaa;
     &:hover {
       color: #fff;
     }
@@ -929,7 +927,7 @@ body.no-scroll {
   .detail {
     position: fixed;
     z-index: 1;
-    top: .1172rem;
+    top: 0.1172rem;
     left: 7%;
     width: 86%;
     min-height: 100%;
@@ -937,9 +935,9 @@ body.no-scroll {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: .2344rem;
-    border-top-left-radius: .0391rem;
-    border-top-right-radius: .0391rem;
+    padding: 0.2344rem;
+    border-top-left-radius: 0.0391rem;
+    border-top-right-radius: 0.0391rem;
     background-color: #fff;
 
     .card__image {
@@ -951,32 +949,31 @@ body.no-scroll {
       flex-direction: column;
       height: 2.3438rem;
       text-align: right;
-      font-size: .1953rem;
+      font-size: 0.1953rem;
 
       .card__desc {
         width: 3.125rem;
-        margin-top: .3125rem;
+        margin-top: 0.3125rem;
         text-align: right;
-        font-size: .1172rem;
+        font-size: 0.1172rem;
         line-height: 1.5;
       }
     }
   }
 
   /* 显示的页面 */
-  .fixed-page{
+  .fixed-page {
     position: fixed;
-    top: .1172rem;
+    top: 0.1172rem;
     left: 7%;
     z-index: -1;
   }
-  
 }
 
 @media screen and (min-width: 1230px) {
   /* 顶部导航栏你阴影 */
   #navbar {
-    box-shadow: 0 .0078rem .0156rem 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 0.0078rem 0.0156rem 0 rgba(0, 0, 0, 0.08);
   }
 
   /* 头--二维码 */
@@ -988,7 +985,7 @@ body.no-scroll {
     top: -92%;
     left: -350%;
 
-    background-image: url("https://s3.bmp.ovh/imgs/2024/12/19/8d099b2fb4ac5dbd.jpg");
+    background-image: url("https://img.picgo.net/2024/12/29/connect-wx92611f9a96f300d5.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0;
@@ -1008,7 +1005,7 @@ body.no-scroll {
     top: -92%;
     left: -350%;
 
-    background-image: url("https://s3.bmp.ovh/imgs/2024/12/19/8d099b2fb4ac5dbd.jpg");
+    background-image: url("https://img.picgo.net/2024/12/29/connect-wx92611f9a96f300d5.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0;
@@ -1028,7 +1025,7 @@ body.no-scroll {
     top: -92%;
     left: -350%;
 
-    background-image: url("https://s3.bmp.ovh/imgs/2024/12/19/8d099b2fb4ac5dbd.jpg");
+    background-image: url("https://img.picgo.net/2024/12/29/connect-wx92611f9a96f300d5.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0;
@@ -1048,7 +1045,7 @@ body.no-scroll {
     top: -92%;
     left: -350%;
 
-    background-image: url("https://s3.bmp.ovh/imgs/2024/12/19/8d099b2fb4ac5dbd.jpg");
+    background-image: url("https://img.picgo.net/2024/12/29/connect-wx92611f9a96f300d5.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0;
@@ -1068,7 +1065,7 @@ body.no-scroll {
     top: -92%;
     left: -350%;
 
-    background-image: url("https://s3.bmp.ovh/imgs/2024/12/19/8d099b2fb4ac5dbd.jpg");
+    background-image: url("https://img.picgo.net/2024/12/29/connect-wx92611f9a96f300d5.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     opacity: 0;
