@@ -33,7 +33,8 @@ fetch("imgs.json")
     // 检查时间是否超过24小时
     if (!lastTimestamp || now - lastTimestamp >= 24 * 60 * 60 * 1000) {
       // 超过24小时或者首次访问，随机选择一张图片
-      const nextIndex = getRandomIndex(parseInt(lastImageIndex), images.length);
+      const nextIndex =
+        getRandomIndex(parseInt(lastImageIndex), images.length) || 0;
       imageElement.src = images[nextIndex]; // 显示随机图片
 
       // 更新 localStorage
