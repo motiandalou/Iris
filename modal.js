@@ -19,15 +19,8 @@ function hideModal() {
   document.getElementById("modal-overlay").style.display = "none";
   // 移除禁止滚动的类--pc
   document.body.classList.remove("no-scroll");
-
-  popup.classList.remove("show"); // 移除动画类
-  popup.addEventListener(
-    "transitionend",
-    () => {
-      if (!popup.classList.contains("show")) {
-        popup.style.display = "none"; // 动画结束后隐藏弹窗
-      }
-    },
-    { once: true } // 确保事件只触发一次
-  );
+  // 移除动画类
+  popup.classList.remove("show");
+  // 隐藏弹窗
+  popup.style.display = "none";
 }

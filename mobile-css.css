@@ -962,7 +962,6 @@ html {
   /* 显示的页面 */
   .fixed-page {
     position: fixed;
-    /* top: 5%; */
     left: 0%;
     z-index: -1;
   }

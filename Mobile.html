@@ -1102,17 +1102,15 @@
   // 隐藏详情弹窗
   document.addEventListener("click", function (event) {
     if (event.target.classList.contains('ri-close-large-line')) {
-      dialog_IELTS.style.display = 'none';
-      dialog_TOEFL.style.display = 'none';
-      dialog_STUDYABROAD.style.display = 'none';
-      dialog_EngTUTOR.style.display = 'none';
-
       dialog_IELTS.classList.remove("show"); // 移除动画类
       dialog_TOEFL.classList.remove("show"); // 移除动画类
       dialog_STUDYABROAD.classList.remove("show"); // 移除动画类
       dialog_EngTUTOR.classList.remove("show"); // 移除动画类
-      
 
+      dialog_IELTS.style.display = 'none';
+      dialog_TOEFL.style.display = 'none';
+      dialog_STUDYABROAD.style.display = 'none';
+      dialog_EngTUTOR.style.display = 'none';
       // 移除禁止滚动的类--pc
       document.body.classList.remove("no-scroll");
     }
