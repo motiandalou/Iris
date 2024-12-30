@@ -38,12 +38,12 @@ body {
   font-size: 14px;
 
   /* 禁止选中事件 */
-  -webkit-touch-callout: none;
+  /* -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none;
+  user-select: none; */
 }
 
 /* 禁止滚动 */
@@ -716,7 +716,7 @@ body.no-scroll {
   width: 100%;
   height: 100%;
   background-color: #fff;
-  transition: bottom 0.5s ease, border-radius 0.5s ease; /* 平滑过渡效果 */
+  transition: bottom 0.4s ease; /* 平滑过渡效果 */
   overflow: auto; /* 如果内容过多，允许滚动 */
   z-index: 99;
   .slidePage-header {
@@ -780,8 +780,6 @@ body.no-scroll {
   /* 外边距全设置为 auto ，元素就这么神奇的居中定位了 */
   margin: auto;
   z-index: 1001;
-  opacity: 0;
-  transition: opacity 2.5s ease;
   width: 100%;
   height: 100%;
   background-color: transparent;
@@ -898,7 +896,7 @@ body.no-scroll {
     position: fixed;
     top: 2%;
     left: 1%;
-    font-size: 0.0977rem;
+    font-size: 0.1177rem;
     color: rgba(255, 255, 255, 0.8);
     &:hover {
       color: #fff;

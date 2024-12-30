@@ -585,7 +585,7 @@
             <i class="ri-award-fill"></i>
             <div class="award__info">
               <h5>Excellent Instructor at <span>Annual Assessment</span></h5>
-              <p>August 2024</p>
+              <p>December 2024</p>
             </div>
           </div>
           <!-- todo 等待未来开发 -->
@@ -1052,6 +1052,11 @@
     // 雅思
     if (event.target.classList.contains('button-dialog-IELTS')) {
       dialog_IELTS.style.display = 'block';
+
+      setTimeout(() => {
+        dialog_IELTS.classList.add("show"); // 添加动画类（需要延迟以触发过渡效果）
+      }, 10); // 微小延迟确保 display 已生效
+
       // 禁止滚动
       noScroll();
     }
@@ -1059,6 +1064,11 @@
     // 托福
     if (event.target.classList.contains('button-dialog-TOEFL')) {
       dialog_TOEFL.style.display = 'block';
+
+      setTimeout(() => {
+        dialog_TOEFL.classList.add("show"); // 添加动画类（需要延迟以触发过渡效果）
+      }, 10); // 微小延迟确保 display 已生效
+
       // 禁止滚动
       noScroll();
     }
@@ -1066,6 +1076,11 @@
     // 出国留学
     if (event.target.classList.contains('button-dialog-STUDYABROAD')) {
       dialog_STUDYABROAD.style.display = 'block';
+
+      setTimeout(() => {
+        dialog_STUDYABROAD.classList.add("show"); // 添加动画类（需要延迟以触发过渡效果）
+      }, 10); // 微小延迟确保 display 已生效
+
       // 禁止滚动
       noScroll();
     }
@@ -1073,6 +1088,11 @@
     // 幼初高英语辅导
     if (event.target.classList.contains('button-dialog-EngTUTOR')) {
       dialog_EngTUTOR.style.display = 'block';
+
+      setTimeout(() => {
+        dialog_EngTUTOR.classList.add("show"); // 添加动画类（需要延迟以触发过渡效果）
+      }, 10); // 微小延迟确保 display 已生效
+
       // 禁止滚动
       noScroll();
     }
@@ -1086,6 +1106,13 @@
       dialog_TOEFL.style.display = 'none';
       dialog_STUDYABROAD.style.display = 'none';
       dialog_EngTUTOR.style.display = 'none';
+
+      dialog_IELTS.classList.remove("show"); // 移除动画类
+      dialog_TOEFL.classList.remove("show"); // 移除动画类
+      dialog_STUDYABROAD.classList.remove("show"); // 移除动画类
+      dialog_EngTUTOR.classList.remove("show"); // 移除动画类
+      
+
       // 移除禁止滚动的类--pc
       document.body.classList.remove("no-scroll");
     }
