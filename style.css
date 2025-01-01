@@ -16,6 +16,8 @@
 /* 滚动过渡动画 */
 html {
   scroll-behavior: smooth;
+  /* 禁止横向滚动条 */
+  overflow-x: hidden;
 }
 
 .ellipsis {
@@ -61,7 +63,6 @@ body.no-scroll {
   color: #fff;
   cursor: pointer;
   border-radius: 0.0586rem;
-  transition: all 0.5s ease;
 }
 
 .btn:hover {
@@ -110,9 +111,9 @@ body.no-scroll {
   display: flex;
   align-items: center;
   justify-content: center;
-  bottom: 0.1563rem;
+  bottom: 0;
+  transform: translateY(100%);
   box-sizing: border-box;
-
   .footer__menu {
     background-color: #4d4d4d;
     width: 3.5375rem;
@@ -165,6 +166,18 @@ body.no-scroll {
   }
 }
 
+/* 动画定义 */
+@keyframes slideUp {
+  0% {
+    transform: translateY(100%); /* 从屏幕外 */
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-40%); /* 滑入屏幕内 */
+    opacity: 1;
+  }
+}
+
 /* 当导航栏变为黑色背景时 */
 .navbar-black {
   background-color: #000 !important; /* 黑色背景 */
@@ -190,7 +203,7 @@ body.no-scroll {
   font-weight: 500;
 }
 
-.navbar__logo i {
+.navbar__logo span {
   font-size: 0.1963rem;
 }
 
@@ -966,6 +979,60 @@ body.no-scroll {
     left: 7%;
     z-index: -1;
   }
+}
+
+/* ? */
+.ri-question-line {
+  color: #5d5d5d;
+  position: fixed;
+  left: calc(98.5%);
+  bottom: 1%;
+  font-size: 25px;
+}
+
+#moreFuncPop {
+  position: fixed;
+  z-index: 999;
+  left: 83.8%;
+  bottom: 3.3%;
+  width: 1.5625rem;
+  height: 1.5625rem;
+  border-radius: 25px;
+  border: 1px solid #e3e3e3;
+  background-color: #fff;
+  font-size: .0781rem;
+  padding: .0977rem;
+  box-shadow: 0 .0313rem .0781rem rgba(0, 0, 0, 0.3);
+
+  transform: scale(0);
+  /* 从右下角开始放大 */
+  transform-origin: bottom right;
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+
+  .funnc {
+    padding: .0586rem;
+    display: flex;
+    justify-content: space-between;
+    .classify {
+      span {
+        display: inline-block;
+        margin-right: .0391rem;
+      }
+    }
+    .icon {
+      margin-right: .0469rem;
+    }
+    &:hover {
+      background-color: rgba(245, 245, 245, 0.8);
+      border-radius: .0391rem;
+    }
+  }
+}
+
+#moreFuncPop.active {
+  transform: scale(1);
+  opacity: 1;
 }
 
 @media screen and (min-width: 1230px) {
