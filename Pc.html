@@ -610,7 +610,7 @@
 
   <nav id="footer-quickLink">
     <div class="footer__menu">
-      <a class="footer__logo cursor" onclick="location.reload()">
+      <a class="footer__logo cursor" onclick='location.href = "index.html"'>
         <span style="font-size: 0.1367rem">IRIS</span>
       </a>
       <div class="courses">
@@ -1038,7 +1038,7 @@
   // 刷新页面--点击左上角logo
   const logo = document.getElementById("logo");
   logo.addEventListener("click", function () {
-    location.reload();
+    location.href = "index.html";
   });
 
 
@@ -1095,9 +1095,6 @@
       document.body.classList.remove("no-scroll");
     }
   })
-
-
-
 
   // todo(图片地址就待替换)点击--微信
   const openModalButton1 = document.getElementById("openModalButton1");
