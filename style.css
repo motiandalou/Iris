@@ -987,14 +987,14 @@ body.no-scroll {
   position: fixed;
   left: calc(98.5%);
   bottom: 1%;
-  font-size: 25px;
+  font-size: .1172rem;
 }
 
 #moreFuncPop {
   position: fixed;
   z-index: 999;
-  left: 83.8%;
-  bottom: 3.3%;
+  left: 84%;
+  bottom: 4%;
   width: 1.5625rem;
   height: 1.5625rem;
   border-radius: 25px;
