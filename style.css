@@ -118,7 +118,6 @@ body.no-scroll {
   box-sizing: border-box;
   .footer__menu {
     background-color: #4d4d4d;
-    width: 3.5375rem;
     height: 0.3906rem;
     border-radius: 0.0781rem;
     display: flex;
