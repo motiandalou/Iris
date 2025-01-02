@@ -4,6 +4,9 @@ let slideIndex = 0;
 let nowIndex = 0;
 
 function showSlides(slides, now) {
+  // 隐藏主页面的滚动条
+  document.documentElement.style.overflow = "hidden";
+
   let i;
   nowIndex = now;
   // 默认全部隐藏
