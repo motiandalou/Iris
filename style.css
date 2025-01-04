@@ -975,7 +975,7 @@ body.no-scroll {
   bottom: 4%;
   width: 1.5625rem;
   height: 1.5625rem;
-  border-radius: 25px;
+  border-radius: 0.0391rem;
   border: 1px solid #e3e3e3;
   background-color: #fff;
   font-size: 0.0781rem;
@@ -992,10 +992,21 @@ body.no-scroll {
     padding: 0.0586rem;
     display: flex;
     justify-content: space-between;
+    font-weight: 500;
     .classify {
       span {
-        display: inline-block;
+        display: inline-flexbox;
+        justify-content: center;
+        align-items: center;
+        border: 0.0078rem solid black;
+        padding: 0.0195rem;
+        height: 0.1172rem;
         margin-right: 0.0391rem;
+        border-radius: 0.0195rem;
+        &:hover {
+          background-color: #000;
+          color: #fff;
+        }
       }
     }
     .icon {
