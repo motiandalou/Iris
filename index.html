@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 网站--图标 -->
+    <link
+      rel="icon"
+      href="https://images.unsplash.com/photo-1617300754527-ed58f59222b3?q=80&w=3888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    />
+    <!-- 在线图标网站 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"
+    />
+    <!-- 网站--标题 -->
+    <title>IRIS STUDIO</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.font.im/css?family=Arvo"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.font.im/css?family=Cinzel+Decorative"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <style>
+      body {
+        background-color: #ffffff;
+        font-family: "Arvo", serif;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        outline: none;
+        box-sizing: border-box;
+      }
+
+      .welcome {
+        position: fixed;
+        /* 上下左右4个方向的定位都设置为0 */
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        /* 外边距全设置为 auto ，元素就这么神奇的居中定位了 */
+        margin: auto;
+        width: 94.1%;
+        height: 88.2%;
+        border: 2px solid #000;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: transform 0.6s ease, opacity 0.6s ease;
+
+        .product-name {
+          font-size: 0.7813rem;
+          font-weight: bold;
+          letter-spacing: 0.0195rem;
+          font-family: "Cinzel Decorative", cursive;
+          text-align: center;
+        }
+
+        .product-slogan {
+          font-size: 0.1563rem;
+          margin: 0.0781rem 0 0.3906rem 0;
+          letter-spacing: 0.0195rem;
+          text-align: center;
+          /* 调整字母间隔 */
+        }
+
+        .start {
+          width: 0.8031rem;
+          height: 0.8031rem;
+          border-radius: 50%;
+          background-color: #000;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          color: #ffffff;
+          letter-spacing: 0.0195rem;
+          /* 调整字母间隔 */
+          font-weight: bold;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        .welcome {
+          position: fixed;
+          /* 上下左右4个方向的定位都设置为0 */
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          /* 外边距全设置为 auto ，元素就这么神奇的居中定位了 */
+          margin: auto;
+          width: 94.1%;
+          height: 90%;
+          border: 2px solid #000;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          transition: transform 0.6s ease, opacity 0.6s ease;
+          border-radius: 20px;
+
+          .product-name {
+            font-size: 54px;
+            font-weight: bold;
+            font-family: "Cinzel Decorative", cursive;
+            text-align: center;
+          }
+
+          .product-slogan {
+            font-size: 12px;
+            margin: 50px 0 100px 0;
+            letter-spacing: 5px;
+            text-align: center;
+            /* 调整字母间隔 */
+          }
+
+          .start {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background-color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            color: #ffffff;
+            letter-spacing: 5px;
+            /* 调整字母间隔 */
+            font-weight: bold;
+            font-size: 22px;
+          }
+        }
+      }
+
+      .fade-out {
+        transform: translateY(-120%);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="currentPage" class="welcome">
+      <div class="product-name">IRIS STUDIO</div>
+      <div class="product-slogan">A - LETTER TO MY FUTURE SELF</div>
+      <div id="start" class="start">START</div>
+      <div class="border left"></div>
+      <div class="border bottom"></div>
+      <div class="border right"></div>
+      <div class="border top"></div>
+    </div>
+  </body>
+  <script>
+    // 产品类型
+    const userAgent = navigator.userAgent.toLowerCase();
+    const start = document.getElementById("start");
+    // 点击START
+
+    document.getElementById("start").addEventListener("click", function () {
+      const currentPage = document.getElementById("currentPage");
+
+      // 添加滑动消失效果
+      currentPage.classList.add("fade-out");
+
+      // 设置定时器在动画结束后跳转
+      setTimeout(() => {
+        if (
+          userAgent.indexOf("android") == -1 &&
+          userAgent.indexOf("iphone") == -1 &&
+          userAgent.indexOf("ipad") == -1
+        ) {
+          location.href = "Pc.html";
+        } else {
+          location.href = "Mobile.html";
+        }
+      }, 600); // 600ms后跳转，与你的CSS动画时间一致
+    });
+  </script>
+
+  <!-- 自适应 -->
+  <script src="flexible.js"></script>
+</html>
