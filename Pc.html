@@ -58,7 +58,7 @@
   </section>
 
   <section id="Profession" class="skills">
-    <div  class="skills__desc">
+    <div class="skills__desc">
       <h3 data-i18n="professionScore"></h3>
       <p data-i18n="professionScoreExperience">
       </p>
@@ -1009,9 +1009,12 @@
         <span>Lang：</span>
       </p>
       <p class="classify">
-        <span onclick="updateTranslations('zh')">简体</span>
-        <span onclick="updateTranslations('en')">EN</span>
-        <span onclick="updateTranslations('tc')">繁體</span>
+        <span id="language_zh"
+          onclick="(()=>{updateTranslations('zh') ; localStorage.setItem('language','zh');langChang()})() ">简体</span>
+        <span id="language_en"
+          onclick="(()=>{updateTranslations('en') ; localStorage.setItem('language','en');;langChang()})()">EN</span>
+        <span id="language_tc"
+          onclick="(()=>{updateTranslations('tc') ; localStorage.setItem('language','tc');;langChang()})()">繁體</span>
       </p>
     </div>
 
@@ -1238,6 +1241,35 @@
 </script>
 <!-- 点击右下角?号弹窗动画 -->
 <script>
+  // 切换语言样式变化
+  function langChang() {
+    const language_zh = document.getElementById('language_zh')
+    const language_en = document.getElementById('language_en')
+    const language_tc = document.getElementById('language_tc')
+
+    switch (localStorage.getItem('language')) {
+      case 'zh':
+        language_zh.classList.add('lang_click')
+        language_en.classList.remove('lang_click')
+        language_tc.classList.remove('lang_click')
+        break;
+      case 'en':
+        language_zh.classList.remove('lang_click')
+        language_en.classList.add('lang_click')
+        language_tc.classList.remove('lang_click')
+        break;
+      case 'tc':
+        language_zh.classList.remove('lang_click')
+        language_en.classList.remove('lang_click')
+        language_tc.classList.add('lang_click')
+        break;
+
+      default:
+        break;
+    }
+  }
+  langChang()
+
   const togglePopupButton = document.getElementById('togglePopup');
   const popup = document.getElementById('moreFuncPop');
 
@@ -1250,6 +1282,8 @@
       popup.classList.remove('active');
     }
   });
+
+
 </script>
 <!-- 公共函数 -->
 <script src="common.js"></script>

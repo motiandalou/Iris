@@ -1008,6 +1008,10 @@ body.no-scroll {
           color: #fff;
         }
       }
+      .lang_click {
+        background-color: #000;
+        color: #fff;
+      }
     }
     .icon {
       margin-right: 0.0469rem;
