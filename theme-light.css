@@ -271,6 +271,7 @@ body.no-scroll {
   line-height: 0.2344rem;
   font-weight: 400;
   margin-top: 0.1953rem;
+
   width: 85%;
   &::after {
     content: "__";
@@ -975,7 +976,7 @@ body.no-scroll {
   bottom: 4%;
   width: 1.5625rem;
   height: 1.5625rem;
-  border-radius: 0.0391rem;
+  border-radius: 0.091rem;
   border: 1px solid #e3e3e3;
   background-color: #fff;
   font-size: 0.0781rem;
