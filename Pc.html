@@ -8,11 +8,17 @@
   <link rel="icon" href="https://s3.bmp.ovh/imgs/2024/12/06/de2e895b4837ce2c.jpg" />
   <!-- 在线图标网站 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" />
-  <!-- 样式 -->
-  <link rel="stylesheet" href="style.css" />
+  <!-- 在线字体 -->
   <link href="https://fonts.font.im/css?family=Cinzel+Decorative" rel="stylesheet" type="text/css" />
   <!-- 网站--标题 -->
   <title>IRIS STUDIO</title>
+  <!-- 主题 -->
+  <script>
+    (function () {
+      const savedTheme = localStorage.getItem('theme') || 'theme-light.css';
+      document.write(`<link id="theme" rel="stylesheet" href="${savedTheme}">`);
+    })();
+  </script>
 </head>
 
 <body>
@@ -872,7 +878,7 @@
       <p class="classify">
         <span id="language_zh"
           onclick="(()=>{updateTranslations('zh') ; localStorage.setItem('language','zh');langChang()})() ">简体</span>
-        <span id="language_en" class="lang_click"
+        <span id="language_en" class="btn_click"
           onclick="(()=>{updateTranslations('en') ; localStorage.setItem('language','en');;langChang()})()">EN</span>
         <span id="language_tc"
           onclick="(()=>{updateTranslations('tc') ; localStorage.setItem('language','tc');;langChang()})()">繁體</span>
@@ -885,8 +891,8 @@
         <span data-i18n="theme"></span>：
       </p>
       <p class="classify">
-        <span class="lang_click" data-i18n="sun"></span>
-        <span data-i18n="moon"></span>
+        <span id="theme_light" class="btn_click" data-i18n="sun" onclick="switchTheme('theme-light.css')"></span>
+        <span id="theme_dark" data-i18n="moon" onclick="switchTheme('theme-dark.css')"></span>
       </p>
     </div>
 
@@ -903,7 +909,43 @@
   </section>
 
 </body>
+<script>
+  function themeStyle() {
+    let themeName = localStorage.getItem('theme')
+    const theme_light = document.getElementById('theme_light');
+    const theme_dark = document.getElementById('theme_dark');
+    switch (themeName) {
+      case 'theme-light.css':
+        theme_light.classList.add('btn_click')
+        theme_dark.classList.remove('btn_click')
+        break;
+      case 'theme-dark.css':
+        theme_light.classList.remove('btn_click')
+        theme_dark.classList.add('btn_click')
+        break;
+      default:
+        break;
+    }
+  }
 
+  themeStyle()
+
+  // 切换主题
+  function switchTheme(themeName) {
+    document.getElementById('theme').setAttribute('href', themeName);
+    localStorage.setItem('theme', themeName); // 保存用户选择
+    themeStyle()
+  }
+
+
+  // 页面加载时应用用户选择的主题
+  window.onload = function () {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.getElementById('theme').setAttribute('href', savedTheme);
+    }
+  };
+</script>
 <script>
   // 刷新页面--点击左上角logo
   const logo = document.getElementById("logo");
@@ -1121,19 +1163,19 @@
 
     switch (localStorage.getItem('language')) {
       case 'zh':
-        language_zh.classList.add('lang_click')
-        language_en.classList.remove('lang_click')
-        language_tc.classList.remove('lang_click')
+        language_zh.classList.add('btn_click')
+        language_en.classList.remove('btn_click')
+        language_tc.classList.remove('btn_click')
         break;
       case 'en':
-        language_zh.classList.remove('lang_click')
-        language_en.classList.add('lang_click')
-        language_tc.classList.remove('lang_click')
+        language_zh.classList.remove('btn_click')
+        language_en.classList.add('btn_click')
+        language_tc.classList.remove('btn_click')
         break;
       case 'tc':
-        language_zh.classList.remove('lang_click')
-        language_en.classList.remove('lang_click')
-        language_tc.classList.add('lang_click')
+        language_zh.classList.remove('btn_click')
+        language_en.classList.remove('btn_click')
+        language_tc.classList.add('btn_click')
         break;
 
       default:
