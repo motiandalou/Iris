@@ -64,7 +64,7 @@ body.no-scroll {
   background: #dedede;
   color: #000;
   cursor: pointer;
-  border-radius: 0.0586rem;
+  border-radius: 0.0356rem;
 }
 
 .btn:hover {
@@ -293,7 +293,7 @@ body.no-scroll {
   font-size: 0.2344rem;
   line-height: 0.3125rem;
   margin-bottom: 0.0391rem;
-  color: #dedede;
+  color: #fff;
 }
 
 .hero__intro p {
@@ -308,8 +308,8 @@ body.no-scroll {
 }
 
 .hero__actions .btn {
-  padding: 0.0391rem 0.0781rem;
-  font-size: 0.0781rem;
+  padding: 0.0591rem 0.0781rem;
+  font-size: 0.0881rem;
   font-weight: 500;
 }
 
@@ -374,7 +374,7 @@ body.no-scroll {
 
 .skills__desc p {
   color: #dedede;
-  font-size: 0.0781rem;
+  font-size: 0.0981rem;
   margin-bottom: 0.1172rem;
 }
 
@@ -389,6 +389,8 @@ body.no-scroll {
   align-items: center;
   justify-content: center;
   padding: 0.0781rem 0;
+  background-color: gray;
+  color: #dedede;
 }
 
 .skill__info {
@@ -486,7 +488,7 @@ body.no-scroll {
 }
 
 .category__desc p {
-  font-size: 0.0703rem;
+  font-size: 0.0903rem;
   color: #dedede;
   font-weight: 500;
 }
@@ -543,13 +545,13 @@ body.no-scroll {
 }
 
 .project-card__desc {
-  font-size: 0.0781rem;
+  font-size: 0.0881rem;
   color: #dedede;
   margin-bottom: 0.1172rem;
 
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 7; /* 定义文本的行数 */
+  -webkit-line-clamp: 6; /* 定义文本的行数 */
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -970,26 +972,28 @@ body.no-scroll {
 
 /* ? */
 .ri-question-line {
-  color: #fff;
+  color: #dedede;
   position: fixed;
-  left: calc(98.5%);
+  left: calc(97.5%);
   bottom: 1%;
-  font-size: 0.1172rem;
+  font-size: 0.1972rem;
+  z-index: 99;
 }
 
 #moreFuncPop {
   position: fixed;
   z-index: 999;
-  left: 84%;
-  bottom: 4%;
+  left: 83.5%;
+  bottom: 5%;
   width: 1.5625rem;
   height: 1.5625rem;
   border-radius: 0.091rem;
-  border: 1px solid #e3e3e3;
-  background-color: #dedede;
+  border: 1px solid #4d4d4d;
+  background-color: #4e4e4e;
   font-size: 0.0781rem;
   padding: 0.0977rem;
   box-shadow: 0 0.0078rem 0.0156rem 0 rgba(0, 0, 0, 0.08);
+  color: #dedede;
 
   transform: scale(0);
   /* 从右下角开始放大 */
@@ -1008,27 +1012,28 @@ body.no-scroll {
         display: inline-flexbox;
         justify-content: center;
         align-items: center;
-        border: 0.0078rem solid black;
+        border: 0.0078rem solid #dedede;
         padding: 0.0195rem;
         height: 0.1172rem;
         margin-right: 0.0391rem;
         border-radius: 0.0195rem;
-        color: #000;
+        color: #dedede;
         &:hover {
           background-color: #000;
           color: #dedede;
+          border: 1px solid #000;
         }
       }
       .btn_click {
-        background-color: #000;
-        color: #dedede;
+        background-color: #dedede;
+        color: #000;
       }
     }
     .icon {
       margin-right: 0.0469rem;
     }
     &:hover {
-      background-color: rgba(245, 245, 245, 0.8);
+      /* background-color: #000; */
       border-radius: 0.0391rem;
     }
   }
