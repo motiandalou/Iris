@@ -109,7 +109,7 @@ const translations = {
     theme: "Theme",
     sun: "Sun",
     moon: "Moon",
-    ResumeDownload: "Resume download",
+    ResumeDownload: "CV download",
     IELTS: "IELTS",
     TOEFL: "TOEFL",
     ABROAD: "STUDY ABROAD",
@@ -117,6 +117,8 @@ const translations = {
     phone: "Phone",
     interested: "Interested?",
     LetsWorkTogether: "Let's Work Together!",
+    english: "EN",
+    chinese: "CN",
   },
 
   // 中文
@@ -238,6 +240,8 @@ const translations = {
     phone: "手机号码",
     interested: "有兴趣加入吗?",
     LetsWorkTogether: "一起创造吧!",
+    english: "英文",
+    chinese: "中文",
   },
 
   // 繁体 https://tool.lu/zhconvert/
@@ -359,6 +363,8 @@ const translations = {
     phone: "手機號碼",
     interested: "有興趣加入嗎?",
     LetsWorkTogether: "一起創造吧!",
+    english: "英文",
+    chinese: "中文",
   },
 };
 

@@ -994,7 +994,8 @@ body.no-scroll {
     justify-content: space-between;
     font-weight: 500;
     .classify {
-      span {
+      span,
+      a {
         display: inline-flexbox;
         justify-content: center;
         align-items: center;
