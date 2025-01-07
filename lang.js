@@ -26,7 +26,7 @@ const translations = {
       "Elevate your English proficiency and achieve your IELTS goals with our comprehensive courses designed to sharpen your listening, speaking, reading, and writing skills for success in the exam and beyond.",
     IELTS_listening_time: "August 2025",
     IELTS_listening_introduce:
-      "Confidently articulate your thoughts in English with our IELTS speaking course, designed to improve fluency, vocabulary, and the clarity of your speech. Engage in mock interviews with feedback from seasoned examiners to prepare for any topic. Interactive sessions mimic the exam environment, building your confidence and reducing anxiety on test day.",
+      "Confidently articulate your thoughts in English with our IELTS listening course, designed to improve fluency, vocabulary, and the clarity of your speech. Engage in mock interviews with feedback from seasoned examiners to prepare for any topic. Interactive sessions mimic the exam environment, building your confidence and reducing anxiety on test day.",
     IELTS_speaking_time: "August 2025",
     IELTS_speaking_introduce:
       "Confidently articulate your thoughts in English with our IELTS speaking course, designed to improve fluency, vocabulary, and the clarity of your speech. Engage in mock interviews with feedback from seasoned examiners to prepare for any topic.Interactive sessions mimic the exam environment, building your confidence and reducing anxiety on test day.",
@@ -146,7 +146,7 @@ const translations = {
       "通过我们全面的课程提高您的英语水平，实现雅思目标。这些课程专为提升听、说、读、写能力设计，帮助您在考试中取得成功，并在未来更进一步。",
     IELTS_listening_time: "2025年8月",
     IELTS_listening_introduce:
-      "通过我们的雅思口语课程，自信地用英语表达您的想法，提升流利度、词汇量和语言清晰度。参与模拟面试，获得经验丰富考官的反馈，为各种话题做好准备。互动课程模拟考试环境，增强信心，减少考试日的焦虑。",
+      "通过我们的雅思听力课程，提升您的听力技巧和理解能力，掌握应对各类听力题型的有效方法。通过模拟测试和详细解析，帮助您在考试中提高准确率，增强应试信心，轻松应对各种听力场景。",
     IELTS_speaking_time: "2025年8月",
     IELTS_speaking_introduce:
       "通过我们的雅思口语课程，自信地用英语表达您的想法，提升流利度、词汇量和语言清晰度。参与模拟面试，获得经验丰富考官的反馈，为各种话题做好准备。互动课程模拟考试环境，增强信心，减少考试日的焦虑。",
@@ -269,7 +269,7 @@ const translations = {
       "透過我們全面的課程提高您的英語水平，實現雅思目標。這些課程專為提升聽、說、讀、寫能力設計，幫助您在考試中取得成功，並在未來更進一步。",
     IELTS_listening_time: "2025年8月",
     IELTS_listening_introduce:
-      "透過我們的雅思口語課程，自信地用英語表達您的想法，提升流利度、詞彙量和語言清晰度。參與模擬面試，獲得經驗豐富考官的反饋，為各種話題做好準備。互動課程模擬考試環境，增強信心，減少考試日的焦慮。",
+      "透過我們的雅思聽力課程，提升您的聽力技巧和理解能力，掌握應對各類聽力題型的有效方法。通過模擬測試和詳細解析，幫助您在考試中提高準確率，增強應試信心，輕鬆應對各種聽力場景。",
     IELTS_speaking_time: "2025年8月",
     IELTS_speaking_introduce:
       "透過我們的雅思口語課程，自信地用英語表達您的想法，提升流利度、詞彙量和語言清晰度。參與模擬面試，獲得經驗豐富考官的反饋，為各種話題做好準備。互動課程模擬考試環境，增強信心，減少考試日的焦慮。",
