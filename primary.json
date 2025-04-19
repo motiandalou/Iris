@@ -1,0 +1,1375 @@
+[
+  { "word": "red", "phonetic": "[red]", "meaning": "红色" },
+  { "word": "blue", "phonetic": "[blu:]", "meaning": "蓝色" },
+  { "word": "green", "phonetic": "[gri:n]", "meaning": "绿色" },
+  { "word": "yellow", "phonetic": "[ˈjeləʊ]", "meaning": "黄色" },
+  { "word": "black", "phonetic": "[blæk]", "meaning": "黑色" },
+  { "word": "white", "phonetic": "[waɪt]", "meaning": "白色" },
+  { "word": "orange", "phonetic": "[ˈɒrɪndʒ]", "meaning": "橙色" },
+  { "word": "purple", "phonetic": "[ˈpɜ:pl]", "meaning": "紫色" },
+  { "word": "pink", "phonetic": "[pɪŋk]", "meaning": "粉红色" },
+  { "word": "brown", "phonetic": "[braʊn]", "meaning": "棕色" },
+  { "word": "gray", "phonetic": "[greɪ]", "meaning": "灰色" },
+  { "word": "gold", "phonetic": "[ɡəʊld]", "meaning": "金色" },
+  { "word": "silver", "phonetic": "[ˈsɪlvə]", "meaning": "银色" },
+  { "word": "beige", "phonetic": "[beɪʒ]", "meaning": "米色" },
+  { "word": "head", "phonetic": "[hed]", "meaning": "头" },
+  { "word": "eye", "phonetic": "[aɪ]", "meaning": "眼睛" },
+  { "word": "ear", "phonetic": "[ɪə]", "meaning": "耳朵" },
+  { "word": "nose", "phonetic": "[nəʊz]", "meaning": "鼻子" },
+  { "word": "tongue", "phonetic": "[tʌŋ]", "meaning": "舌头" },
+  { "word": "neck", "phonetic": "[nek]", "meaning": "脖子" },
+  { "word": "hair", "phonetic": "[heə]", "meaning": "头发" },
+  { "word": "face", "phonetic": "[feɪs]", "meaning": "脸" },
+  { "word": "cheek", "phonetic": "[tʃiːk]", "meaning": "脸颊" },
+  { "word": "mouth", "phonetic": "[maʊθ]", "meaning": "嘴巴" },
+  { "word": "lip", "phonetic": "[lɪp]", "meaning": "嘴唇" },
+  { "word": "finger", "phonetic": "[ˈfɪŋɡə]", "meaning": "手指" },
+  { "word": "leg", "phonetic": "[leɡ]", "meaning": "腿" },
+  { "word": "knee", "phonetic": "[niː]", "meaning": "膝盖" },
+  { "word": "foot", "phonetic": "[fʊt]", "meaning": "脚" },
+  { "word": "toe", "phonetic": "[təʊ]", "meaning": "脚趾" },
+  { "word": "arm", "phonetic": "[ɑːm]", "meaning": "手臂" },
+  { "word": "hand", "phonetic": "[hænd]", "meaning": "手" },
+  { "word": "father", "phonetic": "[ˈfɑːðə]", "meaning": "父亲" },
+  { "word": "mother", "phonetic": "[ˈmʌðə]", "meaning": "母亲" },
+  { "word": "son", "phonetic": "[sʌn]", "meaning": "儿子" },
+  { "word": "daughter", "phonetic": "[ˈdɔːtə]", "meaning": "女儿" },
+  { "word": "brother", "phonetic": "[ˈbrʌðə]", "meaning": "兄弟" },
+  { "word": "sister", "phonetic": "[ˈsɪstə]", "meaning": "姐妹" },
+  { "word": "grandpa", "phonetic": "[ˈɡrænpɑː]", "meaning": "爷爷/外公" },
+  { "word": "grandma", "phonetic": "[ˈɡrænmɑː]", "meaning": "奶奶/外婆" },
+  { "word": "aunt", "phonetic": "[ɑːnt]", "meaning": "姨妈/姑妈" },
+  { "word": "uncle", "phonetic": "[ˈʌŋkl]", "meaning": "叔叔/舅舅" },
+  { "word": "cousin", "phonetic": "[ˈkʌzn]", "meaning": "堂(表)兄弟姐妹" },
+  { "word": "twins", "phonetic": "[twɪnz]", "meaning": "双胞胎" },
+  { "word": "school", "phonetic": "[sku:l]", "meaning": "学校" },
+  { "word": "classroom", "phonetic": "[ˈklɑ:sru:m]", "meaning": "教室" },
+  { "word": "teacher", "phonetic": "[ˈti:tʃə]", "meaning": "老师" },
+  { "word": "student", "phonetic": "[ˈstju:dənt]", "meaning": "学生" },
+  { "word": "principal", "phonetic": "[ˈprinsipl]", "meaning": "校长" },
+  { "word": "classmate", "phonetic": "[ˈklɑ:smeɪt]", "meaning": "同学" },
+  { "word": "lesson", "phonetic": "[ˈlesən]", "meaning": "课程/课时" },
+  { "word": "subject", "phonetic": "[ˈsʌbdʒɪkt]", "meaning": "学科" },
+  { "word": "textbook", "phonetic": "[ˈtekstbʊk]", "meaning": "教科书" },
+  { "word": "desk", "phonetic": "[desk]", "meaning": "课桌" },
+  { "word": "chair", "phonetic": "[tʃer]", "meaning": "椅子" },
+  { "word": "blackboard", "phonetic": "[ˈblækbɔ:d]", "meaning": "黑板" },
+  { "word": "bell", "phonetic": "[bel]", "meaning": "上下课铃" },
+  { "word": "library", "phonetic": "[ˈlaibrəri]", "meaning": "图书馆" },
+  { "word": "gym", "phonetic": "[dʒɪm]", "meaning": "体育馆" },
+  { "word": "school bus", "phonetic": "[sku:l bʌs]", "meaning": "校车" },
+  { "word": "pen", "phonetic": "[pen]", "meaning": "钢笔" },
+  { "word": "pencil", "phonetic": "[ˈpensəl]", "meaning": "铅笔" },
+  { "word": "eraser", "phonetic": "[iˈreisə]", "meaning": "橡皮" },
+  { "word": "ruler", "phonetic": "[ˈru:lə]", "meaning": "尺子" },
+  { "word": "book", "phonetic": "[bʊk]", "meaning": "书" },
+  { "word": "notebook", "phonetic": "[ˈnəʊtbʊk]", "meaning": "笔记本" },
+  { "word": "pencil case", "phonetic": "[ˈpensəl keɪs]", "meaning": "笔盒" },
+  { "word": "marker", "phonetic": "[ˈmɑ:kə]", "meaning": "水彩笔" },
+  { "word": "stapler", "phonetic": "[ˈsteiplə]", "meaning": "订书机" },
+  { "word": "scissors", "phonetic": "[ˈsɪzəz]", "meaning": "剪刀" },
+  { "word": "glue", "phonetic": "[ɡlu:]", "meaning": "胶水" },
+  { "word": "clipboard", "phonetic": "[ˈklɪpbɔ:d]", "meaning": "剪贴板" },
+  { "word": "folder", "phonetic": "[ˈfəʊldə]", "meaning": "文件夹" },
+  { "word": "envelope", "phonetic": "[ˈenvələʊp]", "meaning": "信封" },
+  { "word": "whiteboard", "phonetic": "[ˈwaɪtbɔ:d]", "meaning": "白板" },
+  { "word": "math", "phonetic": "[mæθ]", "meaning": "数学" },
+  { "word": "Chinese", "phonetic": "[ˌtʃaiˈni:z]", "meaning": "语文" },
+  { "word": "art", "phonetic": "[ɑ:t]", "meaning": "美术" },
+  { "word": "English", "phonetic": "[ˈɪŋɡlɪʃ]", "meaning": "英语" },
+  { "word": "science", "phonetic": "[ˈsaɪəns]", "meaning": "科学" },
+  { "word": "music", "phonetic": "[ˈmju:zɪk]", "meaning": "音乐" },
+  { "word": "sun", "phonetic": "[sʌn]", "meaning": "太阳" },
+  { "word": "moon", "phonetic": "[mu:n]", "meaning": "月亮" },
+  { "word": "star", "phonetic": "[stɑ:]", "meaning": "星星" },
+  { "word": "planet", "phonetic": "[ˈplænɪt]", "meaning": "行星" },
+  { "word": "earth", "phonetic": "[ɜ:θ]", "meaning": "地球" },
+  { "word": "ocean", "phonetic": "[ˈəʊʃən]", "meaning": "海洋" },
+  { "word": "beach", "phonetic": "[bi:tʃ]", "meaning": "海滩" },
+  { "word": "lake", "phonetic": "[leɪk]", "meaning": "湖泊" },
+  { "word": "mountain", "phonetic": "[ˈmaʊntən]", "meaning": "山" },
+  { "word": "weather", "phonetic": "[ˈweðə]", "meaning": "天气" },
+  { "word": "tree", "phonetic": "[tri:]", "meaning": "树" },
+  { "word": "flower", "phonetic": "[ˈflaʊə]", "meaning": "花" },
+  { "word": "grass", "phonetic": "[ɡrɑ:s]", "meaning": "草" },
+  { "word": "animal", "phonetic": "[ˈænɪməl]", "meaning": "动物" },
+  { "word": "sky", "phonetic": "[skaɪ]", "meaning": "天空" },
+  { "word": "river", "phonetic": "[ˈrɪvə]", "meaning": "河流" },
+  { "word": "cloud", "phonetic": "[klaʊd]", "meaning": "云朵" },
+  { "word": "bird", "phonetic": "[bɜ:d]", "meaning": "鸟" },
+  { "word": "fish", "phonetic": "[fɪʃ]", "meaning": "鱼" },
+  { "word": "insect", "phonetic": "[ˈɪnsekt]", "meaning": "昆虫" },
+  { "word": "rock", "phonetic": "[rɒk]", "meaning": "岩石" },
+  { "word": "rain", "phonetic": "[reɪn]", "meaning": "雨" },
+  { "word": "storm", "phonetic": "[stɔ:m]", "meaning": "暴风雨" },
+  { "word": "snow", "phonetic": "[snəʊ]", "meaning": "雪" },
+  { "word": "thunder", "phonetic": "[ˈθʌndə]", "meaning": "雷" },
+  { "word": "lightning", "phonetic": "[ˈlaɪtnɪŋ]", "meaning": "闪电" },
+  { "word": "rainbow", "phonetic": "[ˈreɪnbəʊ]", "meaning": "彩虹" },
+  { "word": "sunny", "phonetic": "[ˈsʌni]", "meaning": "晴朗的" },
+  { "word": "wind", "phonetic": "[wɪnd]", "meaning": "风" },
+  { "word": "fog", "phonetic": "[fɒɡ]", "meaning": "雾" },
+  { "word": "windy", "phonetic": "[ˈwɪndi]", "meaning": "有风的" },
+  { "word": "cold", "phonetic": "[kəʊld]", "meaning": "寒冷的" },
+  { "word": "hot", "phonetic": "[hɒt]", "meaning": "热的" },
+  { "word": "cool", "phonetic": "[ku:l]", "meaning": "凉爽的" },
+  { "word": "warm", "phonetic": "[wɔ:m]", "meaning": "温暖的" },
+  { "word": "Spring Festival", "phonetic": "", "meaning": "春节" },
+  { "word": "Mid-Autumn Festival", "phonetic": "", "meaning": "中秋节" },
+  { "word": "Dragon Boat Festival", "phonetic": "", "meaning": "端午节" },
+  { "word": "National Day", "phonetic": "", "meaning": "国庆节" },
+  { "word": "Christmas", "phonetic": "", "meaning": "圣诞节" },
+  { "word": "New Year's Day", "phonetic": "", "meaning": "新年节" },
+  { "word": "Children's Day", "phonetic": "", "meaning": "儿童节" },
+  { "word": "Teachers' Day", "phonetic": "", "meaning": "教师节" },
+  { "word": "Mother's Day", "phonetic": "", "meaning": "母亲节" },
+  { "word": "Father's Day", "phonetic": "", "meaning": "父亲节" },
+  {
+    "word": "run",
+    "phonetic": "[rʌn]",
+    "meaning": "跑"
+  },
+  {
+    "word": "jump",
+    "phonetic": "[dʒʌmp]",
+    "meaning": "跳"
+  },
+  {
+    "word": "throw",
+    "phonetic": "[θroʊ]",
+    "meaning": "扔"
+  },
+  {
+    "word": "catch",
+    "phonetic": "[kætʃ]",
+    "meaning": "接"
+  },
+  {
+    "word": "kick",
+    "phonetic": "[kɪk]",
+    "meaning": "踢"
+  },
+  {
+    "word": "hit",
+    "phonetic": "[hɪt]",
+    "meaning": "击打"
+  },
+  {
+    "word": "exercise",
+    "phonetic": "[ˈɛksərsaɪz]",
+    "meaning": "锻炼"
+  },
+  {
+    "word": "stretch",
+    "phonetic": "[strɛtʃ]",
+    "meaning": "拉伸"
+  },
+  {
+    "word": "warm-up",
+    "phonetic": "[ˈwɔːrmʌp]",
+    "meaning": "热身"
+  },
+  {
+    "word": "rest",
+    "phonetic": "[rɛst]",
+    "meaning": "休息"
+  },
+  {
+    "word": "football",
+    "phonetic": "[ˈfʊtbɔːl]",
+    "meaning": "足球"
+  },
+  {
+    "word": "basketball",
+    "phonetic": "[ˈbæskɪtbɔːl]",
+    "meaning": "篮球"
+  },
+  {
+    "word": "volleyball",
+    "phonetic": "[ˈvɒlibɔːl]",
+    "meaning": "排球"
+  },
+  {
+    "word": "tennis",
+    "phonetic": "[ˈtɛnɪs]",
+    "meaning": "网球"
+  },
+  {
+    "word": "ping-pong",
+    "phonetic": "[ˈpɪŋpɒŋ]",
+    "meaning": "乒乓球"
+  },
+  {
+    "word": "baseball",
+    "phonetic": "[ˈbeɪsbɔːl]",
+    "meaning": "棒球"
+  },
+  {
+    "word": "badminton",
+    "phonetic": "[ˈbædmɪntən]",
+    "meaning": "羽毛球"
+  },
+  {
+    "word": "swimming",
+    "phonetic": "[ˈswɪmɪŋ]",
+    "meaning": "游泳"
+  },
+  {
+    "word": "skiing",
+    "phonetic": "[ˈskiːɪŋ]",
+    "meaning": "滑雪"
+  },
+  {
+    "word": "yoga",
+    "phonetic": "[ˈjoʊɡə]",
+    "meaning": "瑜伽"
+  },
+  {
+    "word": "teacher",
+    "phonetic": "[ˈtiːtʃər]",
+    "meaning": "老师"
+  },
+  {
+    "word": "student",
+    "phonetic": "[ˈstjuːdənt]",
+    "meaning": "学生"
+  },
+  {
+    "word": "doctor",
+    "phonetic": "[ˈdɒktər]",
+    "meaning": "医生"
+  },
+  {
+    "word": "nurse",
+    "phonetic": "[nɜːrs]",
+    "meaning": "护士"
+  },
+  {
+    "word": "driver",
+    "phonetic": "[ˈdraɪvər]",
+    "meaning": "司机"
+  },
+  {
+    "word": "farmer",
+    "phonetic": "[ˈfɑːrmər]",
+    "meaning": "农民"
+  },
+  {
+    "word": "worker",
+    "phonetic": "[ˈwɜːrkər]",
+    "meaning": "工人"
+  },
+  {
+    "word": "artist",
+    "phonetic": "[ˈɑːrtɪst]",
+    "meaning": "艺术家"
+  },
+  {
+    "word": "actor",
+    "phonetic": "[ˈæktər]",
+    "meaning": "演员"
+  },
+  {
+    "word": "painter",
+    "phonetic": "[ˈpeɪntər]",
+    "meaning": "画家"
+  },
+  {
+    "word": "singer",
+    "phonetic": "[ˈsɪŋər]",
+    "meaning": "歌手"
+  },
+  {
+    "word": "musician",
+    "phonetic": "[mjuˈzɪʃən]",
+    "meaning": "音乐家"
+  },
+  {
+    "word": "dancer",
+    "phonetic": "[ˈdænsər]",
+    "meaning": "舞者"
+  },
+  {
+    "word": "police",
+    "phonetic": "[pəˈliːs]",
+    "meaning": "警察"
+  },
+  {
+    "word": "firefighter",
+    "phonetic": "[ˈfaɪərfaɪtər]",
+    "meaning": "消防员"
+  },
+  {
+    "word": "chef",
+    "phonetic": "[ʃɛf]",
+    "meaning": "厨师"
+  },
+  {
+    "word": "engineer",
+    "phonetic": "[ˌɛndʒɪˈnɪr]",
+    "meaning": "工程师"
+  },
+  {
+    "word": "scientist",
+    "phonetic": "[ˈsaɪəntɪst]",
+    "meaning": "科学家"
+  },
+  {
+    "word": "bus",
+    "phonetic": "[bʌs]",
+    "meaning": "公共汽车"
+  },
+  {
+    "word": "motorcycle",
+    "phonetic": "[ˈmoʊtərˌsaɪkl]",
+    "meaning": "摩托车"
+  },
+  {
+    "word": "car",
+    "phonetic": "[kɑːr]",
+    "meaning": "小汽车"
+  },
+  {
+    "word": "traffic light",
+    "phonetic": "[ˈtræfɪk laɪt]",
+    "meaning": "交通灯"
+  },
+  {
+    "word": "bicycle",
+    "phonetic": "[ˈbaɪsɪkl]",
+    "meaning": "自行车"
+  },
+  {
+    "word": "road",
+    "phonetic": "[roʊd]",
+    "meaning": "道路"
+  },
+  {
+    "word": "train",
+    "phonetic": "[treɪn]",
+    "meaning": "火车"
+  },
+  {
+    "word": "highway",
+    "phonetic": "[ˈhaɪweɪ]",
+    "meaning": "高速公路"
+  },
+  {
+    "word": "plane",
+    "phonetic": "[pleɪn]",
+    "meaning": "飞机"
+  },
+  {
+    "word": "sidewalk",
+    "phonetic": "[ˈsaɪdwɔːk]",
+    "meaning": "人行道"
+  },
+  {
+    "word": "ship",
+    "phonetic": "[ʃɪp]",
+    "meaning": "船"
+  },
+  {
+    "word": "stop sign",
+    "phonetic": "[stɑːp saɪn]",
+    "meaning": "停车标志"
+  },
+  {
+    "word": "boat",
+    "phonetic": "[boʊt]",
+    "meaning": "小船"
+  },
+  {
+    "word": "pedestrian",
+    "phonetic": "[pəˈdestriən]",
+    "meaning": "行人"
+  },
+  {
+    "word": "taxi",
+    "phonetic": "[ˈtæksi]",
+    "meaning": "出租车"
+  },
+  {
+    "word": "driver",
+    "phonetic": "[ˈdraɪvər]",
+    "meaning": "驾驶员"
+  },
+  {
+    "word": "truck",
+    "phonetic": "[trʌk]",
+    "meaning": "卡车"
+  },
+  {
+    "word": "passenger",
+    "phonetic": "[ˈpæsɪndʒər]",
+    "meaning": "乘客"
+  },
+  {
+    "word": "subway",
+    "phonetic": "[ˈsʌbweɪ]",
+    "meaning": "地铁"
+  },
+  {
+    "word": "helmet",
+    "phonetic": "[ˈhelmɪt]",
+    "meaning": "头盔"
+  },
+  {
+    "word": "left",
+    "phonetic": "[left]",
+    "meaning": "左边"
+  },
+  {
+    "word": "east",
+    "phonetic": "[iːst]",
+    "meaning": "东"
+  },
+  {
+    "word": "right",
+    "phonetic": "[raɪt]",
+    "meaning": "右边"
+  },
+  {
+    "word": "west",
+    "phonetic": "[west]",
+    "meaning": "西"
+  },
+  {
+    "word": "straight",
+    "phonetic": "[streɪt]",
+    "meaning": "直走"
+  },
+  {
+    "word": "up",
+    "phonetic": "[ʌp]",
+    "meaning": "上"
+  },
+  {
+    "word": "north",
+    "phonetic": "[nɔːrθ]",
+    "meaning": "北"
+  },
+  {
+    "word": "south",
+    "phonetic": "[saʊθ]",
+    "meaning": "南"
+  },
+  {
+    "word": "down",
+    "phonetic": "[daʊn]",
+    "meaning": "下"
+  },
+  {
+    "word": "far",
+    "phonetic": "[fɑːr]",
+    "meaning": "远离"
+  },
+  {
+    "word": "front",
+    "phonetic": "[frʌnt]",
+    "meaning": "前面"
+  },
+  {
+    "word": "back",
+    "phonetic": "[bæk]",
+    "meaning": "后面"
+  },
+  {
+    "word": "near",
+    "phonetic": "[nɪr]",
+    "meaning": "靠近"
+  },
+  {
+    "word": "inside",
+    "phonetic": "[ˌɪnˈsaɪd]",
+    "meaning": "里面"
+  },
+  {
+    "word": "outside",
+    "phonetic": "[ˌaʊtˈsaɪd]",
+    "meaning": "外面"
+  },
+  {
+    "word": "big",
+    "phonetic": "[bɪɡ]",
+    "meaning": "大的"
+  },
+  {
+    "word": "small",
+    "phonetic": "[smɔːl]",
+    "meaning": "小的"
+  },
+  {
+    "word": "tall",
+    "phonetic": "[tɔːl]",
+    "meaning": "高的"
+  },
+  {
+    "word": "long",
+    "phonetic": "[lɔːŋ]",
+    "meaning": "长的"
+  },
+  {
+    "word": "young",
+    "phonetic": "[jʌŋ]",
+    "meaning": "年轻的"
+  },
+  {
+    "word": "old",
+    "phonetic": "[oʊld]",
+    "meaning": "老的/旧的"
+  },
+  {
+    "word": "happy",
+    "phonetic": "[ˈhæpi]",
+    "meaning": "快乐的"
+  },
+  {
+    "word": "sad",
+    "phonetic": "[sæd]",
+    "meaning": "悲伤的"
+  },
+  {
+    "word": "angry",
+    "phonetic": "[ˈæŋɡri]",
+    "meaning": "生气的"
+  },
+  {
+    "word": "living room",
+    "phonetic": "[ˈlɪvɪŋ ruːm]",
+    "meaning": "客厅"
+  },
+  {
+    "word": "sofa",
+    "phonetic": "[ˈsoʊfə]",
+    "meaning": "沙发"
+  },
+  {
+    "word": "chair",
+    "phonetic": "[tʃɛr]",
+    "meaning": "椅子"
+  },
+  {
+    "word": "bedroom",
+    "phonetic": "[ˈbɛdruːm]",
+    "meaning": "卧室"
+  },
+  {
+    "word": "desk",
+    "phonetic": "[dɛsk]",
+    "meaning": "书桌"
+  },
+  {
+    "word": "table",
+    "phonetic": "[ˈteɪbl]",
+    "meaning": "桌子"
+  },
+  {
+    "word": "bathroom",
+    "phonetic": "[ˈbæθruːm]",
+    "meaning": "浴室"
+  },
+  {
+    "word": "shelf",
+    "phonetic": "[ʃɛlf]",
+    "meaning": "书架"
+  },
+  {
+    "word": "bed",
+    "phonetic": "[bɛd]",
+    "meaning": "床"
+  },
+  {
+    "word": "kitchen",
+    "phonetic": "[ˈkɪtʃɪn]",
+    "meaning": "厨房"
+  },
+  {
+    "word": "drawer",
+    "phonetic": "[ˈdrɔːər]",
+    "meaning": "抽屉"
+  },
+  {
+    "word": "dining room",
+    "phonetic": "[ˈdaɪnɪŋ ruːm]",
+    "meaning": "餐厅"
+  },
+  {
+    "word": "wardrobe",
+    "phonetic": "[ˈwɔːrdroʊb]",
+    "meaning": "衣柜"
+  },
+  {
+    "word": "study",
+    "phonetic": "[ˈstʌdi]",
+    "meaning": "书房"
+  },
+  {
+    "word": "bookcase",
+    "phonetic": "[ˈbʊkkeɪs]",
+    "meaning": "书柜"
+  },
+  {
+    "word": "hallway",
+    "phonetic": "[ˈhɔːlweɪ]",
+    "meaning": "走廊"
+  },
+  {
+    "word": "mattress",
+    "phonetic": "[ˈmætrəs]",
+    "meaning": "床垫"
+  },
+  {
+    "word": "balcony",
+    "phonetic": "[ˈbælkəni]",
+    "meaning": "阳台"
+  },
+  {
+    "word": "lamp",
+    "phonetic": "[læmp]",
+    "meaning": "灯"
+  },
+  {
+    "word": "garage",
+    "phonetic": "[ɡəˈrɑːʒ]",
+    "meaning": "车库"
+  },
+  {
+    "word": "mirror",
+    "phonetic": "[ˈmɪrər]",
+    "meaning": "镜子"
+  },
+  {
+    "word": "clothes",
+    "phonetic": "[kloʊðz]",
+    "meaning": "衣服"
+  },
+  {
+    "word": "pants",
+    "phonetic": "[pænts]",
+    "meaning": "裤子"
+  },
+  {
+    "word": "shirt",
+    "phonetic": "[ʃɜːrt]",
+    "meaning": "衬衫"
+  },
+  {
+    "word": "t-shirt",
+    "phonetic": "[ˈtiːʃɜːrt]",
+    "meaning": "T恤"
+  },
+  {
+    "word": "dress",
+    "phonetic": "[drɛs]",
+    "meaning": "连衣裙"
+  },
+  {
+    "word": "skirt",
+    "phonetic": "[skɜːrt]",
+    "meaning": "裙子"
+  },
+  {
+    "word": "jacket",
+    "phonetic": "[ˈdʒækɪt]",
+    "meaning": "夹克"
+  },
+  {
+    "word": "sweater",
+    "phonetic": "[ˈswɛtər]",
+    "meaning": "毛衣"
+  },
+  {
+    "word": "coat",
+    "phonetic": "[koʊt]",
+    "meaning": "大衣"
+  },
+  {
+    "word": "tie",
+    "phonetic": "[taɪ]",
+    "meaning": "领带"
+  },
+  {
+    "word": "jeans",
+    "phonetic": "[dʒiːnz]",
+    "meaning": "牛仔裤"
+  },
+  {
+    "word": "gloves",
+    "phonetic": "[ɡlʌvz]",
+    "meaning": "手套"
+  },
+  {
+    "word": "hat",
+    "phonetic": "[hæt]",
+    "meaning": "帽子"
+  },
+  {
+    "word": "socks",
+    "phonetic": "[sɑks]",
+    "meaning": "袜子"
+  },
+  {
+    "word": "shoes",
+    "phonetic": "[ʃuːz]",
+    "meaning": "鞋子"
+  },
+  {
+    "word": "China",
+    "phonetic": "[ˈtʃaɪnə]",
+    "meaning": "中国"
+  },
+  {
+    "word": "America",
+    "phonetic": "[əˈmɛrɪkə]",
+    "meaning": "美国"
+  },
+  {
+    "word": "France",
+    "phonetic": "[fræns]",
+    "meaning": "法国"
+  },
+  {
+    "word": "London",
+    "phonetic": "[ˈlʌndən]",
+    "meaning": "伦敦"
+  },
+  {
+    "word": "Canada",
+    "phonetic": "[ˈkænədə]",
+    "meaning": "加拿大"
+  },
+  {
+    "word": "Sydney",
+    "phonetic": "[ˈsɪdni]",
+    "meaning": "悉尼"
+  },
+  {
+    "word": "Germany",
+    "phonetic": "[ˈdʒɜːrməni]",
+    "meaning": "德国"
+  },
+  {
+    "word": "Australia",
+    "phonetic": "[ɒˈstreɪliə]",
+    "meaning": "澳大利亚"
+  },
+  {
+    "word": "one",
+    "phonetic": "[wʌn]",
+    "meaning": "一"
+  },
+  {
+    "word": "two",
+    "phonetic": "[tuː]",
+    "meaning": "二"
+  },
+  {
+    "word": "three",
+    "phonetic": "[θriː]",
+    "meaning": "三"
+  },
+  {
+    "word": "four",
+    "phonetic": "[fɔːr]",
+    "meaning": "四"
+  },
+  {
+    "word": "five",
+    "phonetic": "[faɪv]",
+    "meaning": "五"
+  },
+  {
+    "word": "six",
+    "phonetic": "[sɪks]",
+    "meaning": "六"
+  },
+  {
+    "word": "seven",
+    "phonetic": "[ˈsev(ə)n]",
+    "meaning": "七"
+  },
+  {
+    "word": "eight",
+    "phonetic": "[eɪt]",
+    "meaning": "八"
+  },
+  {
+    "word": "nine",
+    "phonetic": "[naɪn]",
+    "meaning": "九"
+  },
+  {
+    "word": "ten",
+    "phonetic": "[ten]",
+    "meaning": "十"
+  },
+  {
+    "word": "eleven",
+    "phonetic": "[ɪˈlev(ə)n]",
+    "meaning": "十一"
+  },
+  {
+    "word": "twelve",
+    "phonetic": "[twelv]",
+    "meaning": "十二"
+  },
+  {
+    "word": "thirteen",
+    "phonetic": "[ˌθɜːrˈtiːn]",
+    "meaning": "十三"
+  },
+  {
+    "word": "fourteen",
+    "phonetic": "[ˌfɔːrˈtiːn]",
+    "meaning": "十四"
+  },
+  {
+    "word": "fifteen",
+    "phonetic": "[ˌfɪfˈtiːn]",
+    "meaning": "十五"
+  },
+  {
+    "word": "sixteen",
+    "phonetic": "[ˌsɪksˈtiːn]",
+    "meaning": "十六"
+  },
+  {
+    "word": "seventeen",
+    "phonetic": "[ˌsev(ə)nˈtiːn]",
+    "meaning": "十七"
+  },
+  {
+    "word": "eighteen",
+    "phonetic": "[ˌeɪˈtiːn]",
+    "meaning": "十八"
+  },
+  {
+    "word": "nineteen",
+    "phonetic": "[ˌnaɪnˈtiːn]",
+    "meaning": "十九"
+  },
+  {
+    "word": "twenty",
+    "phonetic": "[ˈtwenti]",
+    "meaning": "二十"
+  },
+  {
+    "word": "first",
+    "phonetic": "[fɜːrst]",
+    "meaning": "第一"
+  },
+  {
+    "word": "second",
+    "phonetic": "[ˈsekənd]",
+    "meaning": "第二"
+  },
+  {
+    "word": "third",
+    "phonetic": "[θɜːrd]",
+    "meaning": "第三"
+  },
+  {
+    "word": "fourth",
+    "phonetic": "[fɔːrθ]",
+    "meaning": "第四"
+  },
+  {
+    "word": "fifth",
+    "phonetic": "[fɪfθ]",
+    "meaning": "第五"
+  },
+  {
+    "word": "sixth",
+    "phonetic": "[sɪksθ]",
+    "meaning": "第六"
+  },
+  {
+    "word": "seventh",
+    "phonetic": "[ˈsev(ə)nθ]",
+    "meaning": "第七"
+  },
+  {
+    "word": "eighth",
+    "phonetic": "[eɪtθ]",
+    "meaning": "第八"
+  },
+  {
+    "word": "ninth",
+    "phonetic": "[naɪnθ]",
+    "meaning": "第九"
+  },
+  {
+    "word": "tenth",
+    "phonetic": "[tenθ]",
+    "meaning": "第十"
+  },
+  {
+    "word": "eleventh",
+    "phonetic": "[ɪˈlev(ə)nθ]",
+    "meaning": "第十一"
+  },
+  {
+    "word": "twelfth",
+    "phonetic": "[twelfθ]",
+    "meaning": "第十二"
+  },
+  {
+    "word": "thirteenth",
+    "phonetic": "[ˌθɜːrˈtiːnθ]",
+    "meaning": "第十三"
+  },
+  {
+    "word": "fourteenth",
+    "phonetic": "[ˌfɔːrˈtiːnθ]",
+    "meaning": "第十四"
+  },
+  {
+    "word": "fifteenth",
+    "phonetic": "[ˌfɪfˈtiːnθ]",
+    "meaning": "第十五"
+  },
+  {
+    "word": "sixteenth",
+    "phonetic": "[ˌsɪksˈtiːnθ]",
+    "meaning": "第十六"
+  },
+  {
+    "word": "seventeenth",
+    "phonetic": "[ˌsev(ə)nˈtiːnθ]",
+    "meaning": "第十七"
+  },
+  {
+    "word": "eighteenth",
+    "phonetic": "[ˌeɪˈtiːnθ]",
+    "meaning": "第十八"
+  },
+  {
+    "word": "nineteenth",
+    "phonetic": "[ˌnaɪnˈtiːnθ]",
+    "meaning": "第十九"
+  },
+  {
+    "word": "twentieth",
+    "phonetic": "[ˈtwentiəθ]",
+    "meaning": "第二十"
+  },
+  {
+    "word": "year",
+    "phonetic": "[jɪər]",
+    "meaning": "年"
+  },
+  {
+    "word": "month",
+    "phonetic": "[mʌnθ]",
+    "meaning": "月"
+  },
+  {
+    "word": "week",
+    "phonetic": "[wiːk]",
+    "meaning": "周"
+  },
+  {
+    "word": "day",
+    "phonetic": "[deɪ]",
+    "meaning": "天"
+  },
+  {
+    "word": "hour",
+    "phonetic": "[ˈaʊər]",
+    "meaning": "小时"
+  },
+  {
+    "word": "minute",
+    "phonetic": "[ˈmɪnɪt]",
+    "meaning": "分钟"
+  },
+  {
+    "word": "second",
+    "phonetic": "[ˈsekənd]",
+    "meaning": "秒"
+  },
+
+  {
+    "word": "morning",
+    "phonetic": "[ˈmɔːrnɪŋ]",
+    "meaning": "早上"
+  },
+  {
+    "word": "afternoon",
+    "phonetic": "[ˌæftərˈnuːn]",
+    "meaning": "下午"
+  },
+  {
+    "word": "evening",
+    "phonetic": "[ˈiːvnɪŋ]",
+    "meaning": "晚上"
+  },
+  {
+    "word": "night",
+    "phonetic": "[naɪt]",
+    "meaning": "夜晚"
+  },
+  {
+    "word": "today",
+    "phonetic": "[təˈdeɪ]",
+    "meaning": "今天"
+  },
+  {
+    "word": "yesterday",
+    "phonetic": "[ˈjestərdeɪ]",
+    "meaning": "昨天"
+  },
+  {
+    "word": "tomorrow",
+    "phonetic": "[təˈmɒroʊ]",
+    "meaning": "明天"
+  },
+
+  {
+    "word": "Monday",
+    "phonetic": "[ˈmʌndeɪ]",
+    "meaning": "星期一"
+  },
+  {
+    "word": "Tuesday",
+    "phonetic": "[ˈtuːzdeɪ]",
+    "meaning": "星期二"
+  },
+  {
+    "word": "Wednesday",
+    "phonetic": "[ˈwenzdeɪ]",
+    "meaning": "星期三"
+  },
+  {
+    "word": "Thursday",
+    "phonetic": "[ˈθɜːrzdeɪ]",
+    "meaning": "星期四"
+  },
+  {
+    "word": "Friday",
+    "phonetic": "[ˈfraɪdeɪ]",
+    "meaning": "星期五"
+  },
+  {
+    "word": "Saturday",
+    "phonetic": "[ˈsætərdeɪ]",
+    "meaning": "星期六"
+  },
+  {
+    "word": "Sunday",
+    "phonetic": "[ˈsʌndeɪ]",
+    "meaning": "星期天"
+  },
+
+  {
+    "word": "January",
+    "phonetic": "[ˈdʒænjuəri]",
+    "meaning": "一月"
+  },
+  {
+    "word": "February",
+    "phonetic": "[ˈfebruəri]",
+    "meaning": "二月"
+  },
+  {
+    "word": "March",
+    "phonetic": "[mɑːrtʃ]",
+    "meaning": "三月"
+  },
+  {
+    "word": "April",
+    "phonetic": "[ˈeɪprəl]",
+    "meaning": "四月"
+  },
+  {
+    "word": "May",
+    "phonetic": "[meɪ]",
+    "meaning": "五月"
+  },
+  {
+    "word": "June",
+    "phonetic": "[dʒuːn]",
+    "meaning": "六月"
+  },
+  {
+    "word": "July",
+    "phonetic": "[dʒʊˈlaɪ]",
+    "meaning": "七月"
+  },
+  {
+    "word": "August",
+    "phonetic": "[ˈɔːɡəst]",
+    "meaning": "八月"
+  },
+  {
+    "word": "September",
+    "phonetic": "[sepˈtembər]",
+    "meaning": "九月"
+  },
+  {
+    "word": "October",
+    "phonetic": "[ɒkˈtoʊbər]",
+    "meaning": "十月"
+  },
+  {
+    "word": "November",
+    "phonetic": "[noʊˈvembər]",
+    "meaning": "十一月"
+  },
+  {
+    "word": "December",
+    "phonetic": "[dɪˈsembər]",
+    "meaning": "十二月"
+  },
+
+  {
+    "word": "spring",
+    "phonetic": "[sprɪŋ]",
+    "meaning": "春天"
+  },
+  {
+    "word": "summer",
+    "phonetic": "[ˈsʌmər]",
+    "meaning": "夏天"
+  },
+  {
+    "word": "autumn",
+    "phonetic": "[ˈɔːtəm]",
+    "meaning": "秋天"
+  },
+  {
+    "word": "winter",
+    "phonetic": "[ˈwɪntər]",
+    "meaning": "冬天"
+  },
+  {
+    "word": "dog",
+    "phonetic": "[dɒɡ]",
+    "meaning": "狗",
+    "mastered": true
+  },
+  {
+    "word": "cat",
+    "phonetic": "[kæt]",
+    "meaning": "猫",
+    "mastered": true
+  },
+  {
+    "word": "bird",
+    "phonetic": "[bɜːrd]",
+    "meaning": "鸟",
+    "mastered": true
+  },
+  {
+    "word": "fish",
+    "phonetic": "[fɪʃ]",
+    "meaning": "鱼",
+    "mastered": true
+  },
+  {
+    "word": "mouse",
+    "phonetic": "[maʊs]",
+    "meaning": "老鼠",
+    "mastered": false
+  },
+  {
+    "word": "rabbit",
+    "phonetic": "[ˈræbɪt]",
+    "meaning": "兔子",
+    "mastered": true
+  },
+  {
+    "word": "tiger",
+    "phonetic": "[ˈtaɪɡər]",
+    "meaning": "老虎",
+    "mastered": true
+  },
+  {
+    "word": "lion",
+    "phonetic": "[ˈlaɪən]",
+    "meaning": "狮子",
+    "mastered": false
+  },
+  {
+    "word": "elephant",
+    "phonetic": "[ˈelɪfənt]",
+    "meaning": "大象",
+    "mastered": true
+  },
+  {
+    "word": "monkey",
+    "phonetic": "[ˈmʌŋki]",
+    "meaning": "猴子",
+    "mastered": true
+  },
+  {
+    "word": "panda",
+    "phonetic": "[ˈpændə]",
+    "meaning": "熊猫",
+    "mastered": true
+  },
+  {
+    "word": "bear",
+    "phonetic": "[beər]",
+    "meaning": "熊",
+    "mastered": true
+  },
+  {
+    "word": "wolf",
+    "phonetic": "[wʊlf]",
+    "meaning": "狼",
+    "mastered": false
+  },
+  {
+    "word": "fox",
+    "phonetic": "[fɒks]",
+    "meaning": "狐狸",
+    "mastered": false
+  },
+  {
+    "word": "zebra",
+    "phonetic": "[ˈziːbrə]",
+    "meaning": "斑马",
+    "mastered": false
+  },
+  {
+    "word": "giraffe",
+    "phonetic": "[dʒɪˈræf]",
+    "meaning": "长颈鹿",
+    "mastered": true
+  },
+  {
+    "word": "deer",
+    "phonetic": "[dɪər]",
+    "meaning": "鹿",
+    "mastered": false
+  },
+  {
+    "word": "horse",
+    "phonetic": "[hɔːrs]",
+    "meaning": "马",
+    "mastered": false
+  },
+  {
+    "word": "cow",
+    "phonetic": "[kaʊ]",
+    "meaning": "奶牛",
+    "mastered": true
+  },
+  {
+    "word": "pig",
+    "phonetic": "[pɪɡ]",
+    "meaning": "猪",
+    "mastered": true
+  },
+  {
+    "word": "sheep",
+    "phonetic": "[ʃiːp]",
+    "meaning": "绵羊",
+    "mastered": false
+  },
+  {
+    "word": "goat",
+    "phonetic": "[ɡoʊt]",
+    "meaning": "山羊",
+    "mastered": false
+  },
+  {
+    "word": "duck",
+    "phonetic": "[dʌk]",
+    "meaning": "鸭子",
+    "mastered": false
+  },
+  {
+    "word": "chicken",
+    "phonetic": "[ˈtʃɪkɪn]",
+    "meaning": "鸡",
+    "mastered": true
+  },
+  {
+    "word": "snake",
+    "phonetic": "[sneɪk]",
+    "meaning": "蛇",
+    "mastered": true
+  },
+  {
+    "word": "crocodile",
+    "phonetic": "[ˈkrɒkədaɪl]",
+    "meaning": "鳄鱼",
+    "mastered": false
+  },
+  {
+    "word": "turtle",
+    "phonetic": "[ˈtɜːrtl]",
+    "meaning": "乌龟",
+    "mastered": false
+  },
+  {
+    "word": "frog",
+    "phonetic": "[frɒɡ]",
+    "meaning": "青蛙",
+    "mastered": false
+  },
+  {
+    "word": "spider",
+    "phonetic": "[ˈspaɪdər]",
+    "meaning": "蜘蛛",
+    "mastered": true
+  },
+  {
+    "word": "butterfly",
+    "phonetic": "[ˈbʌtərflaɪ]",
+    "meaning": "蝴蝶",
+    "mastered": false
+  },
+  {
+    "word": "circle",
+    "phonetic": "[ˈsɜːrkl]",
+    "meaning": "圆形",
+    "mastered": false
+  },
+  {
+    "word": "square",
+    "phonetic": "[skweər]",
+    "meaning": "正方形",
+    "mastered": false
+  },
+  {
+    "word": "rectangle",
+    "phonetic": "[ˈrektæŋɡl]",
+    "meaning": "长方形",
+    "mastered": false
+  },
+  {
+    "word": "triangle",
+    "phonetic": "[ˈtraɪæŋɡl]",
+    "meaning": "三角形",
+    "mastered": false
+  },
+  {
+    "word": "star",
+    "phonetic": "[stɑːr]",
+    "meaning": "星形",
+    "mastered": true
+  },
+  {
+    "word": "heart",
+    "phonetic": "[hɑːrt]",
+    "meaning": "心形",
+    "mastered": true
+  },
+  {
+    "word": "diamond",
+    "phonetic": "[ˈdaɪəmənd]",
+    "meaning": "菱形",
+    "mastered": false
+  },
+  {
+    "word": "oval",
+    "phonetic": "[ˈoʊvl]",
+    "meaning": "椭圆形",
+    "mastered": false
+  }
+]

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 网站--图标 -->
+  <link rel="icon" href="https://s3.bmp.ovh/imgs/2024/12/06/de2e895b4837ce2c.jpg" />
+  <!-- 网站--标题 -->
+  <title>IRIS STUDIO</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      background: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #111;
+      overflow-x: hidden;
+    }
+
+    body {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 24px 16px 80px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #111;
+      margin-bottom: 24px;
+    }
+
+    .word-box {
+      background: #f5f5f5;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      margin-top: 24px;
+    }
+
+    .stats {
+      margin: 16px 0;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    #chinese {
+      margin-right: 20px;
+    }
+
+    input[type="text"] {
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #999;
+      border-radius: 6px;
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      margin-top: 40px;
+      gap: 10px;
+    }
+
+    button {
+      padding: 10px 14px;
+      font-size: 16px;
+      background-color: #111;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: white;
+      color: #111;
+      border: 1px solid #111;
+    }
+
+    .hint {
+      letter-spacing: 2px;
+      font-weight: bold;
+      color: #444;
+      margin-top: 12px;
+    }
+
+
+
+    select {
+      width: 100%;
+      padding: 12px 16px;
+      font-size: 16px;
+      margin-top: 8px;
+      margin-bottom: 16px;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      padding-right: 40px;
+      cursor: pointer;
+      /* 给右边多点空位放箭头 */
+      border: 1px solid #444;
+      border-radius: 6px;
+
+      background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='20' viewBox='0 0 24 24' width='20' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>");
+      background-repeat: no-repeat;
+      background-position: calc(100% - 20px) center;
+      background-size: 24px;
+    }
+
+    @media (min-width: 480px) {
+      .button-group {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      button {
+        flex: 1;
+      }
+    }
+  </style>
+
+</head>
+
+<!-- 动画 lottie-->
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+
+<body>
+  <h1 data-i18n="WordMemorizationAssistant"></h1>
+  <div>
+    <label data-i18n="selectWordList">选择词汇表：</label>
+    <select id="wordSet">
+      <option value="primary.json" selected data-i18n="primarySchool"></option>
+      <option value="middle.json" data-i18n="middleSchool"></option>
+      <option value="high.json" data-i18n="highSchool"></option>
+    </select>
+  </div>
+  <div class="stats">
+    <span data-i18n="completedCount"></span>:
+    <span id="correctCount">0</span> / <span id="totalCount">0</span>
+  </div>
+  <div class="word-box">
+    <p>
+      <b data-i18n="chineseDefinition"></b>:
+      <span id="chinese"></span>
+      <b data-i18n="phonetic"></b>:
+      <span id="phonetic"></span>
+    </p>
+
+
+    <div style="position: relative;">
+      <input type="text" id="answer" onkeydown="checkEnter(event)" autocomplete="off">
+
+      <!-- 对勾 -->
+      <lottie-player id="checkIcon" src="./check.json" background="transparent" speed="2" style="
+      display: none; width: 50px; height: 50px;position: absolute;right: 6px;
+    top: 18px;" autoplay>
+      </lottie-player>
+
+      <!-- 错误 -->
+      <lottie-player id="errorIcon" src="./error.json" background="transparent" speed="2" style=" 
+      display: none; width: 40px;height: 40px;position: absolute;right: 10px;top: 21px;" autoplay>
+      </lottie-player>
+    </div>
+  </div>
+
+
+
+  <div class="button-group">
+    <button data-i18n="confirm" onclick="checkAnswer()"></button>
+    <button data-i18n="hint" onclick="showHint()"></button>
+  </div>
+  <p class="hint" id="hint"></p>
+  </div>
+
+  <script>
+    let words = [], current = 0, correct = 0, hints = 0;
+    let currentWord = '', phonetic = '', currentMeaning = '';
+    let errorWords = JSON.parse(localStorage.getItem('errorWords') || '[]');
+
+    document.getElementById('wordSet').addEventListener('change', preloadWords);
+    window.onload = preloadWords;
+
+    async function preloadWords() {
+      try {
+        const level = document.getElementById('wordSet').value;
+        const res = await fetch(level);
+        const data = await res.json();
+        words = shuffle(data);
+        document.getElementById('totalCount').textContent = words.length;
+        document.getElementById('correctCount').textContent = 0;
+        current = 0;
+        correct = 0;
+        nextWord();
+      } catch (error) {
+        console.log("词汇表加载失败，请检查文件是否存在！");
+      }
+    }
+
+    // 下一个单词
+    function nextWord() {
+      document.getElementById('checkIcon').style.display = 'none';
+      document.getElementById('errorIcon').style.display = 'none';
+
+      if (current >= words.length) return alert('恭喜你通关,奖励你一句恭喜你通关!');
+      const wordObj = words[current];
+      currentWord = wordObj.word;
+      currentPhonetic = wordObj.phonetic;
+      currentMeaning = wordObj.meaning;
+      hints = 0;
+      document.getElementById('chinese').textContent = currentMeaning;
+      document.getElementById('phonetic').textContent = currentPhonetic;
+      document.getElementById('answer').value = '';
+      document.getElementById('hint').textContent = '';
+    }
+
+    // 核对答案
+    function checkAnswer() {
+      const input = document.getElementById('answer').value.trim().toLowerCase();
+      const errorIcon = document.getElementById('errorIcon')
+      const checkIcon = document.getElementById('checkIcon')
+
+      if (input === currentWord.toLowerCase()) {
+        errorIcon.style.display = 'none'
+        checkIcon.style.display = 'block'
+        checkIcon.seek(0); // 回到起始帧
+        checkIcon.play();  // 重新播放
+        correct++;
+        document.getElementById('correctCount').textContent = correct;
+        updateProgress();
+        current++;
+        setTimeout(() => {
+          nextWord();
+          checkIcon.style.display = 'none'
+        }, 1000);
+
+      } else {
+        addError(currentWord);
+        errorIcon.style.display = 'block'
+        errorIcon.seek(0); // 回到起始帧
+        errorIcon.play();  // 重新播放
+      }
+    }
+
+    // 按下 Enter 确定
+    function checkEnter(e) {
+      if (e.key === 'Enter') checkAnswer();
+    }
+
+    function showHint() {
+      if (hints < currentWord.length) {
+        hints++;
+        document.getElementById('hint').textContent = currentWord.slice(0, hints) + '*'.repeat(currentWord.length - hints);
+      } else {
+        current++;
+        nextWord();
+      }
+    }
+
+    function addError(word) {
+      if (!errorWords.includes(word)) {
+        errorWords.push(word);
+        localStorage.setItem('errorWords', JSON.stringify(errorWords));
+      }
+    }
+
+    function updateProgress() {
+      const date = new Date().toISOString().slice(0, 10);
+      const progress = JSON.parse(localStorage.getItem('dailyProgress') || '{}');
+      progress[date] = (progress[date] || 0) + 1;
+      localStorage.setItem('dailyProgress', JSON.stringify(progress));
+    }
+
+    function shuffle(arr) {
+      for (let i = arr.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [arr[i], arr[j]] = [arr[j], arr[i]];
+      }
+      return arr;
+    }
+  </script>
+</body>
+<!-- 国际化 -->
+<script src="lang.js"></script>
+<!-- 切换语言 -->
+<script src="switchLang.js"></script>
+
+</html>

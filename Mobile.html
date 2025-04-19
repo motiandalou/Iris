@@ -12,17 +12,29 @@
   <link rel="stylesheet" href="mobile-css.css" />
   <!-- 网站--标题 -->
   <title>IRIS STUDIO</title>
+  <!-- 在线字体 -->
+  <link href="https://fonts.font.im/css?family=Cinzel+Decorative" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-  <nav id="navbar">
-    <div class="navbar__menu">
-      <a href="#" class="navbar__link cursor active">Home</a>
-      <a href="#Profession" class="navbar__link cursor">Profession</a>
-      <a href="#project" class="navbar__link cursor">Projects</a>
-      <a href="#Join" class="navbar__link cursor">Join</a>
-    </div>
-  </nav>
+  <div class="navbar">
+    <div style='font-size: 24px; font-family: "Cinzel Decorative", cursive;'>IRIS</div>
+    <i id="menuToggle" class="ri-menu-line menu-toggle"></i>
+  </div>
+
+  <div class="divider">
+    <p></p>
+  </div>
+
+  <div class="menu-overlay" id="menuOverlay"></div>
+  <div class="menu-content" id="menuContent">
+    <a href="#" class="navbar__link cursor active">Home</a>
+    <a href="#Profession" class="navbar__link cursor">Profession</a>
+    <a href="#project" class="navbar__link cursor">Projects</a>
+    <a href="#Join" class="navbar__link cursor">Join</a>
+    <a href="word.html" class="navbar__link cursor">背单词小助手</a>
+  </div>
+
 
   <section class="hero">
     <div class="hero__content">
@@ -987,6 +999,44 @@
     </div>
   </section>
 </body>
+
+<script>
+  const toggle = document.getElementById('menuToggle');
+  const overlay = document.getElementById('menuOverlay');
+  const content = document.getElementById('menuContent');
+
+  let isOpen = false;
+
+  toggle.addEventListener('click', () => {
+    const rect = toggle.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+
+    overlay.style.setProperty('--left', `${centerX}px`);
+    overlay.style.setProperty('--top', `${centerY}px`);
+
+    isOpen = !isOpen;
+    overlay.classList.toggle('open', isOpen);
+    content.classList.toggle('show', isOpen);
+
+    // 切换图标类名
+    menuToggle.classList.toggle('ri-menu-line', !isOpen);
+    menuToggle.classList.toggle('ri-close-large-fill', isOpen);
+  });
+
+
+
+
+  // 可选：点击内容任意位置关闭
+  content.addEventListener('click', () => {
+    isOpen = false;
+    overlay.classList.remove('open');
+    content.classList.remove('show');
+    // 切换图标类名
+    menuToggle.classList.toggle('ri-menu-line', !isOpen);
+    menuToggle.classList.toggle('ri-close-large-fill', isOpen);
+  });
+</script>
 
 <!-- 二维码 -->
 <script>
