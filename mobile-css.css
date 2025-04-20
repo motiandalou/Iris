@@ -1233,6 +1233,11 @@ html {
   flex-direction: column;
   z-index: 1000;
   pointer-events: none;
+
+  /* iOS 兼容 */
+  will-change: transform, opacity;
+  -webkit-transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 .menu-content.show {

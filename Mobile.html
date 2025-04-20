@@ -1017,54 +1017,39 @@
 
     isOpen = !isOpen;
 
-     
-   
+    overlay.classList.toggle('open', isOpen);
+
+    // iOS 兼容：使用 requestAnimationFrame 保证动画触发
     if (isOpen) {
-    // 强制重绘
-    content.style.display = 'none';
-    content.offsetHeight;
-    content.style.display = '';
-    requestAnimationFrame(() => {
-      // 添加属性
-      content.classList.add('show');
-      overlay.classList.add('open');
-    });
-  } else {
-    // 移除属性
-    content.classList.remove('show');
-    overlay.classList.remove('open');
-    setTimeout(()=>{
-      content.style.display = 'none';
-      overlay.style.display = 'none';
-    },500)
-  }
+      // Safari 有时动画无法触发，强制回流 + 下一帧添加类
+      content.classList.remove('show');
+      content.offsetHeight; // 触发 reflow
+      requestAnimationFrame(() => {
+        content.classList.add('show');
+      });
+    } else {
+      content.classList.remove('show');
+    }
 
     // 切换图标类名
     toggle.classList.toggle('ri-menu-line', !isOpen);
     toggle.classList.toggle('ri-close-large-fill', isOpen);
   });
 
-  // 可选：点击内容任意位置关闭
+  // 点击菜单内容区域关闭菜单
   content.addEventListener('click', () => {
     isOpen = false;
-
-    // 移除属性
     overlay.classList.remove('open');
+
+    // 同样做兼容处理
     content.classList.remove('show');
 
-    setTimeout(()=>{
-      content.style.display = 'none';
-      overlay.style.display = 'none';
-    },500)
-
     // 切换图标类名
-    toggle.classList.toggle('ri-menu-line', !isOpen);
-    toggle.classList.toggle('ri-close-large-fill', isOpen);
-
-
-
+    toggle.classList.add('ri-menu-line');
+    toggle.classList.remove('ri-close-large-fill');
   });
 </script>
+
 
 <!-- 二维码 -->
 <script>
