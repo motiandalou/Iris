@@ -169,7 +169,14 @@
 
 
     <div style="position: relative;">
-      <input type="text" id="answer" onkeydown="checkEnter(event)" autocomplete="off">
+      <input 
+        type="text"
+        inputmode="latin" 
+        id="answer"
+        onkeydown="checkEnter(event)" 
+        autocorrect="off" 
+        autocapitalize="off" 
+        autocomplete="off">
 
       <!-- 对勾 -->
       <lottie-player id="checkIcon" src="./check.json" background="transparent" speed="2" style="
@@ -235,24 +242,24 @@
 
       // 👉 加这一句，保持键盘不收起
       document.getElementById('answer').focus();
+      focusInput(); // ✅ 加这一句！触发按钮保持键盘逻辑
     }
 
     // 聚焦输入框
     function focusInput() {
-      // 保持键盘打开
-      document.querySelector('#confirmBtn').addEventListener('click', (e) => {
-        e.preventDefault(); // 避免提交等默认行为
-        const input = document.querySelector('#answer');
+      const btn = document.querySelector('#confirmBtn');
+      const input = document.querySelector('#answer');
+
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
         setTimeout(() => {
           input.focus(); // 再次聚焦
         }, 0);
       });
 
-
-      // ios比较凑效
-      document.querySelector('#confirmBtn').addEventListener('touchstart', (e) => {
+      btn.addEventListener('touchstart', (e) => {
         e.preventDefault();
-        document.querySelector('#answer').focus();
+        input.focus();
       });
     }
 
