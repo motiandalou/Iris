@@ -173,19 +173,19 @@
 
         <!-- 对勾 -->
         <lottie-player id="checkIcon" src="./check.json" background="transparent" speed="2" style="
-      display: none; width: 50px; height: 50px;position: absolute;right: 6px;
-    top: 18px;" autoplay>
+      display: none; width: 45px; height: 45px;position: absolute;right: 6px;
+    top: 20px;" autoplay>
         </lottie-player>
 
         <!-- 错误 -->
         <lottie-player id="errorIcon" src="./error.json" background="transparent" speed="2" style=" 
-      display: none; width: 40px;height: 40px;position: absolute;right: 10px;top: 21px;" autoplay>
+      display: none; width: 35px;height: 35px;position: absolute;right: 11px;top: 25px;" autoplay>
         </lottie-player>
 
         <!-- 确定 / 提示 -->
         <div class="button-group">
-          <button type="submit" id='confirmBtn' data-i18n="confirm" onclick="checkAnswer()"></button>
-          <button data-i18n="hint" onclick="showHint()"></button>
+          <button type="submit" id='confirmBtn' data-i18n="confirm" "></button>
+          <button data-i18n=" hint" onclick="showHint()"></button>
         </div>
 
         <!-- 提示 -->
@@ -232,13 +232,20 @@
       }
     }
 
+    let usedIndex = new Set();
+
     // 下一个单词
     function nextWord() {
       document.getElementById('checkIcon').style.display = 'none';
       document.getElementById('errorIcon').style.display = 'none';
 
-      if (current >= words.length) return alert('恭喜你通关,奖励你一句恭喜你通关!');
-      const wordObj = words[current];
+      let index;
+      do {
+        index = Math.floor(Math.random() * words.length);
+      } while (usedIndex.has(index));
+
+      usedIndex.add(index);
+      const wordObj = words[index];
       currentWord = wordObj.word;
       currentPhonetic = wordObj.phonetic;
       currentMeaning = wordObj.meaning;
