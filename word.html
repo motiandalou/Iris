@@ -70,7 +70,7 @@
     .button-group {
       display: flex;
       flex-direction: column;
-      margin-top: 40px;
+      margin-top: 30px;
       gap: 10px;
     }
 
@@ -123,6 +123,12 @@
       z-index: -1;
     }
 
+    #playSoundBtn {
+      margin-top: 10px;
+      font-size: 35px;
+      cursor: pointer;
+    }
+
     @media (min-width: 480px) {
       .button-group {
         flex-direction: row;
@@ -167,6 +173,8 @@
         <b data-i18n="phonetic"></b>:
         <p id="phonetic"></p>
       </div>
+
+
     </div>
 
     <div style="position: relative;">
@@ -185,6 +193,9 @@
       display: none; width: 35px;height: 35px;position: absolute;right: 11px;top: 25px;" autoplay>
         </lottie-player>
 
+        <!-- 喇叭图标按钮 -->
+        <div id="playSoundBtn">🔊</div>
+
         <!-- 确定 / 提示 -->
         <div class="button-group">
           <button type="submit" id='confirmBtn' data-i18n="confirm" onclick="checkAnswer()"></button>
@@ -201,6 +212,11 @@
 </body>
 
 <script>
+  document.getElementById('playSoundBtn').addEventListener('click', () => {
+    speak(currentWord);
+  });
+
+  // 打开手机键盘(safari失效)
   document.querySelector('#confirmBtn').addEventListener('click', (e) => {
     e.preventDefault();
     checkAnswer();
@@ -255,6 +271,17 @@
     document.getElementById('phonetic').textContent = currentPhonetic;
     document.getElementById('answer').value = '';
     document.getElementById('hint').textContent = '';
+
+    // ✅ 朗读当前单词
+    speak(currentWord);
+  }
+
+  function speak(text) {
+    if (!window.speechSynthesis) return;
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = 'en-US';
+    utterance.rate = 0.7; // 可调语速
+    window.speechSynthesis.speak(utterance);
   }
 
   // 核对答案
