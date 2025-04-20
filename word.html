@@ -247,29 +247,6 @@
       document.getElementById('phonetic').textContent = currentPhonetic;
       document.getElementById('answer').value = '';
       document.getElementById('hint').textContent = '';
-
-      // 👉 加这一句，保持键盘不收起
-      document.getElementById('answer').focus();
-
-    }
-
-    // 聚焦输入框
-    function focusInput() {
-      // 保持键盘打开
-      document.querySelector('#confirmBtn').addEventListener('click', (e) => {
-        e.preventDefault(); // 避免提交等默认行为
-        const input = document.querySelector('#answer');
-        setTimeout(() => {
-          input.focus(); // 再次聚焦
-        }, 0);
-      });
-
-
-      // ios比较凑效
-      document.querySelector('#confirmBtn').addEventListener('touchstart', (e) => {
-        e.preventDefault();
-        document.querySelector('#answer').focus();
-      });
     }
 
     // 核对答案
@@ -290,17 +267,12 @@
         setTimeout(() => {
           nextWord();
           checkIcon.style.display = 'none'
-          document.getElementById('answer').focus(); // ✅ 重新聚焦
         }, 1000);
       } else {
         addError(currentWord);
         errorIcon.style.display = 'block'
         errorIcon.seek(0); // 回到起始帧
         errorIcon.play();  // 重新播放
-
-        setTimeout(() => {
-          document.getElementById('answer').focus(); // ✅ 重新聚焦
-        }, 100);
       }
     }
 
