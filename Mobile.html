@@ -567,8 +567,8 @@
     <h5>Interested?</h5>
     <h2>Let's Work Together!</h2>
     <button class="btn">
-      <a target="_blank"
-        href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=cn.jiangwei.1997@gmail.com">Send Email</a>
+      <a target="_blank" href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=cn.jiangwei.1997@gmail.com"
+        style="color: #fff;">Send Email</a>
     </button>
     <p>Phone: <span>86-17621901054</span></p>
   </section>
@@ -1002,36 +1002,36 @@
 
 <script>
   const toggle = document.getElementById('menuToggle');
-const overlay = document.getElementById('menuOverlay');
-const content = document.getElementById('menuContent');
+  const overlay = document.getElementById('menuOverlay');
+  const content = document.getElementById('menuContent');
 
-let isOpen = false;
+  let isOpen = false;
 
-toggle.addEventListener('click', () => {
-  const rect = toggle.getBoundingClientRect();
-  const centerX = rect.left + rect.width / 2;
-  const centerY = rect.top + rect.height / 2;
+  toggle.addEventListener('click', () => {
+    const rect = toggle.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
 
-  overlay.style.setProperty('--left', `${centerX}px`);
-  overlay.style.setProperty('--top', `${centerY}px`);
+    overlay.style.setProperty('--left', `${centerX}px`);
+    overlay.style.setProperty('--top', `${centerY}px`);
 
-  isOpen = !isOpen;
+    isOpen = !isOpen;
 
-  overlay.classList.toggle('open', isOpen);
-  content.classList.toggle('show', isOpen);
+    overlay.classList.toggle('open', isOpen);
+    content.classList.toggle('show', isOpen);
 
-  toggle.classList.toggle('ri-menu-line', !isOpen);
-  toggle.classList.toggle('ri-close-large-fill', isOpen);
-});
+    toggle.classList.toggle('ri-menu-line', !isOpen);
+    toggle.classList.toggle('ri-close-large-fill', isOpen);
+  });
 
-content.addEventListener('click', () => {
-  isOpen = false;
-  overlay.classList.remove('open');
-  content.classList.remove('show');
+  content.addEventListener('click', () => {
+    isOpen = false;
+    overlay.classList.remove('open');
+    content.classList.remove('show');
 
-  toggle.classList.add('ri-menu-line');
-  toggle.classList.remove('ri-close-large-fill');
-});
+    toggle.classList.add('ri-menu-line');
+    toggle.classList.remove('ri-close-large-fill');
+  });
 </script>
 
 <!-- 二维码 -->
