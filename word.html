@@ -42,6 +42,11 @@
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       margin-top: 24px;
+
+      .word-title {
+        display: flex;
+        justify-content: space-between;
+      }
     }
 
     .stats {
@@ -50,9 +55,7 @@
       text-align: center;
     }
 
-    #chinese {
-      margin-right: 20px;
-    }
+
 
     input[type="text"] {
       padding: 12px;
@@ -79,12 +82,12 @@
       border-radius: 6px;
       cursor: pointer;
       transition: 0.3s;
+      border: 1px solid #111;
     }
 
     button:hover {
       background-color: white;
       color: #111;
-      border: 1px solid #111;
     }
 
     .hint {
@@ -138,7 +141,7 @@
 <body>
   <h1 data-i18n="WordMemorizationAssistant"></h1>
   <div>
-    <label data-i18n="selectWordList">选择词汇表：</label>
+    <label data-i18n="selectWordList"></label>
     <select id="wordSet">
       <option value="primary.json" selected data-i18n="primarySchool"></option>
       <option value="middle.json" data-i18n="middleSchool"></option>
@@ -150,12 +153,17 @@
     <span id="correctCount">0</span> / <span id="totalCount">0</span>
   </div>
   <div class="word-box">
-    <p>
-      <b data-i18n="chineseDefinition"></b>:
-      <span id="chinese"></span>
-      <b data-i18n="phonetic"></b>:
-      <span id="phonetic"></span>
-    </p>
+    <div class="word-title">
+      <p>
+        <b data-i18n="chineseDefinition"></b>:
+        <span id="chinese"></span>
+      </p>
+      <p>
+        <b data-i18n="phonetic"></b>:
+        <span id="phonetic"></span>
+      </p>
+    </div>
+
 
 
     <div style="position: relative;">
@@ -229,6 +237,11 @@
       const input = document.getElementById('answer').value.trim().toLowerCase();
       const errorIcon = document.getElementById('errorIcon')
       const checkIcon = document.getElementById('checkIcon')
+
+      // 保持键盘打开
+      setTimeout(() => {
+        input.focus();
+      }, 0);
 
       if (input === currentWord.toLowerCase()) {
         errorIcon.style.display = 'none'

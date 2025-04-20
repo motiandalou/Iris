@@ -110,7 +110,7 @@ const translations = {
     sun: "Sun",
     moon: "Moon",
     ResumeDownload: "CV download",
-    WordMemorizationAssistant: "Word memorization assistant",
+    WordMemorizationAssistant: "LoopWord",
     IELTS: "IELTS",
     TOEFL: "TOEFL",
     ABROAD: "STUDY ABROAD",
