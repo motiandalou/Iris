@@ -194,7 +194,7 @@
 
 
   <div class="button-group">
-    <button type="button" id='confirmBtn' data-i18n="confirm" onclick="checkAnswer()"></button>
+    <button type="button" id='confirmBtn' data-i18n="confirm"></button>
     <button data-i18n="hint" onclick="showHint()"></button>
   </div>
   <p class="hint" id="hint"></p>
@@ -245,24 +245,39 @@
       focusInput(); // ✅ 加这一句！触发按钮保持键盘逻辑
     }
 
-    // 聚焦输入框
-    function focusInput() {
-      const btn = document.querySelector('#confirmBtn');
-      const input = document.querySelector('#answer');
+   // 聚焦输入框并绑定按钮点击事件
+function focusInput() {
+  const btn = document.querySelector('#confirmBtn');
+  const input = document.querySelector('#answer');
 
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        setTimeout(() => {
-          input.focus(); // 再次聚焦
-        }, 0);
-      });
+  // 如果已经绑定过，就不重复绑定
+  if (!btn.hasAttribute('data-bound')) {
+    btn.setAttribute('data-bound', 'true');
 
-      btn.addEventListener('touchstart', (e) => {
-        e.preventDefault();
-        input.focus();
-      });
-    }
+    // 绑定点击事件
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      checkAnswer(); // 点击时核对答案
+      setTimeout(() => {
+        input.focus(); // 保持键盘不收起
+      }, 0);
+    });
 
+    // 绑定触摸事件 (防止移动端点击被阻止)
+    btn.addEventListener('touchstart', (e) => {
+      e.preventDefault();
+      input.focus();
+    });
+  }
+}
+
+// 绑定页面加载时事件
+window.onload = () => {
+  preloadWords();
+  focusInput(); // 确保按钮事件绑定
+};
+
+   
     // 核对答案
     function checkAnswer() {
   const input = document.getElementById('answer').value.trim().toLowerCase();
@@ -331,6 +346,8 @@
       }
       return arr;
     }
+    
+
   </script>
 </body>
 
