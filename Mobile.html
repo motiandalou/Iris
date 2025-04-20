@@ -1021,29 +1021,26 @@
     toggle.classList.toggle('ri-menu-line', !isOpen);
     toggle.classList.toggle('ri-close-large-fill', isOpen);
 
-
-    if (isOpen) {
-      // 添加属性
-      overlay.classList.toggle('open', isOpen);
-      requestAnimationFrame(() => {
-        // 等下一帧再加上
-        content.classList.toggle('show', isOpen);
-      })
-
-    }
-
+    // 添加属性
+    overlay.classList.toggle('open', isOpen);
+    content.classList.toggle('show', isOpen);
   });
 
   // 可选：点击内容任意位置关闭
   content.addEventListener('click', () => {
-    isOpen = false;
-    // 切换图标类名
-    toggle.classList.toggle('ri-menu-line', !isOpen);
-    toggle.classList.toggle('ri-close-large-fill', isOpen);
-
     // 移除属性
     overlay.classList.remove('open');
     content.classList.remove('show');
+
+    setTimeout(() => {
+      isOpen = false;
+      // 切换图标类名
+      toggle.classList.toggle('ri-menu-line', !isOpen);
+      toggle.classList.toggle('ri-close-large-fill', isOpen);
+    }, 500)
+
+
+
 
   });
 </script>
