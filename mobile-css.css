@@ -1191,6 +1191,7 @@ html {
   }
 }
 
+/* 汉堡按钮样式 */
 .menu-toggle {
   position: relative;
   font-size: 24px;
@@ -1220,71 +1221,72 @@ html {
   transform: scale(30);
 }
 
-/* 菜单内容 */
+/* 菜单内容（修复 Safari 的关键） */
 .menu-content {
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0.98);
+  transition: opacity 0.3s ease, transform 0.3s ease;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  display: none;
+  display: flex; /* 始终为 flex，不再使用 display: none */
   justify-content: center;
   align-items: center;
   flex-direction: column;
   z-index: 1000;
   pointer-events: none;
 
-  /* iOS 兼容 */
+  /* iOS 兼容优化 */
   will-change: transform, opacity;
   -webkit-transform: translateZ(0);
   backface-visibility: hidden;
 }
 
 .menu-content.show {
-  display: flex;
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
   pointer-events: auto;
-  animation: fadeIn 0.5s 0.2s ease forwards;
 }
 
+/* 菜单链接动画 */
 .menu-content a {
   color: #000;
-
   font-size: 2rem;
   margin: 1rem 0;
   text-decoration: none;
   opacity: 0;
   transform: translateY(20px);
+}
+
+/* 显示状态时触发动画 */
+.menu-content.show a {
   animation: slideUp 0.4s ease forwards;
 }
 
-.menu-content a:nth-child(1) {
+.menu-content.show a:nth-child(1) {
   animation-delay: 0.4s;
 }
-.menu-content a:nth-child(2) {
+.menu-content.show a:nth-child(2) {
   animation-delay: 0.6s;
 }
-.menu-content a:nth-child(3) {
+.menu-content.show a:nth-child(3) {
   animation-delay: 0.8s;
 }
-.menu-content a:nth-child(4) {
+.menu-content.show a:nth-child(4) {
   animation-delay: 1s;
 }
-.menu-content a:nth-child(5) {
+.menu-content.show a:nth-child(5) {
   animation-delay: 1.2s;
 }
 
+/* 动画定义 */
 @keyframes slideUp {
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
   }
 }

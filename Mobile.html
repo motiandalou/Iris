@@ -1002,54 +1002,37 @@
 
 <script>
   const toggle = document.getElementById('menuToggle');
-  const overlay = document.getElementById('menuOverlay');
-  const content = document.getElementById('menuContent');
+const overlay = document.getElementById('menuOverlay');
+const content = document.getElementById('menuContent');
 
-  let isOpen = false;
+let isOpen = false;
 
-  toggle.addEventListener('click', () => {
-    const rect = toggle.getBoundingClientRect();
-    const centerX = rect.left + rect.width / 2;
-    const centerY = rect.top + rect.height / 2;
+toggle.addEventListener('click', () => {
+  const rect = toggle.getBoundingClientRect();
+  const centerX = rect.left + rect.width / 2;
+  const centerY = rect.top + rect.height / 2;
 
-    overlay.style.setProperty('--left', `${centerX}px`);
-    overlay.style.setProperty('--top', `${centerY}px`);
+  overlay.style.setProperty('--left', `${centerX}px`);
+  overlay.style.setProperty('--top', `${centerY}px`);
 
-    isOpen = !isOpen;
+  isOpen = !isOpen;
 
-    overlay.classList.toggle('open', isOpen);
+  overlay.classList.toggle('open', isOpen);
+  content.classList.toggle('show', isOpen);
 
-    // iOS 兼容：使用 requestAnimationFrame 保证动画触发
-    if (isOpen) {
-      // Safari 有时动画无法触发，强制回流 + 下一帧添加类
-      content.classList.remove('show');
-      content.offsetHeight; // 触发 reflow
-      requestAnimationFrame(() => {
-        content.classList.add('show');
-      });
-    } else {
-      content.classList.remove('show');
-    }
+  toggle.classList.toggle('ri-menu-line', !isOpen);
+  toggle.classList.toggle('ri-close-large-fill', isOpen);
+});
 
-    // 切换图标类名
-    toggle.classList.toggle('ri-menu-line', !isOpen);
-    toggle.classList.toggle('ri-close-large-fill', isOpen);
-  });
+content.addEventListener('click', () => {
+  isOpen = false;
+  overlay.classList.remove('open');
+  content.classList.remove('show');
 
-  // 点击菜单内容区域关闭菜单
-  content.addEventListener('click', () => {
-    isOpen = false;
-    overlay.classList.remove('open');
-
-    // 同样做兼容处理
-    content.classList.remove('show');
-
-    // 切换图标类名
-    toggle.classList.add('ri-menu-line');
-    toggle.classList.remove('ri-close-large-fill');
-  });
+  toggle.classList.add('ri-menu-line');
+  toggle.classList.remove('ri-close-large-fill');
+});
 </script>
-
 
 <!-- 二维码 -->
 <script>
