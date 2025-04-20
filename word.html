@@ -241,12 +241,12 @@
 
       // 保持键盘打开
       setTimeout(() => {
-        input.focus();
+        document.getElementById('answer').focus();
       }, 0);
 
       document.querySelector('#confirmBtn').addEventListener('touchstart', (e) => {
         e.preventDefault();
-        input.focus();
+        document.getElementById('answer').focus();
       });
 
       if (input === currentWord.toLowerCase()) {

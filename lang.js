@@ -125,7 +125,7 @@ const translations = {
     middleSchool: "Middle School",
     highSchool: "High School",
     completedCount: "Completed",
-    chineseDefinition: "Chinese Definition",
+    chineseDefinition: "Definition",
     phonetic: "Phonetic",
     confirm: "Confirm",
     hint: "Hint",
