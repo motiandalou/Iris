@@ -1017,8 +1017,7 @@
 
     isOpen = !isOpen;
 
-     // 添加属性
-     overlay.classList.toggle('open', isOpen);
+     
    
     if (isOpen) {
     // 强制重绘
@@ -1026,28 +1025,29 @@
     content.offsetHeight;
     content.style.display = '';
     requestAnimationFrame(() => {
+      // 添加属性
       content.classList.add('show');
+      overlay.classList.add('open');
     });
   } else {
+    // 移除属性
     content.classList.remove('show');
+    overlay.classList.remove('open');
   }
 
-   
-    // content.classList.toggle('show', isOpen);
-
-
-     // 切换图标类名
-     toggle.classList.toggle('ri-menu-line', !isOpen);
+    // 切换图标类名
+    toggle.classList.toggle('ri-menu-line', !isOpen);
     toggle.classList.toggle('ri-close-large-fill', isOpen);
   });
 
   // 可选：点击内容任意位置关闭
   content.addEventListener('click', () => {
+    isOpen = false;
+
     // 移除属性
     overlay.classList.remove('open');
     content.classList.remove('show');
 
-    isOpen = false;
     // 切换图标类名
     toggle.classList.toggle('ri-menu-line', !isOpen);
     toggle.classList.toggle('ri-close-large-fill', isOpen);
