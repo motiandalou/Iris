@@ -1016,12 +1016,14 @@
     overlay.style.setProperty('--top', `${centerY}px`);
 
     isOpen = !isOpen;
-    overlay.classList.toggle('open', isOpen);
-    content.classList.toggle('show', isOpen);
 
     // 切换图标类名
-    menuToggle.classList.toggle('ri-menu-line', !isOpen);
-    menuToggle.classList.toggle('ri-close-large-fill', isOpen);
+    toggle.classList.toggle('ri-menu-line', !isOpen);
+    toggle.classList.toggle('ri-close-large-fill', isOpen);
+
+    // 添加属性
+    overlay.classList.toggle('open', isOpen);
+    content.classList.toggle('show', isOpen);
   });
 
 
@@ -1030,11 +1032,14 @@
   // 可选：点击内容任意位置关闭
   content.addEventListener('click', () => {
     isOpen = false;
+    // 切换图标类名
+    toggle.classList.toggle('ri-menu-line', !isOpen);
+    toggle.classList.toggle('ri-close-large-fill', isOpen);
+
+    // 移除属性
     overlay.classList.remove('open');
     content.classList.remove('show');
-    // 切换图标类名
-    menuToggle.classList.toggle('ri-menu-line', !isOpen);
-    menuToggle.classList.toggle('ri-close-large-fill', isOpen);
+
   });
 </script>
 

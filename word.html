@@ -240,14 +240,20 @@
       const checkIcon = document.getElementById('checkIcon')
 
       // 保持键盘打开
-      setTimeout(() => {
-        document.getElementById('answer').focus();
-      }, 0);
+      document.querySelector('#confirmBtn').addEventListener('click', (e) => {
+        e.preventDefault(); // 避免提交等默认行为
+        const input = document.querySelector('#answer');
+        setTimeout(() => {
+          input.focus(); // 再次聚焦
+        }, 0);
+      });
+
 
       document.querySelector('#confirmBtn').addEventListener('touchstart', (e) => {
         e.preventDefault();
-        document.getElementById('answer').focus();
+        document.querySelector('#answer').focus();
       });
+
 
       if (input === currentWord.toLowerCase()) {
         errorIcon.style.display = 'none'
