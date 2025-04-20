@@ -247,29 +247,23 @@
 
     // 聚焦输入框
     function focusInput() {
-  const btn = document.querySelector('#confirmBtn');
-  const input = document.querySelector('#answer');
+      // 保持键盘打开
+      document.querySelector('#confirmBtn').addEventListener('click', (e) => {
+        e.preventDefault(); // 避免提交等默认行为
+        const input = document.querySelector('#answer');
+        setTimeout(() => {
+          input.focus(); // 再次聚焦
+        }, 0);
+      });
 
-  // 如果已经绑定过，就不重复绑定
-  if (!btn.hasAttribute('data-bound')) {
-    btn.setAttribute('data-bound', 'true');
 
-    // 绑定点击事件
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      checkAnswer(); // 点击时核对答案
-      setTimeout(() => {
-        input.focus(); // 保持键盘不收起
-      }, 0);
-    });
+      // ios比较凑效
+      document.querySelector('#confirmBtn').addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        document.querySelector('#answer').focus();
+      });
+    }
 
-    // 绑定触摸事件 (防止移动端点击被阻止)
-    btn.addEventListener('touchstart', (e) => {
-      e.preventDefault();
-      input.focus();
-    });
-  }
-}
     // 核对答案
     function checkAnswer() {
   const input = document.getElementById('answer').value.trim().toLowerCase();
