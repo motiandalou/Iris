@@ -93,8 +93,6 @@
       margin-top: 12px;
     }
 
-
-
     select {
       width: 100%;
       padding: 12px 16px;
@@ -117,6 +115,11 @@
       background-size: 24px;
     }
 
+    .prompt {
+      margin-top: 280px;
+      text-align: center;
+    }
+
     @media (min-width: 480px) {
       .button-group {
         flex-direction: row;
@@ -126,6 +129,8 @@
       button {
         flex: 1;
       }
+
+
     }
   </style>
 
@@ -180,142 +185,139 @@
         <!-- 确定 / 提示 -->
         <div class="button-group">
           <button type="submit" id='confirmBtn' data-i18n="confirm" onclick="checkAnswer()"></button>
-          <button data-i18n=" hint" onclick="showHint()"></button>
+          <button data-i18n="hint" onclick="showHint()"></button>
         </div>
 
         <!-- 提示 -->
         <p class="hint" id="hint"></p>
       </div>
     </div>
-  </div>
-
-
-
 
   </div>
-
-  <script>
-    document.querySelector('#quizForm').addEventListener('submit', (e) => {
-      e.preventDefault();
-      checkAnswer();
-      setTimeout(() => {
-        document.querySelector('#answer').focus();
-      }, 100);
-    });
-
-
-    let words = [], current = 0, correct = 0, hints = 0;
-    let currentWord = '', phonetic = '', currentMeaning = '';
-    let errorWords = JSON.parse(localStorage.getItem('errorWords') || '[]');
-
-    document.getElementById('wordSet').addEventListener('change', preloadWords);
-    window.onload = preloadWords;
-
-    async function preloadWords() {
-      try {
-        const level = document.getElementById('wordSet').value;
-        const res = await fetch(level);
-        const data = await res.json();
-        words = shuffle(data);
-        document.getElementById('totalCount').textContent = words.length;
-        document.getElementById('correctCount').textContent = 0;
-        current = 0;
-        correct = 0;
-        nextWord();
-      } catch (error) {
-        console.log("词汇表加载失败，请检查文件是否存在！");
-      }
-    }
-
-    let usedIndex = new Set();
-
-    // 下一个单词
-    function nextWord() {
-      document.getElementById('checkIcon').style.display = 'none';
-      document.getElementById('errorIcon').style.display = 'none';
-
-      let index;
-      do {
-        index = Math.floor(Math.random() * words.length);
-      } while (usedIndex.has(index));
-
-      usedIndex.add(index);
-      const wordObj = words[index];
-      currentWord = wordObj.word;
-      currentPhonetic = wordObj.phonetic;
-      currentMeaning = wordObj.meaning;
-      hints = 0;
-      document.getElementById('chinese').textContent = currentMeaning;
-      document.getElementById('phonetic').textContent = currentPhonetic;
-      document.getElementById('answer').value = '';
-      document.getElementById('hint').textContent = '';
-    }
-
-    // 核对答案
-    function checkAnswer() {
-      const input = document.getElementById('answer').value.trim().toLowerCase();
-      const errorIcon = document.getElementById('errorIcon')
-      const checkIcon = document.getElementById('checkIcon')
-
-      if (input === currentWord.toLowerCase()) {
-        errorIcon.style.display = 'none'
-        checkIcon.style.display = 'block'
-        checkIcon.seek(0); // 回到起始帧
-        checkIcon.play();  // 重新播放
-        correct++;
-        document.getElementById('correctCount').textContent = correct;
-        updateProgress();
-        current++;
-        setTimeout(() => {
-          nextWord();
-          checkIcon.style.display = 'none'
-        }, 1000);
-      } else {
-        addError(currentWord);
-        errorIcon.style.display = 'block'
-        errorIcon.seek(0); // 回到起始帧
-        errorIcon.play();  // 重新播放
-      }
-    }
-
-    // 按下 Enter 确定
-    function checkEnter(e) {
-      if (e.key === 'Enter') checkAnswer();
-    }
-
-    function showHint() {
-      if (hints < currentWord.length) {
-        hints++;
-        document.getElementById('hint').textContent = currentWord.slice(0, hints) + '*'.repeat(currentWord.length - hints);
-      } else {
-        current++;
-        nextWord();
-      }
-    }
-
-    function addError(word) {
-      if (!errorWords.includes(word)) {
-        errorWords.push(word);
-        localStorage.setItem('errorWords', JSON.stringify(errorWords));
-      }
-    }
-
-    function updateProgress() {
-      const date = new Date().toISOString().slice(0, 10);
-      const progress = JSON.parse(localStorage.getItem('dailyProgress') || '{}');
-      progress[date] = (progress[date] || 0) + 1;
-      localStorage.setItem('dailyProgress', JSON.stringify(progress));
-    }
-
-    function shuffle(arr) {
-      for (let i = arr.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [arr[i], arr[j]] = [arr[j], arr[i]];
-      }
-      return arr;
-    }
-  </script>
+  <div class="prompt">*建议使用非Safari浏览器</div>
 </body>
+
+<script>
+  document.querySelector('#confirmBtn').addEventListener('click', (e) => {
+    e.preventDefault();
+    checkAnswer();
+    setTimeout(() => {
+      document.querySelector('#answer').focus();
+    }, 0);
+  });
+
+
+  let words = [], current = 0, correct = 0, hints = 0;
+  let currentWord = '', phonetic = '', currentMeaning = '';
+  let errorWords = JSON.parse(localStorage.getItem('errorWords') || '[]');
+
+  document.getElementById('wordSet').addEventListener('change', preloadWords);
+  window.onload = preloadWords;
+
+  async function preloadWords() {
+    try {
+      const level = document.getElementById('wordSet').value;
+      const res = await fetch(level);
+      const data = await res.json();
+      words = shuffle(data);
+      document.getElementById('totalCount').textContent = words.length;
+      document.getElementById('correctCount').textContent = 0;
+      current = 0;
+      correct = 0;
+      nextWord();
+    } catch (error) {
+      console.log("词汇表加载失败，请检查文件是否存在！");
+    }
+  }
+
+  let usedIndex = new Set();
+
+  // 下一个单词
+  function nextWord() {
+    document.getElementById('checkIcon').style.display = 'none';
+    document.getElementById('errorIcon').style.display = 'none';
+
+    let index;
+    do {
+      index = Math.floor(Math.random() * words.length);
+    } while (usedIndex.has(index));
+
+    usedIndex.add(index);
+    const wordObj = words[index];
+    currentWord = wordObj.word;
+    currentPhonetic = wordObj.phonetic;
+    currentMeaning = wordObj.meaning;
+    hints = 0;
+    document.getElementById('chinese').textContent = currentMeaning;
+    document.getElementById('phonetic').textContent = currentPhonetic;
+    document.getElementById('answer').value = '';
+    document.getElementById('hint').textContent = '';
+  }
+
+  // 核对答案
+  function checkAnswer() {
+    const input = document.getElementById('answer').value.trim().toLowerCase();
+    const errorIcon = document.getElementById('errorIcon')
+    const checkIcon = document.getElementById('checkIcon')
+
+    if (input === currentWord.toLowerCase()) {
+      errorIcon.style.display = 'none'
+      checkIcon.style.display = 'block'
+      checkIcon.seek(0); // 回到起始帧
+      checkIcon.play();  // 重新播放
+      correct++;
+      document.getElementById('correctCount').textContent = correct;
+      updateProgress();
+      current++;
+      setTimeout(() => {
+        nextWord();
+        checkIcon.style.display = 'none'
+      }, 1000);
+    } else {
+      addError(currentWord);
+      errorIcon.style.display = 'block'
+      errorIcon.seek(0); // 回到起始帧
+      errorIcon.play();  // 重新播放
+    }
+  }
+
+  // 按下 Enter 确定
+  function checkEnter(e) {
+    if (e.key === 'Enter') checkAnswer();
+  }
+
+  function showHint() {
+    if (hints < currentWord.length) {
+      hints++;
+      document.getElementById('hint').textContent = currentWord.slice(0, hints) + '*'.repeat(currentWord.length - hints);
+    } else {
+      current++;
+      nextWord();
+    }
+  }
+
+  function addError(word) {
+    if (!errorWords.includes(word)) {
+      errorWords.push(word);
+      localStorage.setItem('errorWords', JSON.stringify(errorWords));
+    }
+  }
+
+  function updateProgress() {
+    const date = new Date().toISOString().slice(0, 10);
+    const progress = JSON.parse(localStorage.getItem('dailyProgress') || '{}');
+    progress[date] = (progress[date] || 0) + 1;
+    localStorage.setItem('dailyProgress', JSON.stringify(progress));
+  }
+
+  function shuffle(arr) {
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }
+</script>
 
 <!-- 国际化 -->
 <script src="lang.js"></script>
