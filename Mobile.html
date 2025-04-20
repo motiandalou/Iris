@@ -1017,13 +1017,28 @@
 
     isOpen = !isOpen;
 
-    // 切换图标类名
-    toggle.classList.toggle('ri-menu-line', !isOpen);
-    toggle.classList.toggle('ri-close-large-fill', isOpen);
+     // 添加属性
+     overlay.classList.toggle('open', isOpen);
+   
+    if (isOpen) {
+    // 强制重绘
+    content.style.display = 'none';
+    content.offsetHeight;
+    content.style.display = '';
+    requestAnimationFrame(() => {
+      content.classList.add('show');
+    });
+  } else {
+    content.classList.remove('show');
+  }
 
-    // 添加属性
-    overlay.classList.toggle('open', isOpen);
-    content.classList.toggle('show', isOpen);
+   
+    // content.classList.toggle('show', isOpen);
+
+
+     // 切换图标类名
+     toggle.classList.toggle('ri-menu-line', !isOpen);
+    toggle.classList.toggle('ri-close-large-fill', isOpen);
   });
 
   // 可选：点击内容任意位置关闭
@@ -1032,13 +1047,10 @@
     overlay.classList.remove('open');
     content.classList.remove('show');
 
-    setTimeout(() => {
-      isOpen = false;
-      // 切换图标类名
-      toggle.classList.toggle('ri-menu-line', !isOpen);
-      toggle.classList.toggle('ri-close-large-fill', isOpen);
-    }, 500)
-
+    isOpen = false;
+    // 切换图标类名
+    toggle.classList.toggle('ri-menu-line', !isOpen);
+    toggle.classList.toggle('ri-close-large-fill', isOpen);
 
 
 
