@@ -169,35 +169,36 @@
 
 
     <div style="position: relative;">
-      <input 
-        type="text"
-        inputmode="latin" 
-        id="answer"
-        onkeydown="checkEnter(event)" 
-        autocorrect="off" 
-        autocapitalize="off" 
-        autocomplete="off">
+      <form id="quizForm">
+        <input type="text" inputmode="latin" id="answer" onkeydown="checkEnter(event)" autocorrect="off"
+          autocapitalize="off" autocomplete="off">
 
-      <!-- 对勾 -->
-      <lottie-player id="checkIcon" src="./check.json" background="transparent" speed="2" style="
+        <!-- 对勾 -->
+        <lottie-player id="checkIcon" src="./check.json" background="transparent" speed="2" style="
       display: none; width: 50px; height: 50px;position: absolute;right: 6px;
     top: 18px;" autoplay>
-      </lottie-player>
+        </lottie-player>
 
-      <!-- 错误 -->
-      <lottie-player id="errorIcon" src="./error.json" background="transparent" speed="2" style=" 
+        <!-- 错误 -->
+        <lottie-player id="errorIcon" src="./error.json" background="transparent" speed="2" style=" 
       display: none; width: 40px;height: 40px;position: absolute;right: 10px;top: 21px;" autoplay>
-      </lottie-player>
+        </lottie-player>
+
+        <!-- 确定 / 提示 -->
+        <div class="button-group">
+          <button type="button" id='confirmBtn' data-i18n="confirm" onclick="checkAnswer()"></button>
+          <button data-i18n="hint" onclick="showHint()"></button>
+        </div>
+
+        <!-- 提示 -->
+        <p class="hint" id="hint"></p>
+      </form>
     </div>
   </div>
 
 
 
-  <div class="button-group">
-    <button type="button" id='confirmBtn' data-i18n="confirm" onclick="checkAnswer()"></button>
-    <button data-i18n="hint" onclick="showHint()"></button>
-  </div>
-  <p class="hint" id="hint"></p>
+
   </div>
 
   <script>
@@ -242,7 +243,7 @@
 
       // 👉 加这一句，保持键盘不收起
       document.getElementById('answer').focus();
-      
+
     }
 
     // 聚焦输入框
@@ -266,35 +267,35 @@
 
     // 核对答案
     function checkAnswer() {
-  const input = document.getElementById('answer').value.trim().toLowerCase();
-  const errorIcon = document.getElementById('errorIcon')
-  const checkIcon = document.getElementById('checkIcon')
+      const input = document.getElementById('answer').value.trim().toLowerCase();
+      const errorIcon = document.getElementById('errorIcon')
+      const checkIcon = document.getElementById('checkIcon')
 
-  if (input === currentWord.toLowerCase()) {
-    errorIcon.style.display = 'none'
-    checkIcon.style.display = 'block'
-    checkIcon.seek(0); // 回到起始帧
-    checkIcon.play();  // 重新播放
-    correct++;
-    document.getElementById('correctCount').textContent = correct;
-    updateProgress();
-    current++;
-    setTimeout(() => {
-      nextWord();
-      checkIcon.style.display = 'none'
-      document.getElementById('answer').focus(); // ✅ 重新聚焦
-    }, 1000);
-  } else {
-    addError(currentWord);
-    errorIcon.style.display = 'block'
-    errorIcon.seek(0); // 回到起始帧
-    errorIcon.play();  // 重新播放
+      if (input === currentWord.toLowerCase()) {
+        errorIcon.style.display = 'none'
+        checkIcon.style.display = 'block'
+        checkIcon.seek(0); // 回到起始帧
+        checkIcon.play();  // 重新播放
+        correct++;
+        document.getElementById('correctCount').textContent = correct;
+        updateProgress();
+        current++;
+        setTimeout(() => {
+          nextWord();
+          checkIcon.style.display = 'none'
+          document.getElementById('answer').focus(); // ✅ 重新聚焦
+        }, 1000);
+      } else {
+        addError(currentWord);
+        errorIcon.style.display = 'block'
+        errorIcon.seek(0); // 回到起始帧
+        errorIcon.play();  // 重新播放
 
-    setTimeout(() => {
-      document.getElementById('answer').focus(); // ✅ 重新聚焦
-    }, 100);
-  }
-}
+        setTimeout(() => {
+          document.getElementById('answer').focus(); // ✅ 重新聚焦
+        }, 100);
+      }
+    }
 
     // 按下 Enter 确定
     function checkEnter(e) {
