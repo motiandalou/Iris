@@ -212,9 +212,7 @@
 </body>
 
 <script>
-  document.getElementById('playSoundBtn').addEventListener('click', () => {
-    speak(currentWord);
-  });
+
 
   // 打开手机键盘(safari失效)
   document.querySelector('#confirmBtn').addEventListener('click', (e) => {
@@ -229,6 +227,10 @@
   let words = [], current = 0, correct = 0, hints = 0;
   let currentWord = '', phonetic = '', currentMeaning = '';
   let errorWords = JSON.parse(localStorage.getItem('errorWords') || '[]');
+
+  document.getElementById('playSoundBtn').addEventListener('click', () => {
+    speak(currentWord);
+  });
 
   document.getElementById('wordSet').addEventListener('change', preloadWords);
   window.onload = preloadWords;
@@ -278,10 +280,16 @@
 
   function speak(text) {
     if (!window.speechSynthesis) return;
+    window.speechSynthesis.cancel(); // 取消上一次朗读，防止重复
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = 'en-US';
     utterance.rate = 0.7; // 可调语速
-    window.speechSynthesis.speak(utterance);
+    // 安卓某些浏览器需要先触发一次空播放初始化
+    if (speechSynthesis.speaking || speechSynthesis.pending) {
+      setTimeout(() => window.speechSynthesis.speak(utterance), 100);
+    } else {
+      window.speechSynthesis.speak(utterance);
+    }
   }
 
   // 核对答案
