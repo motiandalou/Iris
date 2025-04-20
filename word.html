@@ -8,6 +8,8 @@
   <link rel="icon" href="https://s3.bmp.ovh/imgs/2024/12/06/de2e895b4837ce2c.jpg" />
   <!-- 网站--标题 -->
   <title>IRIS STUDIO</title>
+  <base href="/motiandalou/" />
+
   <style>
     * {
       margin: 0;
@@ -186,7 +188,7 @@
 
 
   <div class="button-group">
-    <button id='confirmBtn' data-i18n="confirm" onclick="checkAnswer()"></button>
+    <button type="button" id='confirmBtn' data-i18n="confirm" onclick="checkAnswer()"></button>
     <button data-i18n="hint" onclick="showHint()"></button>
   </div>
   <p class="hint" id="hint"></p>
@@ -231,6 +233,9 @@
       document.getElementById('phonetic').textContent = currentPhonetic;
       document.getElementById('answer').value = '';
       document.getElementById('hint').textContent = '';
+
+      // 👉 加这一句，保持键盘不收起
+      document.getElementById('answer').focus();
     }
 
     // 聚焦输入框
@@ -254,34 +259,35 @@
 
     // 核对答案
     function checkAnswer() {
-      const input = document.getElementById('answer').value.trim().toLowerCase();
-      const errorIcon = document.getElementById('errorIcon')
-      const checkIcon = document.getElementById('checkIcon')
+  const input = document.getElementById('answer').value.trim().toLowerCase();
+  const errorIcon = document.getElementById('errorIcon')
+  const checkIcon = document.getElementById('checkIcon')
 
-      if (input === currentWord.toLowerCase()) {
-        errorIcon.style.display = 'none'
-        checkIcon.style.display = 'block'
-        checkIcon.seek(0); // 回到起始帧
-        checkIcon.play();  // 重新播放
-        correct++;
-        document.getElementById('correctCount').textContent = correct;
-        updateProgress();
-        current++;
-        setTimeout(() => {
-          nextWord();
-          checkIcon.style.display = 'none'
-        }, 1000);
-      } else {
-        addError(currentWord);
-        errorIcon.style.display = 'block'
-        errorIcon.seek(0); // 回到起始帧
-        errorIcon.play();  // 重新播放
-      }
+  if (input === currentWord.toLowerCase()) {
+    errorIcon.style.display = 'none'
+    checkIcon.style.display = 'block'
+    checkIcon.seek(0); // 回到起始帧
+    checkIcon.play();  // 重新播放
+    correct++;
+    document.getElementById('correctCount').textContent = correct;
+    updateProgress();
+    current++;
+    setTimeout(() => {
+      nextWord();
+      checkIcon.style.display = 'none'
+      document.getElementById('answer').focus(); // ✅ 重新聚焦
+    }, 1000);
+  } else {
+    addError(currentWord);
+    errorIcon.style.display = 'block'
+    errorIcon.seek(0); // 回到起始帧
+    errorIcon.play();  // 重新播放
 
-      // 重新聚焦输入框
-      // focusInput()
-
-    }
+    setTimeout(() => {
+      document.getElementById('answer').focus(); // ✅ 重新聚焦
+    }, 100);
+  }
+}
 
     // 按下 Enter 确定
     function checkEnter(e) {
