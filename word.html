@@ -166,8 +166,6 @@
       </div>
     </div>
 
-
-
     <div style="position: relative;">
       <form id="quizForm">
         <input type="text" inputmode="latin" id="answer" onkeydown="checkEnter(event)" autocorrect="off"
@@ -202,6 +200,15 @@
   </div>
 
   <script>
+    document.querySelector('#quizForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      checkAnswer();
+      setTimeout(() => {
+        document.querySelector('#answer').focus();
+      }, 0);
+    });
+
+
     let words = [], current = 0, correct = 0, hints = 0;
     let currentWord = '', phonetic = '', currentMeaning = '';
     let errorWords = JSON.parse(localStorage.getItem('errorWords') || '[]');
